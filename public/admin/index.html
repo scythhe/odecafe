@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e0c0a">
+  <meta name="robots" content="noindex">
+  <title>Ode — Admin</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@500;600;700&family=Noto+Sans+Georgian:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <!-- login -->
+  <section class="login" id="login" hidden>
+    <form class="login-card" id="loginForm">
+      <div class="login-mark">ode<span>.</span></div>
+      <p class="login-sub">Admin</p>
+      <label class="field">
+        <span>Password</span>
+        <input type="password" name="password" autocomplete="current-password" required>
+      </label>
+      <p class="form-error" id="loginError" role="alert"></p>
+      <button class="btn primary wide" type="submit">Sign in</button>
+    </form>
+  </section>
+
+  <!-- app -->
+  <div class="app" id="app" hidden>
+    <aside class="side">
+      <div class="side-mark">ode<span>.</span></div>
+      <nav class="tabs" id="tabs">
+        <button type="button" data-view="products" class="active">
+          <svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg>
+          <span>Products</span>
+        </button>
+        <button type="button" data-view="categories">
+          <svg viewBox="0 0 24 24"><path d="M5 6h14M5 12h14M5 18h9"/></svg>
+          <span>Categories</span>
+        </button>
+        <button type="button" data-view="settings">
+          <svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg>
+          <span>Cafe</span>
+        </button>
+        <a href="/" target="_blank" rel="noopener" class="tab-link">
+          <svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>Menu</span>
+        </a>
+      </nav>
+      <button class="btn ghost signout" id="logout" type="button">
+        <svg viewBox="0 0 24 24"><path d="M15 12H4M8 8l-4 4 4 4M13 4h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-6"/></svg>
+        <span>Sign out</span>
+      </button>
+    </aside>
+
+    <main class="main">
+      <!-- products -->
+      <section class="view" id="view-products">
+        <header class="view-head">
+          <div>
+            <h1>Products</h1>
+            <p class="stats" id="stats"></p>
+          </div>
+          <button class="btn primary new-btn" id="newProduct" type="button" aria-label="New product">
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>New product</span>
+          </button>
+        </header>
+        <div class="toolbar">
+          <label class="searchbox">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/></svg>
+            <input id="pSearch" type="search" placeholder="Search products" autocomplete="off">
+          </label>
+          <div class="filter" id="pFilter"></div>
+        </div>
+        <div id="productList" class="groups"></div>
+      </section>
+
+      <!-- categories -->
+      <section class="view" id="view-categories" hidden>
+        <header class="view-head">
+          <div><h1>Categories</h1><p class="stats">Drag <span class="grip-hint">⠿</span> to reorder · switch off to hide from the menu</p></div>
+        </header>
+        <form class="add-cat" id="addCat">
+          <input name="en" placeholder="Name (English)" maxlength="60" autocomplete="off">
+          <input name="ka" placeholder="სახელი (ქართული)" maxlength="60" autocomplete="off" lang="ka">
+          <button class="btn primary" type="submit"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>Add</span></button>
+        </form>
+        <ul class="list" id="catList"></ul>
+      </section>
+
+      <!-- settings -->
+      <section class="view" id="view-settings" hidden>
+        <header class="view-head"><div><h1>Cafe</h1><p class="stats">Details shown on the menu</p></div></header>
+        <form class="settings" id="settingsForm">
+          <div class="cover-field">
+            <span class="label">Cover photo</span>
+            <label class="drop cover" id="coverDrop">
+              <img id="coverImg" alt="">
+              <span class="drop-hint"><svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"/></svg><b>Change cover</b></span>
+              <span class="drop-loading"></span>
+              <input type="file" accept="image/*" id="coverFile" hidden>
+            </label>
+          </div>
+          <div class="grid2">
+            <label class="field"><span>Tagline · EN</span><input name="tagline.en" maxlength="80"></label>
+            <label class="field"><span>Tagline · KA</span><input name="tagline.ka" maxlength="80" lang="ka"></label>
+            <label class="field"><span>Address · EN</span><input name="address.en" maxlength="120"></label>
+            <label class="field"><span>Address · KA</span><input name="address.ka" maxlength="120" lang="ka"></label>
+            <label class="field"><span>Opens</span><input name="hours.open" type="time" required></label>
+            <label class="field"><span>Closes</span><input name="hours.close" type="time" required></label>
+            <label class="field"><span>Phone</span><input name="phone" maxlength="40" inputmode="tel" autocomplete="off"></label>
+            <label class="field"><span>Email</span><input name="email" type="email" maxlength="80" autocomplete="off"></label>
+            <label class="field full"><span>Instagram link</span><input name="instagram" type="url" maxlength="120" placeholder="https://instagram.com/…"></label>
+          </div>
+          <div class="form-actions"><button class="btn primary" type="submit">Save changes</button></div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!-- product editor -->
+  <dialog class="editor" id="editor">
+    <form class="editor-inner" id="editorForm" novalidate>
+      <header class="editor-head">
+        <button class="icon" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        <h2 id="editorTitle" tabindex="-1" autofocus>New product</h2>
+        <button class="btn primary small" type="submit" id="editorSave">Save</button>
+      </header>
+      <div class="editor-body">
+        <label class="drop" id="drop">
+          <img id="dropImg" alt="">
+          <span class="drop-hint"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="12" cy="12" r="3.5"/><path d="M8 5l1.5-2h5L16 5"/></svg><b>Add photo</b><small>Tap to choose · or drop a file</small></span>
+          <span class="drop-loading"></span>
+          <input type="file" accept="image/*" id="file" hidden>
+        </label>
+        <button type="button" class="link-btn" id="removeImg" hidden>Remove photo</button>
+
+        <label class="toggle-row big">
+          <div><b>On menu</b><small id="availHint">Visible to guests</small></div>
+          <input type="checkbox" name="available" class="switch">
+        </label>
+
+        <div class="grid2">
+          <label class="field"><span>Name · EN</span><input name="name.en" maxlength="120" autocomplete="off"></label>
+          <label class="field"><span>Name · KA</span><input name="name.ka" maxlength="120" autocomplete="off" lang="ka"></label>
+          <label class="field"><span>Price ₾</span><input name="price" type="number" min="0" step="0.1" inputmode="decimal" required></label>
+          <label class="field"><span>Category</span><select name="categoryId" class="select" id="catSelect"></select></label>
+          <label class="field"><span>Note · EN <i>optional</i></span><input name="description.en" maxlength="240" autocomplete="off"></label>
+          <label class="field"><span>Note · KA <i>optional</i></span><input name="description.ka" maxlength="240" autocomplete="off" lang="ka"></label>
+        </div>
+
+        <label class="toggle-row">
+          <div><b>Signature</b><small>Show in the highlight row at the top</small></div>
+          <input type="checkbox" name="featured" class="switch">
+        </label>
+        <p class="form-error" id="editorError" role="alert"></p>
+        <button class="btn danger-ghost delete-btn" type="button" id="editorDelete">
+          <svg viewBox="0 0 24 24"><path d="M5 7h14M10 11v6M14 11v6M6 7l1 12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1l1-12M9 7V4h6v3"/></svg>Delete product
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- confirm -->
+  <dialog class="confirm" id="confirm">
+    <div class="confirm-inner">
+      <h3 id="confirmTitle"></h3>
+      <p id="confirmText"></p>
+      <div class="confirm-actions">
+        <button class="btn ghost" type="button" value="no">Cancel</button>
+        <button class="btn danger" type="button" value="yes" id="confirmYes">Delete</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" popover="manual"></div>
+  <script src="/admin/admin.js" type="module"></script>
+</body>
+</html>

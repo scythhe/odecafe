@@ -1,0 +1,2543 @@
+{
+  "settings": {
+    "name": "Ode",
+    "tagline": {
+      "en": "Cafe & wine bar",
+      "ka": "კაფე & ღვინის ბარი"
+    },
+    "hours": {
+      "open": "09:00",
+      "close": "00:00"
+    },
+    "phone": "+995 599 93 84 37",
+    "email": "ode.cafe18@gmail.com",
+    "address": {
+      "en": "Tbilisi, Georgia",
+      "ka": "თბილისი, საქართველო"
+    },
+    "instagram": "",
+    "currency": "₾",
+    "cover": "/media/c11365dcdf07a9a200f5-l.webp"
+  },
+  "categories": [
+    {
+      "id": "c1",
+      "name": {
+        "ka": "აპეტაიზერი",
+        "en": "Appetizer"
+      },
+      "order": 0,
+      "visible": true
+    },
+    {
+      "id": "c2",
+      "name": {
+        "ka": "სალათი",
+        "en": "Salad"
+      },
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "c3",
+      "name": {
+        "ka": "ძირითადი კერძები",
+        "en": "Main Dishes"
+      },
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "c4",
+      "name": {
+        "ka": "სუპი",
+        "en": "Soup"
+      },
+      "order": 3,
+      "visible": true
+    },
+    {
+      "id": "c5",
+      "name": {
+        "ka": "ცომეული",
+        "en": "Baked"
+      },
+      "order": 4,
+      "visible": true
+    },
+    {
+      "id": "c6",
+      "name": {
+        "ka": "პასტა",
+        "en": "Pasta"
+      },
+      "order": 5,
+      "visible": true
+    },
+    {
+      "id": "c7",
+      "name": {
+        "ka": "გრილ პროდუქტი",
+        "en": "Grilled Product"
+      },
+      "order": 6,
+      "visible": true
+    },
+    {
+      "id": "c8",
+      "name": {
+        "ka": "გარნირი",
+        "en": "Garnish"
+      },
+      "order": 7,
+      "visible": true
+    },
+    {
+      "id": "c10",
+      "name": {
+        "ka": "ყავა",
+        "en": "Coffee"
+      },
+      "order": 8,
+      "visible": true
+    },
+    {
+      "id": "c11",
+      "name": {
+        "ka": "დესერტი",
+        "en": "Dessert"
+      },
+      "order": 9,
+      "visible": true
+    },
+    {
+      "id": "c12",
+      "name": {
+        "ka": "გამაგრილებელი სასმელი",
+        "en": "Cold Drinks"
+      },
+      "order": 10,
+      "visible": true
+    },
+    {
+      "id": "c17",
+      "name": {
+        "ka": "სახლში დამზადებული ღვინო",
+        "en": "Homemade wine"
+      },
+      "order": 11,
+      "visible": true
+    },
+    {
+      "id": "c19",
+      "name": {
+        "ka": "ნატურალური ქვევრის ღვინო",
+        "en": "Natural Kvevri wine"
+      },
+      "order": 12,
+      "visible": true
+    },
+    {
+      "id": "c20",
+      "name": {
+        "ka": "ბიო მაღალი კლასის ღვინო",
+        "en": "Bio high class wine"
+      },
+      "order": 13,
+      "visible": true
+    },
+    {
+      "id": "c18",
+      "name": {
+        "ka": "ბოთლის ღვინო",
+        "en": "Bottle wine"
+      },
+      "order": 14,
+      "visible": true
+    },
+    {
+      "id": "c21",
+      "name": {
+        "ka": "პროსეკო",
+        "en": "Prosecco"
+      },
+      "order": 15,
+      "visible": true
+    },
+    {
+      "id": "c13",
+      "name": {
+        "ka": "ლუდი",
+        "en": "Beer"
+      },
+      "order": 16,
+      "visible": true
+    },
+    {
+      "id": "c14",
+      "name": {
+        "ka": "კოქტეილი",
+        "en": "Cocktails"
+      },
+      "order": 17,
+      "visible": true
+    },
+    {
+      "id": "c15",
+      "name": {
+        "ka": "ალკოჰოლი",
+        "en": "Alcohol"
+      },
+      "order": 18,
+      "visible": true
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "categoryId": "c1",
+      "name": {
+        "en": "Hummus",
+        "ka": "ჰუმუსი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 27,
+      "image": "/media/5806a8897ecc6fc0d467.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p3",
+      "categoryId": "c1",
+      "name": {
+        "en": "Bruschetta: Salmon",
+        "ka": "ბრუსკეტი: ორაგული"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 22,
+      "image": "/media/48791e47836038934340.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p4",
+      "categoryId": "c1",
+      "name": {
+        "en": "Bruschetta: prosciutto",
+        "ka": "ბრუსკეტი: პროშუტო"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 19,
+      "image": "/media/377f1ab527e2784f1554.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p5",
+      "categoryId": "c1",
+      "name": {
+        "en": "Cheese board",
+        "ka": "ყველის ნაკრები"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 32,
+      "image": "/media/e9f093943d1aa385ebb7.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p6",
+      "categoryId": "c1",
+      "name": {
+        "en": "Cheese board: Prosciutto and sausage",
+        "ka": "ყველის ნაკრები: პროშუტოთი და პეპერონით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 39,
+      "image": "/media/c1cb47409a0c0cc0911a.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p8",
+      "categoryId": "c2",
+      "name": {
+        "en": "Georgian salad with walnuts and kakhuri oil",
+        "ka": "ქართული სალათი ნიგვზით და კახური ზეთით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 26,
+      "image": "/media/5a28b631d7354dee397c.webp",
+      "available": true,
+      "featured": true,
+      "order": 0
+    },
+    {
+      "id": "p9",
+      "categoryId": "c2",
+      "name": {
+        "en": "Prosciutto and cream cheese salad",
+        "ka": "კრემ ყველის სალათი პროშუტოთი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/f1dc45c23a55128c6295.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p10",
+      "categoryId": "c2",
+      "name": {
+        "en": "Steak salad with beef",
+        "ka": "სტეიკ სალათი"
+      },
+      "description": {
+        "en": "With dijon mustard sauce",
+        "ka": ""
+      },
+      "price": 33,
+      "image": "/media/4443a769d83dcca37088.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p11",
+      "categoryId": "c2",
+      "name": {
+        "en": "Caprese",
+        "ka": "კაპრეზე"
+      },
+      "description": {
+        "en": "Pesto sauce",
+        "ka": ""
+      },
+      "price": 33,
+      "image": "/media/d2b1d5def1c037862b8e.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p12",
+      "categoryId": "c2",
+      "name": {
+        "en": "Caesar with chicken",
+        "ka": "ცეზარი ქათმით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/15407b9ec6a0d1d69b0b.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p13",
+      "categoryId": "c2",
+      "name": {
+        "en": "Caesar with shrimps",
+        "ka": "ცეზარი კრევეტებით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 35,
+      "image": "/media/360ace1cb2d7c8a74f6d.webp",
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p14",
+      "categoryId": "c2",
+      "name": {
+        "en": "Salmon and avocado salad",
+        "ka": "ორაგულის და ავოკადოს სალათი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 35,
+      "image": "/media/c9d45f2b3339ae9e6e21.webp",
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    {
+      "id": "p16",
+      "categoryId": "c3",
+      "name": {
+        "en": "Khinkluka",
+        "ka": "ხინკლუკა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 28,
+      "image": "/media/bd1d337921e35649b108.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p17",
+      "categoryId": "c3",
+      "name": {
+        "en": "Eggplants with walnuts",
+        "ka": "ნიგვზიანი ბადრიჯანი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 28,
+      "image": "/media/4a60f7f7200f5ce7b914.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p18",
+      "categoryId": "c3",
+      "name": {
+        "en": "Mushroom with sulguni cheese",
+        "ka": "სოკო კეცზე სულგუნით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29.9,
+      "image": "/media/accf82bf49070d5cbf9e.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p19",
+      "categoryId": "c3",
+      "name": {
+        "en": "Trout rolls with walnuts and salad",
+        "ka": "კალმახის ხვეულა ნიგვზით და სალათით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 33.9,
+      "image": "/media/57b61afc776a043d4a0c.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p20",
+      "categoryId": "c3",
+      "name": {
+        "en": "Beef chashushuli",
+        "ka": "საქონლის ჩაშუშული"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 33.9,
+      "image": "/media/4801e12c25f90709b07d.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p21",
+      "categoryId": "c3",
+      "name": {
+        "en": "Ojakhuri with pork and potatoes",
+        "ka": "ოჯახური ღორის ხორცით და კარტოფილით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 31.5,
+      "image": "/media/d7c4fc0f8bf381a99b11.webp",
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p23",
+      "categoryId": "c3",
+      "name": {
+        "en": "Nadughi with sulguni cheese",
+        "ka": "ნადუღი სულგუნის ფირფიტებში"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29.9,
+      "image": "/media/b0c41b81f817d950f009.webp",
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    {
+      "id": "p127",
+      "categoryId": "c3",
+      "name": {
+        "en": "Ajapsandali",
+        "ka": "აჯაფსანდალი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/79e8508e775e83def0c1.webp",
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    {
+      "id": "p130",
+      "categoryId": "c3",
+      "name": {
+        "en": "Khinkali",
+        "ka": "ხინკალი"
+      },
+      "description": {
+        "en": "Beef and pork mix",
+        "ka": "საქონლის და ღორის ხორცი"
+      },
+      "price": 25,
+      "image": "/media/59ab79bb7728842f5614.webp",
+      "available": true,
+      "featured": true,
+      "order": 8
+    },
+    {
+      "id": "p141",
+      "categoryId": "c3",
+      "name": {
+        "en": "Mushroom stew",
+        "ka": "სოკოს ჩაშუშული"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/f51d65eacf7b0d28145d.webp",
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    {
+      "id": "p24",
+      "categoryId": "c4",
+      "name": {
+        "en": "Mushroom cream soup",
+        "ka": "სოკოს კრემ სუპი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 27,
+      "image": "/media/930ddcef80bae2d8145e.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p25",
+      "categoryId": "c4",
+      "name": {
+        "en": "Tomato cream soup",
+        "ka": "პომიდვრის კრემ სუპი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 27,
+      "image": "/media/0447b9e11779801b5779.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p26",
+      "categoryId": "c4",
+      "name": {
+        "en": "Kharcho",
+        "ka": "ხარჩო"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 32,
+      "image": "/media/52c38af4d09c29e9e26f.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p128",
+      "categoryId": "c4",
+      "name": {
+        "en": "Pumpkin cream soup",
+        "ka": "გოგრის კრემ სუპი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 27,
+      "image": "/media/511f05d32709c6a6fd13.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p139",
+      "categoryId": "c4",
+      "name": {
+        "en": "Chikhirtma",
+        "ka": "ჩიხირთმა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/03d8fa34e1cf333614f8.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p140",
+      "categoryId": "c4",
+      "name": {
+        "en": "Broccoli cream soup",
+        "ka": "ბროკოლის კრემ სუპი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 27,
+      "image": "/media/d2a398e8f315a87b31c5.webp",
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p27",
+      "categoryId": "c5",
+      "name": {
+        "en": "Adjarian Khachapuri",
+        "ka": "აჭარული ხაჭაპური"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 27,
+      "image": "/media/a8ae7f38c678e990c8b5.webp",
+      "available": true,
+      "featured": true,
+      "order": 0
+    },
+    {
+      "id": "p28",
+      "categoryId": "c5",
+      "name": {
+        "en": "Adjaruli with spinach",
+        "ka": "აჭარული ისპანახით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 25,
+      "image": "/media/0a260c1d9cf23cb3bd64.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p29",
+      "categoryId": "c5",
+      "name": {
+        "en": "Adjaruli shkmerulad",
+        "ka": "აჭარული შქმერულად"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/9a49d2461a0eb90c3a16.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p30",
+      "categoryId": "c5",
+      "name": {
+        "en": "Adjaruli with shrimps",
+        "ka": "აჭარული კრევეტებით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 32,
+      "image": "/media/6b14034ad254508624a9.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p31",
+      "categoryId": "c5",
+      "name": {
+        "en": "Pizza Pepperoni",
+        "ka": "პიცა პეპერონი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 34,
+      "image": "/media/edb8fca10a362564af01.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p32",
+      "categoryId": "c5",
+      "name": {
+        "en": "Pizza 4 cheese",
+        "ka": "პიცა 4 ყველით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 37,
+      "image": "/media/1f57efccb755c65ecc73.webp",
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p33",
+      "categoryId": "c5",
+      "name": {
+        "en": "Pizza capricciosa",
+        "ka": "პიცა კაპრიჩოზა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 35,
+      "image": "/media/fec0bb7bce18320cef00.webp",
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    {
+      "id": "p34",
+      "categoryId": "c6",
+      "name": {
+        "en": "Pasta Carbonara",
+        "ka": "პასტა კარბონარა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 30.9,
+      "image": "/media/14f2b28f40217da0ecfb.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p35",
+      "categoryId": "c6",
+      "name": {
+        "en": "Pasta with mushroom and pesto",
+        "ka": "პასტა სოკოთი და პესტოტი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 30.9,
+      "image": "/media/ca92e3e48763c1351560.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p36",
+      "categoryId": "c6",
+      "name": {
+        "en": "Pasta with shrimps",
+        "ka": "პასტა კრევეტებით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 32.9,
+      "image": "/media/71e1ea6e7b960746a423.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p37",
+      "categoryId": "c6",
+      "name": {
+        "en": "Pasta with chicken and milk cream",
+        "ka": "პასტა ქათმით და ნაღებით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 32.9,
+      "image": "/media/b91879db60384e2ac6c1.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p38",
+      "categoryId": "c7",
+      "name": {
+        "en": "Grilled vegetables",
+        "ka": "ბოსტნეული გრილზე"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 27.9,
+      "image": "/media/7f80f973a451c26e19b9.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p39",
+      "categoryId": "c7",
+      "name": {
+        "en": "Barbecue: Shrimps",
+        "ka": "ბარბექიუ: კრევეტები"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 33,
+      "image": "/media/e1b552b7ee1f6fe8120d.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p40",
+      "categoryId": "c7",
+      "name": {
+        "en": "Barbecue: Chicken",
+        "ka": "ბარბექიუ: ქათამი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/b0a191a11f4136d2e3fc.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p41",
+      "categoryId": "c7",
+      "name": {
+        "en": "Barbecue: Pork",
+        "ka": "ბარბექიუ: ღორი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 30,
+      "image": "/media/baf7fd46ec16f34e8940.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p42",
+      "categoryId": "c7",
+      "name": {
+        "en": "Beef steak with truffle sauce",
+        "ka": "საქონლის სტეიკი ტრუფელის სოუსით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 35,
+      "image": "/media/8f7fc7292ec2b42b0ac7.webp",
+      "available": true,
+      "featured": true,
+      "order": 4
+    },
+    {
+      "id": "p43",
+      "categoryId": "c7",
+      "name": {
+        "en": "Beef steak with blue cheese sauce",
+        "ka": "საქონლის სტეიკი ლურჯი ყველის სოუსით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 36.9,
+      "image": "/media/4e2e113e33c218b68965.webp",
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p44",
+      "categoryId": "c7",
+      "name": {
+        "en": "Salmon steak with beet sauce",
+        "ka": "ორაგულის სტეიკი ჭარხლის სოუსით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 39,
+      "image": "/media/6b0aa73eea2d468b4d8f.webp",
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    {
+      "id": "p45",
+      "categoryId": "c8",
+      "name": {
+        "en": "French fries",
+        "ka": "კარტოფილი ფრი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.9,
+      "image": "/media/14847c1df3ea03cafde2.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p46",
+      "categoryId": "c8",
+      "name": {
+        "en": "Homemade potatoes",
+        "ka": "კარტოფილი გლეხურად"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 17.9,
+      "image": "/media/41ae194bf20609f19aa0.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p47",
+      "categoryId": "c8",
+      "name": {
+        "en": "Risotto with mushroom and pesto",
+        "ka": "რიზოტო ქამა სოკოთი და პესტოთი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 27.9,
+      "image": "/media/7e35b75e3fffbfb0d1d5.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p51",
+      "categoryId": "c10",
+      "name": {
+        "en": "Espresso",
+        "ka": "ესპრესო"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 5.9,
+      "image": "/media/cda246e9e8c3479b1dab.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p52",
+      "categoryId": "c10",
+      "name": {
+        "en": "Americano",
+        "ka": "ამერიკანო"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 6.9,
+      "image": "/media/cdb63594c46e91c14609.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p53",
+      "categoryId": "c10",
+      "name": {
+        "en": "Latte",
+        "ka": "ლატე"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 11.5,
+      "image": "/media/4965f5337eee98fee5fd.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p54",
+      "categoryId": "c10",
+      "name": {
+        "en": "Cappuccino",
+        "ka": "კაპუჩინო"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 7.9,
+      "image": "/media/4caf3011c0cc22da4803.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p55",
+      "categoryId": "c10",
+      "name": {
+        "en": "Iced coffee",
+        "ka": "ცივი ყავა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 12.5,
+      "image": "/media/704a2f69b68dfd2cc6df.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p56",
+      "categoryId": "c10",
+      "name": {
+        "en": "Iced coffee with ice cream",
+        "ka": "ცივი ყავა ნაყინით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 15.5,
+      "image": "/media/601c740067afbba45485.webp",
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p57",
+      "categoryId": "c11",
+      "name": {
+        "en": "Ice Cream",
+        "ka": "ნაყინი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 12.9,
+      "image": "/media/8dd0ebd71460327aa056.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p58",
+      "categoryId": "c11",
+      "name": {
+        "en": "Cheesecake with berries",
+        "ka": "ჩიზქეიქი ტყის კენკრით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 15.9,
+      "image": "/media/d0c32926c98af1430788.webp",
+      "available": true,
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "p59",
+      "categoryId": "c11",
+      "name": {
+        "en": "Lava cake with ice cream",
+        "ka": "ლავა ქეიქი ნაყინით"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 15.9,
+      "image": "/media/1ffced08f60c1092c54c.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p60",
+      "categoryId": "c11",
+      "name": {
+        "en": "Apple strudel",
+        "ka": "ვაშლის შტრუდელი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 15.9,
+      "image": "/media/d8dedd0d959575704064.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p62",
+      "categoryId": "c11",
+      "name": {
+        "en": "Fruit platter",
+        "ka": "ხილის დაფა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 35,
+      "image": "/media/dcf81050f624bfd7eee7.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p63",
+      "categoryId": "c12",
+      "name": {
+        "en": "Water",
+        "ka": "წყალი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 3.9,
+      "image": "/media/27992b34c8e81d17cc4a.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p64",
+      "categoryId": "c12",
+      "name": {
+        "en": "Borjomi",
+        "ka": "ბორჯომი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 4.9,
+      "image": "/media/595c2687308412d4bc93.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p65",
+      "categoryId": "c12",
+      "name": {
+        "en": "Coca-cola",
+        "ka": "კოკა-კოლა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 6.9,
+      "image": "/media/8f91a5f886184a0d8b8f.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p66",
+      "categoryId": "c12",
+      "name": {
+        "en": "Fanta",
+        "ka": "ფანტა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 6.9,
+      "image": "/media/a4d99d51b2d5515a756e.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p67",
+      "categoryId": "c12",
+      "name": {
+        "en": "Sprite",
+        "ka": "სპრაიტი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 6.9,
+      "image": "/media/07651f88f6faa039906c.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p68",
+      "categoryId": "c12",
+      "name": {
+        "en": "Homemade lemonade: citrus",
+        "ka": "სახლის ლიმონათი: ციტრუსი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.9,
+      "image": "/media/b32838a9c39d12c6487e.webp",
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p69",
+      "categoryId": "c12",
+      "name": {
+        "en": "Homemade lemonade: berries",
+        "ka": "სახლის ლიმონათი: კენკრა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.9,
+      "image": "/media/cb0f52eace41d919b72a.webp",
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    {
+      "id": "p70",
+      "categoryId": "c12",
+      "name": {
+        "en": "Homemade lemonade: maracuya",
+        "ka": "სახლის ლიმონათი: მარაკუია"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.9,
+      "image": "/media/9f6810346d9bf0818f04.webp",
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    {
+      "id": "p71",
+      "categoryId": "c12",
+      "name": {
+        "en": "Fresh orange juice",
+        "ka": "ფორთოხლის ფრეში"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 22.9,
+      "image": "/media/11229e295b215bce9835.webp",
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    {
+      "id": "p72",
+      "categoryId": "c12",
+      "name": {
+        "en": "Fresh grapefruit juice",
+        "ka": "ფრეში გრეიფრუტი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 22.9,
+      "image": "/media/16a62a59f32874caf18f.webp",
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    {
+      "id": "p73",
+      "categoryId": "c12",
+      "name": {
+        "en": "Juice",
+        "ka": "ნატურალური წვენი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 6.9,
+      "image": "/media/e822294f26b7e1aab377.webp",
+      "available": true,
+      "featured": false,
+      "order": 10
+    },
+    {
+      "id": "p74",
+      "categoryId": "c12",
+      "name": {
+        "en": "Strawberry Milkshake",
+        "ka": "მარწყვის მილქშეიქი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 22.9,
+      "image": "/media/3a837e647923874bdd01.webp",
+      "available": true,
+      "featured": false,
+      "order": 11
+    },
+    {
+      "id": "p75",
+      "categoryId": "c12",
+      "name": {
+        "en": "Chocolate Milkshake",
+        "ka": "შოკოლადის მილქშეიქი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 22.9,
+      "image": "/media/ce77cad3a150f9885741.webp",
+      "available": true,
+      "featured": false,
+      "order": 12
+    },
+    {
+      "id": "p76",
+      "categoryId": "c12",
+      "name": {
+        "en": "Banana Milkshake",
+        "ka": "ბანანის მილქშეიქი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 22.9,
+      "image": "/media/2022646b46401732c3f2.webp",
+      "available": true,
+      "featured": false,
+      "order": 13
+    },
+    {
+      "id": "p98",
+      "categoryId": "c17",
+      "name": {
+        "en": "Rkatsiteli (white dry)",
+        "ka": "რქაწითელი (თეთრი მშრალი)"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 13.9,
+      "image": "/media/64874ee63a59a631d6b6.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p99",
+      "categoryId": "c17",
+      "name": {
+        "en": "Alazani valley (white semi-sweet)",
+        "ka": "ალაზნის ველი (თეთრი ნახევრად ტკბილი)"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 13.9,
+      "image": "/media/d48c1b278212bd4d21b0.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p100",
+      "categoryId": "c17",
+      "name": {
+        "en": "Saperavi (red dry)",
+        "ka": "საფერავი (წითელი მშრალი)"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 13.9,
+      "image": "/media/9453d75e953f9344f728.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p101",
+      "categoryId": "c17",
+      "name": {
+        "en": "Kindzmarauli (red semi-sweet)",
+        "ka": "ქინძმარაული (წითელი ნახევრად ტკბილი)"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 13.9,
+      "image": "/media/b78cc5b20444cdfd69d9.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p133",
+      "categoryId": "c19",
+      "name": {
+        "en": "Saperavi (red dry) 750ml",
+        "ka": "საფერავი (წითელი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/f66ca237cef09cef20c8.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p134",
+      "categoryId": "c19",
+      "name": {
+        "en": "Saperavi (red dry) 180ml",
+        "ka": "საფერავი (წითელი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.5,
+      "image": "/media/88e4669cf84a60fc0a0e.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p135",
+      "categoryId": "c19",
+      "name": {
+        "en": "Rkatsiteli (amber dry) 750ml",
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/3fc495da7eabc15686c1.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p136",
+      "categoryId": "c19",
+      "name": {
+        "en": "Rkatsiteli (amber dry) 180ml",
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.5,
+      "image": "/media/05a7d4bd2f64b7b1e355.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p116",
+      "categoryId": "c19",
+      "name": {
+        "en": "Saperavi (red dry) 750ml",
+        "ka": "საფერავი (წითელი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/6592c860b1e38da7cc35.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p145",
+      "categoryId": "c19",
+      "name": {
+        "en": "Saperavi (red dry) 180ml",
+        "ka": "საფერავი (წითელი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.5,
+      "image": "/media/f8fc1268cdfcc86850bc.webp",
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p115",
+      "categoryId": "c19",
+      "name": {
+        "en": "Rkatsiteli (amber dry) 750ml",
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/a01043177296e2c1223e.webp",
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    {
+      "id": "p143",
+      "categoryId": "c19",
+      "name": {
+        "en": "Rkatsiteli (amber dry) 180ml",
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.5,
+      "image": "/media/976005bd69b3d9a5db3c.webp",
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    {
+      "id": "p114",
+      "categoryId": "c19",
+      "name": {
+        "en": "Saperavi (red dry) 750ml",
+        "ka": "საფერავი (წითელი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/ec0fc0252629af96c3ae.webp",
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    {
+      "id": "p144",
+      "categoryId": "c19",
+      "name": {
+        "en": "Saperavi (red dry) 180ml",
+        "ka": "საფერავი (წითელი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.5,
+      "image": "/media/f8fc1268cdfcc86850bc.webp",
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    {
+      "id": "p113",
+      "categoryId": "c19",
+      "name": {
+        "en": "Rkatsiteli (amber dry) 750ml",
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/9863617304d3c6de2ec6.webp",
+      "available": true,
+      "featured": false,
+      "order": 10
+    },
+    {
+      "id": "p142",
+      "categoryId": "c19",
+      "name": {
+        "en": "Rkatsiteli (amber dry) 180ml",
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.5,
+      "image": "/media/05a7d4bd2f64b7b1e355.webp",
+      "available": true,
+      "featured": false,
+      "order": 11
+    },
+    {
+      "id": "p111",
+      "categoryId": "c19",
+      "name": {
+        "en": "Saperavi (red dry) 750ml",
+        "ka": "საფერავი (წითელი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/09634cf160260af8d9d5.webp",
+      "available": true,
+      "featured": false,
+      "order": 12
+    },
+    {
+      "id": "p124",
+      "categoryId": "c19",
+      "name": {
+        "en": "Saperavi (red dry) 180ml",
+        "ka": "საფერავი (წითელი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.5,
+      "image": "/media/43e92e44e1b5047fa212.webp",
+      "available": true,
+      "featured": false,
+      "order": 13
+    },
+    {
+      "id": "p110",
+      "categoryId": "c19",
+      "name": {
+        "en": "Krakhuna (white dry) 750ml",
+        "ka": "კრახუნა (თეთრი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/cecef81a4ddce43f8d49.webp",
+      "available": true,
+      "featured": false,
+      "order": 14
+    },
+    {
+      "id": "p129",
+      "categoryId": "c19",
+      "name": {
+        "en": "Krakhuna (white dry) 180ml",
+        "ka": "კრახუნა (თეთრი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.5,
+      "image": "/media/976005bd69b3d9a5db3c.webp",
+      "available": true,
+      "featured": false,
+      "order": 15
+    },
+    {
+      "id": "p147",
+      "categoryId": "c19",
+      "name": {
+        "en": "Khikhvi (amber dry) 750ml",
+        "ka": "ხიხვი (ქარვისფერი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/07ce09fab5fc7dc7afb0.webp",
+      "available": true,
+      "featured": false,
+      "order": 16
+    },
+    {
+      "id": "p149",
+      "categoryId": "c19",
+      "name": {
+        "en": "Khikhvi (amber dry) 180ml",
+        "ka": "ხიხვი (ქარვისფერი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.5,
+      "image": "/media/d2b1026f4ca1a441f0c3.webp",
+      "available": true,
+      "featured": false,
+      "order": 17
+    },
+    {
+      "id": "p148",
+      "categoryId": "c19",
+      "name": {
+        "en": "Kisi (amber dry) 750ml",
+        "ka": "ქისი (ქარვისფერი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/07ce09fab5fc7dc7afb0.webp",
+      "available": true,
+      "featured": false,
+      "order": 18
+    },
+    {
+      "id": "p150",
+      "categoryId": "c19",
+      "name": {
+        "en": "Kisi (amber dry) 180ml",
+        "ka": "ქისი (ქარვისფერი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.5,
+      "image": "/media/cdc5b0456f56772c3628.webp",
+      "available": true,
+      "featured": false,
+      "order": 19
+    },
+    {
+      "id": "p117",
+      "categoryId": "c19",
+      "name": {
+        "en": "Saperavi chacha 50ml",
+        "ka": "საფერავის ჭაჭა 50მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 10.9,
+      "image": "/media/c76ec6a6c8d9214cef0c.webp",
+      "available": true,
+      "featured": false,
+      "order": 20
+    },
+    {
+      "id": "p118",
+      "categoryId": "c19",
+      "name": {
+        "en": "Fruit chacha 50ml",
+        "ka": "ხილის ჭაჭა 50მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 10.9,
+      "image": "/media/515876a557e74a59ffc4.webp",
+      "available": true,
+      "featured": false,
+      "order": 21
+    },
+    {
+      "id": "p119",
+      "categoryId": "c20",
+      "name": {
+        "en": "Rkatsiteli (amber dry) 750ml",
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 89,
+      "image": "/media/36d26be79909ddf23d94.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p121",
+      "categoryId": "c20",
+      "name": {
+        "en": "Mtsvane (amber dry) 750ml",
+        "ka": "მწვანე (ქარვისფერი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 89,
+      "image": "/media/d599ecf9c69c1ad3199c.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p122",
+      "categoryId": "c20",
+      "name": {
+        "en": "Saperavi (red dry) 750ml",
+        "ka": "საფერავი (წითელი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 99,
+      "image": "/media/7a572964f4c7f646ec6c.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p125",
+      "categoryId": "c20",
+      "name": {
+        "en": "Khikhvi (white dry) 750ml",
+        "ka": "ხიხვი (თეთრი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 89,
+      "image": "/media/513a170cf022208cb6c1.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p126",
+      "categoryId": "c20",
+      "name": {
+        "en": "Kisi (amber dry) 750ml",
+        "ka": "ქისი (ქარვისფერი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 89,
+      "image": "/media/feee215fba062037c0e7.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p103",
+      "categoryId": "c18",
+      "name": {
+        "en": "Tsinandali (white dry) 750ml",
+        "ka": "წინანდალი (თეთრი მშრალი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/8064c1fd44c898a5cb88.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p102",
+      "categoryId": "c18",
+      "name": {
+        "en": "Tsinandali (white dry) 180ml",
+        "ka": "წინანდალი (თეთრი მშრალი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.9,
+      "image": "/media/05ff739c2be6ca0b9ace.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p105",
+      "categoryId": "c18",
+      "name": {
+        "en": "Tvishi (white semi-sweet) 750ml",
+        "ka": "ტვიში (თეთრი ნახევრად ტკბილი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 75,
+      "image": "/media/fa041233a22173bc6a79.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p104",
+      "categoryId": "c18",
+      "name": {
+        "en": "Tvishi (white semi-sweet) 180ml",
+        "ka": "ტვიში (თეთრი ნახევრად ტკბილი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 17.9,
+      "image": "/media/e7d896d3d0b18e569f48.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p107",
+      "categoryId": "c18",
+      "name": {
+        "en": "Rose (pink) 750ml",
+        "ka": "როზე (ვარდისფერი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/27786e0f29aa3dd5522c.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p106",
+      "categoryId": "c18",
+      "name": {
+        "en": "Rose (pink) 180ml",
+        "ka": "როზე (ვარდისფერი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.9,
+      "image": "/media/424d4a6571ef2f496a72.webp",
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p109",
+      "categoryId": "c18",
+      "name": {
+        "en": "Kindzmarauli (red semi-sweet) 750ml",
+        "ka": "ქინძმარაული (წითელი ნახევრად ტკბილი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 79,
+      "image": "/media/275a3c6acc37ee6dd091.webp",
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    {
+      "id": "p108",
+      "categoryId": "c18",
+      "name": {
+        "en": "Kindzmarauli (red semi-sweet) 180ml",
+        "ka": "ქინძმარაული (წითელი ნახევრად ტკბილი) 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 19.9,
+      "image": "/media/a6f7ae8c635011acf0e5.webp",
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    {
+      "id": "p151",
+      "categoryId": "c21",
+      "name": {
+        "en": "Sparkling wine Brut 750ml",
+        "ka": "ცქრიალა ღვინო ბრუტი 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 69,
+      "image": "/media/48e85f8703ba542267b2.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p152",
+      "categoryId": "c21",
+      "name": {
+        "en": "Sparkling wine Brut 180ml",
+        "ka": "ცქრიალა ღვინო ბრუტი 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 16.9,
+      "image": "/media/d89b113a948559829d55.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p137",
+      "categoryId": "c21",
+      "name": {
+        "en": "Prosecco",
+        "ka": "პროსეკო"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 75,
+      "image": "/media/905bc6933c13dda119b2.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p138",
+      "categoryId": "c21",
+      "name": {
+        "en": "Prosecco 180ml",
+        "ka": "პროსეკო 180მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 18.9,
+      "image": "/media/515c8f79edf1e239454a.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p146",
+      "categoryId": "c21",
+      "name": {
+        "en": "Petnat (extra brut) 750ml",
+        "ka": "პეტნატი (ექსტრა ბრუტი) 750მლ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 75,
+      "image": "/media/2e63ca1e3872af19119b.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p77",
+      "categoryId": "c13",
+      "name": {
+        "en": "Natakhtari",
+        "ka": "ნატახტარი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 12.9,
+      "image": "/media/e90e10dbf14eb701f7ea.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p78",
+      "categoryId": "c13",
+      "name": {
+        "en": "Lowenbrau",
+        "ka": "ლოვენბრაუ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 13,
+      "image": "/media/6d983b9cb6c31737475a.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p79",
+      "categoryId": "c13",
+      "name": {
+        "en": "Corona",
+        "ka": "კორონა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 15,
+      "image": "/media/b703574ef6373c45d708.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p131",
+      "categoryId": "c13",
+      "name": {
+        "en": "Black Lion",
+        "ka": "შავი ლომი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 13,
+      "image": "/media/191ded16491f28f300d0.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p81",
+      "categoryId": "c14",
+      "name": {
+        "en": "Aperol",
+        "ka": "აპეროლი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/b520eddea433b925a9f3.webp",
+      "available": true,
+      "featured": true,
+      "order": 0
+    },
+    {
+      "id": "p82",
+      "categoryId": "c14",
+      "name": {
+        "en": "Gin tonic",
+        "ka": "ჯინ ტონიკი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 28,
+      "image": "/media/01eb38772b1c552827a2.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p83",
+      "categoryId": "c14",
+      "name": {
+        "en": "Negroni",
+        "ka": "ნეგრონი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/05e4c3ce67312860802f.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p84",
+      "categoryId": "c14",
+      "name": {
+        "en": "Piña colada",
+        "ka": "პინა კოლადა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/9cfbc8a5436c29b5daf0.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p85",
+      "categoryId": "c14",
+      "name": {
+        "en": "Maracuya cocktail",
+        "ka": "მარაკუიას კოქტეილი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 29,
+      "image": "/media/49797aec596c3789f342.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p87",
+      "categoryId": "c15",
+      "name": {
+        "en": "Jameson",
+        "ka": "ჯეიმსონი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 19,
+      "image": "/media/5ec81a7d038632eff5c4.webp",
+      "available": true,
+      "featured": false,
+      "order": 0
+    },
+    {
+      "id": "p88",
+      "categoryId": "c15",
+      "name": {
+        "en": "Blue label",
+        "ka": "ბლუ ლეიბელ"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 95,
+      "image": "/media/8b0dea7b1f235f8bb398.webp",
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "p89",
+      "categoryId": "c15",
+      "name": {
+        "en": "Sarajishvili V.S",
+        "ka": "სარაჯიშვილი V.S"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 19,
+      "image": "/media/b264650c6331872a510c.webp",
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p90",
+      "categoryId": "c15",
+      "name": {
+        "en": "Sarajishvili X.O",
+        "ka": "სარაჯიშვილი X.O"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 32,
+      "image": "/media/ad18c12856927ed165e3.webp",
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "p91",
+      "categoryId": "c15",
+      "name": {
+        "en": "Olmega",
+        "ka": "ოლმეგა"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 19,
+      "image": "/media/a309107ae80d8e0ec07f.webp",
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    {
+      "id": "p92",
+      "categoryId": "c15",
+      "name": {
+        "en": "Jagermeister",
+        "ka": "იაგერმასტერი"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 18,
+      "image": "/media/1aece60a52cff2d82783.webp",
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p93",
+      "categoryId": "c15",
+      "name": {
+        "en": "Hennessy V.S",
+        "ka": "ჰენესი V.S"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 33,
+      "image": "/media/8b28c6c463eeddbc302b.webp",
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    {
+      "id": "p94",
+      "categoryId": "c15",
+      "name": {
+        "en": "Hennessy V.S.O.P",
+        "ka": "ჰენესი V.S.O.P"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 47,
+      "image": "/media/2728bfde1dfeac7a6f2a.webp",
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    {
+      "id": "p95",
+      "categoryId": "c15",
+      "name": {
+        "en": "Hennessy X.O",
+        "ka": "ჰენესი X.O"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 99,
+      "image": "/media/0192a372013f50149bc9.webp",
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    {
+      "id": "p96",
+      "categoryId": "c15",
+      "name": {
+        "en": "Remy Martin V.S",
+        "ka": "რემი მარტინი V.S"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 35,
+      "image": "/media/6e62945f1ac6022a05bb.webp",
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    {
+      "id": "p97",
+      "categoryId": "c15",
+      "name": {
+        "en": "Remy Martin X.O",
+        "ka": "რემი მარტინი X.O"
+      },
+      "description": {
+        "en": "",
+        "ka": ""
+      },
+      "price": 95,
+      "image": "/media/cee4b90b8c7a7e881578.webp",
+      "available": true,
+      "featured": false,
+      "order": 10
+    }
+  ]
+}
