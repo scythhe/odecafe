@@ -4,7 +4,7 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const money = (n) => (Number.isInteger(n) ? String(n) : Number(n).toFixed(2));
 const label = (o) => o?.en || o?.ka || '—';
-const thumb = (url) => (url?.startsWith('/media/') ? url.replace('/media/', '/media/t/') : url);
+const thumb = (url) => (url?.startsWith('/media/') ? url.replace('/media/', '/media/w/360/') : url);
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const ic = {

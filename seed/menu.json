@@ -12,9 +12,10 @@
     "phone": "+995 599 93 84 37",
     "email": "ode.cafe18@gmail.com",
     "address": {
-      "en": "Tbilisi, Georgia",
-      "ka": "თბილისი, საქართველო"
+      "en": "G. Atoneli street 18, Tbilisi, Georgia",
+      "ka": "გ. ათონელის ქ. 18, თბილისი, საქართველო"
     },
+    "mapUrl": "https://maps.app.goo.gl/8yqYCDWy1q1xCM9g7",
     "instagram": "",
     "currency": "₾",
     "cover": "/media/c11365dcdf07a9a200f5-l.webp"

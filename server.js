@@ -65,7 +65,7 @@ async function removeImageIfOrphan(url) {
   if (!url?.startsWith('/media/u-')) return; // never touch seed images
   if (state.products.some((p) => p.image === url) || state.settings.cover === url) return;
   await unlink(path.join(UPLOAD_DIR, path.basename(url))).catch(() => {});
-  await unlink(path.join(THUMB_DIR, path.basename(url))).catch(() => {});
+  for (const w of SIZES) await unlink(path.join(THUMB_DIR, String(w), path.basename(url))).catch(() => {});
 }
 
 // ---------- public ----------
@@ -78,10 +78,10 @@ app.get('/api/menu', (_req, res) => {
     .sort(byOrder)
     .map(({ id, categoryId, name, description, price, image, featured }) => ({ id, categoryId, name, description, price, image, featured }));
   const withItems = new Set(products.map((p) => p.categoryId));
-  const { name, tagline, hours, phone, email, address, instagram, currency, cover } = state.settings;
+  const { name, tagline, hours, phone, email, address, mapUrl, instagram, currency, cover } = state.settings;
   res.set('Cache-Control', 'no-cache');
   res.json({
-    settings: { name, tagline, hours, phone, email, address, instagram, currency, cover },
+    settings: { name, tagline, hours, phone, email, address, mapUrl, instagram, currency, cover },
     categories: categories.filter((c) => withItems.has(c.id)).map(({ id, name }) => ({ id, name })),
     products,
   });
@@ -196,6 +196,11 @@ admin.put('/settings', async (req, res) => {
   if ('phone' in b) s.phone = str(b.phone, 40);
   if ('email' in b) s.email = str(b.email, 80);
   if ('instagram' in b) s.instagram = str(b.instagram, 120);
+  if ('mapUrl' in b) {
+    const url = str(b.mapUrl, 600);
+    if (url && !/^https:\/\//.test(url)) return bad(res, 'Map link must start with https://');
+    s.mapUrl = url;
+  }
   if ('hours' in b) s.hours = { open: time(b.hours?.open, s.hours.open), close: time(b.hours?.close, s.hours.close) };
   if ('cover' in b && String(b.cover).startsWith('/media/')) {
     const prev = s.cover;
@@ -221,8 +226,9 @@ admin.post('/upload', upload.single('image'), async (req, res) => {
     const name = `u-${Date.now().toString(36)}${crypto.randomBytes(4).toString('hex')}.webp`;
     await sharp(req.file.buffer)
       .rotate()
-      .resize(wide ? { width: 2000, height: 1200, fit: 'cover' } : { width: 900, height: 900, fit: 'cover' })
-      .webp({ quality: 82 })
+      // keep the full frame and plenty of pixels; the menu crops and picks a size per screen
+      .resize(wide ? { width: 2400, height: 1600, fit: 'inside', withoutEnlargement: true } : { width: 1600, height: 1600, fit: 'inside', withoutEnlargement: true })
+      .webp({ quality: 85 })
       .toFile(path.join(UPLOAD_DIR, name));
     res.json({ url: `/media/${name}` });
   } catch {
@@ -236,26 +242,30 @@ app.use('/api', (_req, res) => bad(res, 'Not found', 404));
 // ---------- static ----------
 const SEED_IMG = path.join(ROOT, 'seed', 'images');
 const THUMB_DIR = path.join(DATA_DIR, 'thumbs');
+const SIZES = [360, 640, 1080]; // widths the menu asks for, via srcset
 await mkdir(UPLOAD_DIR, { recursive: true });
-await mkdir(THUMB_DIR, { recursive: true });
+for (const w of SIZES) await mkdir(path.join(THUMB_DIR, String(w)), { recursive: true });
 const longCache = { maxAge: '30d', immutable: true };
 const exists = (p) => access(p).then(() => true, () => false);
 
-// Small thumbnails for the menu grid (phones download ~4x less). Generated once, then cached on disk.
+// Resized copies (/media/w/640/x.webp) so each phone downloads only what its screen can show.
+// Generated on first request, then cached on disk. Never upscales.
 const pending = new Map();
-app.get('/media/t/:name', async (req, res, next) => {
+app.get('/media/w/:w/:name', async (req, res, next) => {
+  const w = Number(req.params.w);
   const { name } = req.params;
-  if (!/^[\w-]+\.webp$/.test(name)) return next();
-  const out = path.join(THUMB_DIR, name);
+  if (!SIZES.includes(w) || !/^[\w-]+\.webp$/.test(name)) return next();
+  const out = path.join(THUMB_DIR, String(w), name);
   try {
     if (!(await exists(out))) {
       const src = [path.join(UPLOAD_DIR, name), path.join(SEED_IMG, name)];
       const from = (await exists(src[0])) ? src[0] : (await exists(src[1])) ? src[1] : null;
       if (!from) return next();
-      if (!pending.has(name)) {
-        pending.set(name, sharp(from).resize(480, 480, { fit: 'cover' }).webp({ quality: 74 }).toFile(out).finally(() => pending.delete(name)));
+      const key = `${w}/${name}`;
+      if (!pending.has(key)) {
+        pending.set(key, sharp(from).resize({ width: w, withoutEnlargement: true }).webp({ quality: 82 }).toFile(out).finally(() => pending.delete(key)));
       }
-      await pending.get(name);
+      await pending.get(key);
     }
     res.sendFile(out, { maxAge: '30d', immutable: true });
   } catch (err) { next(err); }

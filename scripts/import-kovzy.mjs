@@ -26,12 +26,12 @@ async function post(endpoint, lang) {
 
 const exists = (p) => access(p).then(() => true, () => false);
 
-async function download(hash, size = 'medium') {
+async function download(hash, suffix = '') {
   if (!hash) return '';
-  const file = `${hash.slice(0, 20)}${size === 'large' ? '-l' : ''}.webp`;
+  const file = `${hash.slice(0, 20)}${suffix}.webp`; // always the 'large' (960px) version, the biggest the old menu has
   const dest = path.join(IMG_DIR, file);
   if (!(await exists(dest))) {
-    const res = await fetch(`${BUCKET}${hash}/${size}.webp`);
+    const res = await fetch(`${BUCKET}${hash}/large.webp`);
     if (!res.ok) { console.warn('  ! missing image', hash); return ''; }
     await writeFile(dest, Buffer.from(await res.arrayBuffer()));
   }
@@ -120,10 +120,11 @@ const settings = {
   hours: { open: '09:00', close: '00:00' },
   phone: '+995 599 93 84 37',
   email: 'ode.cafe18@gmail.com',
-  address: { en: 'Tbilisi, Georgia', ka: 'თბილისი, საქართველო' },
+  address: { en: 'G. Atoneli street 18, Tbilisi, Georgia', ka: 'გ. ათონელის ქ. 18, თბილისი, საქართველო' },
+  mapUrl: 'https://maps.app.goo.gl/8yqYCDWy1q1xCM9g7',
   instagram: '',
   currency: '₾',
-  cover: await download(COVER, 'large'),
+  cover: await download(COVER, '-l'),
 };
 
 await writeFile(path.join(SEED, 'menu.json'), JSON.stringify({ settings, categories, products }, null, 2));

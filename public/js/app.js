@@ -6,12 +6,12 @@ const T = {
   en: {
     menu: 'Menu', search: 'Search the menu', signature: 'Signature', noResults: 'No matches',
     tryElse: 'Try another word', results: 'Results', hours: 'Hours', address: 'Address', daily: 'Every day',
-    call: 'Call', unavailable: 'The menu is unavailable right now.',
+    call: 'Call', directions: 'Directions', unavailable: 'The menu is unavailable right now.',
   },
   ka: {
     menu: 'მენიუ', search: 'მენიუში ძებნა', signature: 'რჩეული', noResults: 'ვერაფერი მოიძებნა',
     tryElse: 'სცადეთ სხვა სიტყვა', results: 'შედეგები', hours: 'სამუშაო საათები', address: 'მისამართი', daily: 'ყოველდღე',
-    call: 'დარეკვა', unavailable: 'მენიუ დროებით მიუწვდომელია.',
+    call: 'დარეკვა', directions: 'რუკაზე ნახვა', unavailable: 'მენიუ დროებით მიუწვდომელია.',
   },
 };
 
@@ -31,12 +31,21 @@ const tr = (o) => (o ? o[lang] || o.en || o.ka || '' : '');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const money = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(2));
 const priceHTML = (n) => `${money(n)}<small>${esc(menu.settings.currency || '₾')}</small>`;
-const thumb = (url) => (url?.startsWith('/media/') ? url.replace('/media/', '/media/t/') : url);
+// resized copies served by /media/w/<width>/… — the browser picks the one that fits its screen
+const sized = (url, w) => (url?.startsWith('/media/') ? url.replace('/media/', `/media/w/${w}/`) : url);
+const srcset = (url) => (url?.startsWith('/media/') ? [360, 640, 1080].map((w) => `${sized(url, w)} ${w}w`).concat(`${url} 1600w`).join(', ') : '');
+const SIZES = {
+  // deliberately one step generous so photos stay crisp on phones
+  card: '(min-width: 1100px) 30vw, (min-width: 720px) 40vw, 64vw',
+  feature: '(min-width: 720px) 30vw, 72vw',
+  sheet: '(min-width: 820px) 470px, 100vw',
+};
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const icons = {
   phone: '<svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>',
   mail: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+  pin: '<svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
   ig: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>',
 };
 
@@ -64,9 +73,14 @@ function renderStatic() {
     hero.src = s.cover;
   }
   $('#tagline').textContent = tr(s.tagline);
+  const addr = $('#heroAddr');
+  addr.hidden = !tr(s.address);
+  addr.querySelector('span').textContent = tr(s.address);
+  if (s.mapUrl) addr.href = s.mapUrl; else addr.removeAttribute('href');
   renderStatus();
 
   const links = [
+    s.mapUrl && `<a class="pill-link" href="${esc(s.mapUrl)}" target="_blank" rel="noopener">${icons.pin}${t('directions')}</a>`,
     s.phone && `<a class="pill-link" href="tel:${esc(s.phone.replace(/[^\d+]/g, ''))}">${icons.phone}${esc(s.phone)}</a>`,
     s.instagram && `<a class="pill-link" href="${esc(s.instagram)}" target="_blank" rel="noopener">${icons.ig}Instagram</a>`,
     s.email && `<a class="pill-link" href="mailto:${esc(s.email)}">${icons.mail}${esc(s.email)}</a>`,
@@ -75,7 +89,7 @@ function renderStatic() {
     <div class="footer-inner">
       <div class="fmark">ode<span>.</span></div>
       <div><h4>${t('hours')}</h4><p>${t('daily')}<br>${esc(s.hours?.open || '')} — ${esc(s.hours?.close || '')}</p></div>
-      <div><h4>${t('address')}</h4><p>${esc(tr(s.address))}</p></div>
+      <div><h4>${t('address')}</h4>${s.mapUrl ? `<a class="addr" href="${esc(s.mapUrl)}" target="_blank" rel="noopener">${esc(tr(s.address))}</a>` : `<p>${esc(tr(s.address))}</p>`}</div>
       <div class="contact">${links}</div>
       <p class="fine">© ${new Date().getFullYear()} ${esc(s.name || 'Ode')}</p>
     </div>`;
@@ -100,7 +114,7 @@ function renderStatus() {
 }
 
 // ---------- menu ----------
-const imgTag = (src, cls = '') => `<img${cls ? ` class="${cls}"` : ''} src="${esc(src)}" alt="" loading="lazy" decoding="async" width="480" height="480">`;
+const imgTag = (url, sizes) => `<img src="${esc(sized(url, 640))}" srcset="${esc(srcset(url))}" sizes="${sizes}" alt="" loading="lazy" decoding="async" width="640" height="640">`;
 
 function cardHTML(p, i, q) {
   const name = tr(p.name);
@@ -109,7 +123,7 @@ function cardHTML(p, i, q) {
   const hl = (s) => (re ? esc(s).replace(re, '<mark>$1</mark>') : esc(s));
   return `
   <button class="card" type="button" data-id="${p.id}" style="--i:${i % 6}">
-    <div class="media">${p.image ? imgTag(thumb(p.image)) : `<span class="noimg">${esc(name[0] || 'o')}</span>`}</div>
+    <div class="media">${p.image ? imgTag(p.image, SIZES.card) : `<span class="noimg">${esc(name[0] || 'o')}</span>`}</div>
     <div class="body">
       <h3 class="name">${hl(name)}</h3>
       ${desc ? `<p class="desc">${hl(desc)}</p>` : ''}
@@ -147,7 +161,7 @@ function renderMenu() {
       <div class="section-head"><h2><em>${t('signature')}</em></h2><span class="rule"></span></div>
       <div class="strip">${featured.map((p, i) => `
         <button class="feature" type="button" data-id="${p.id}" style="--i:${i}">
-          <div class="media">${p.image ? imgTag(p.image) : ''}</div>
+          <div class="media">${p.image ? imgTag(p.image, SIZES.feature) : ''}</div>
           <div class="ftext"><h3>${esc(tr(p.name))}</h3><span class="price">${priceHTML(p.price)}</span></div>
         </button>`).join('')}
       </div>
@@ -237,11 +251,13 @@ function fillSheet(p, dir) {
   const img = $('#sheetImg');
   media.classList.toggle('empty', !p.image);
   if (p.image) {
-    // show the cached thumbnail instantly, swap in the sharp photo once it's loaded
-    img.src = thumb(p.image);
-    const full = new Image();
-    full.onload = () => { if (current === p) img.src = p.image; };
-    full.src = p.image;
+    // show the grid's (already cached) copy instantly, then swap in the sharpest size for this screen
+    img.removeAttribute('srcset');
+    img.src = sized(p.image, 640);
+    const sharp = new Image();
+    sharp.sizes = SIZES.sheet;
+    sharp.srcset = srcset(p.image);
+    sharp.onload = () => { if (current === p) img.src = sharp.currentSrc || sharp.src; };
   }
   $('#sheetCat').textContent = tr(cat?.name);
   $('#sheetTitle').textContent = tr(p.name);
