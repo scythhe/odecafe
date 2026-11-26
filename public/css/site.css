@@ -65,6 +65,32 @@ html[lang="ka"] .block h2 { font: 500 29px/1.35 'Noto Serif Georgian', var(--ser
 .ph.reveal.in { clip-path: inset(0 0 0 0 round var(--radius)); }
 .ph.reveal.in img { transform: none; }
 
+/* ---------- live piano ---------- */
+.live { padding-top: 56px; }
+@media (min-width: 900px) { .live { padding-top: 96px; } }
+.live-card {
+  position: relative; margin: 0; overflow: hidden; isolation: isolate;
+  aspect-ratio: 4 / 5; border-radius: var(--radius); border: 1px solid var(--line);
+}
+.live-card img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; transform: scale(1.08); transition: transform 2s var(--ease-out); }
+.live-card.in img { transform: none; }
+.live-card::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgb(10 8 6 / .92) 0%, rgb(10 8 6 / .55) 32%, transparent 62%); }
+.live-card figcaption { position: absolute; inset: auto 0 0; padding: 28px 24px 30px; }
+.live-kicker { display: flex; align-items: center; gap: 10px; margin: 0 0 10px !important; color: var(--text) !important; font-size: 12px !important; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+html[lang="ka"] .live-kicker { font-size: 13.5px !important; letter-spacing: .02em; }
+.live-kicker i { width: 8px; height: 8px; border-radius: 50%; background: #e07a5f; box-shadow: 0 0 0 0 rgb(224 122 95 / .6); animation: livePulse 2s infinite; }
+@keyframes livePulse { 70% { box-shadow: 0 0 0 10px rgb(224 122 95 / 0); } 100% { box-shadow: 0 0 0 0 rgb(224 122 95 / 0); } }
+.live-card h2 { margin: 0 0 6px !important; }
+.live-time { margin: 0 !important; max-width: none !important; color: var(--accent) !important; font: 400 54px/1 var(--serif) !important; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.live-time span { color: rgb(232 176 113 / .55); margin: 0 .08em; }
+@media (min-width: 900px) {
+  .live-card { aspect-ratio: 16 / 8; }
+  .live-card img { object-position: 50% 62%; }
+  .live-card::after { background: linear-gradient(to right, rgb(10 8 6 / .9) 0%, rgb(10 8 6 / .5) 38%, transparent 70%); }
+  .live-card figcaption { inset: 0 auto 0 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 56px; max-width: 560px; }
+  .live-time { font-size: 80px !important; }
+}
+
 /* ---------- about ---------- */
 .about-grid { display: grid; gap: 56px; }
 .lead { color: var(--text) !important; font: 400 27px/1.4 var(--serif) !important; letter-spacing: -.005em; max-width: 24em !important; }

@@ -5,6 +5,7 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const T = {
   en: {
     menu: 'Menu', viewMenu: 'View menu', reserve: 'Reserve a table',
+    liveKicker: 'Live music', liveTitle: 'Live piano',
     aboutEyebrow: 'About Ode',
     aboutText: 'Ode is a restaurant in the center of Tbilisi featuring a cozy dining room, a terrace, and warm hospitality. It is ideal for leisurely lunches, family gatherings, and elegant dinners accompanied by live piano music.',
     factTerrace: 'Terrace', factHall: 'Dining room', factPiano: 'Live piano',
@@ -20,6 +21,7 @@ const T = {
   },
   ka: {
     menu: 'მენიუ', viewMenu: 'მენიუს ნახვა', reserve: 'დაჯავშნა',
+    liveKicker: 'ცოცხალი მუსიკა', liveTitle: 'ცოცხალი პიანინო',
     aboutEyebrow: 'ოდეს შესახებ',
     aboutText: 'ოდე თბილისის ცენტრში მდებარე რესტორანია მყუდრო დარბაზით, ტერასითა და თბილი მასპინძლობით. აქ იდეალურია დაუჩქარებელი სადილი, ოჯახური შეკრება თუ ელეგანტური ვახშამი ცოცხალი ფორტეპიანოს თანხლებით.',
     factTerrace: 'ტერასა', factHall: 'დარბაზი', factPiano: 'ცოცხალი ფორტეპიანო',

@@ -117,7 +117,7 @@ const settings = {
   name: 'Ode',
   tagline: { en: 'Wine & kitchen', ka: 'ღვინო და სამზარეულო' },
   notice: { en: 'Tax +15%', ka: 'დღგ +15%', enabled: true },
-  hours: { open: '09:00', close: '00:00' },
+  hours: { open: '13:00', close: '01:00' },
   phone: '+995 599 93 84 37',
   email: 'ode.cafe18@gmail.com',
   address: { en: 'G. Atoneli street 18, Tbilisi, Georgia', ka: 'გ. ათონელის ქ. 18, თბილისი, საქართველო' },
