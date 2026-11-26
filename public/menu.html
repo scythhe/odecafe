@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e0c0a">
+  <meta name="description" content="Ode — wine & kitchen, Tbilisi. Menu.">
+  <title>Menu — Ode</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="/" aria-label="Ode — home"><img src="/img/logo-mark.webp" alt="Ode" width="474" height="296"></a>
+    <button class="lang" id="langBtn" type="button" aria-label="Language / ენა">
+      <span data-l="ka">ქა</span><span data-l="en">EN</span>
+    </button>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-media"><img id="heroImg" alt="" fetchpriority="high" decoding="async"></div>
+    <div class="hero-content">
+      <p class="status" id="status"><i></i><span></span></p>
+      <h1 class="hero-logo"><img src="/img/logo.webp" alt="Ode — wine & kitchen" width="474" height="394" fetchpriority="high"></h1>
+      <a class="hero-addr" id="heroAddr" target="_blank" rel="noopener" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        <span></span>
+      </a>
+    </div>
+    <a href="#menu" class="to-menu" id="toMenu">
+      <span data-i18n="menu"></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <nav class="rail" id="rail" aria-label="Categories">
+    <div class="search" id="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/></svg>
+      <input id="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search">
+      <button type="button" class="search-clear" id="qClear" aria-label="Clear">
+        <svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></svg>
+      </button>
+    </div>
+    <div class="chips" id="chips"></div>
+  </nav>
+
+  <main id="menu" class="menu">
+    <div class="skeleton" aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+    <div class="sheet-inner" id="sheetInner">
+      <div class="grab" aria-hidden="true"></div>
+      <button class="close" data-close type="button" aria-label="Close">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="sheet-media" id="sheetMedia"><img id="sheetImg" alt=""></div>
+      <div class="sheet-body" id="sheetBody">
+        <p class="sheet-cat" id="sheetCat"></p>
+        <h2 id="sheetTitle"></h2>
+        <p class="sheet-desc" id="sheetDesc"></p>
+        <div class="sheet-foot">
+          <span class="sheet-price" id="sheetPrice"></span>
+          <div class="sheet-nav">
+            <button type="button" id="prevBtn" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></svg></button>
+            <span id="sheetPos"></span>
+            <button type="button" id="nextBtn" aria-label="Next"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="notice" id="notice" aria-labelledby="noticeMain">
+    <div class="notice-card">
+      <button class="close notice-x" data-close type="button" aria-label="Close">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <img class="notice-logo" src="/img/logo.webp" alt="" width="474" height="394">
+      <p class="notice-label" data-i18n="notice"></p>
+      <p class="notice-main" id="noticeMain"></p>
+      <p class="notice-alt" id="noticeAlt"></p>
+      <button class="notice-ok" data-close type="button" data-i18n="gotIt"></button>
+    </div>
+  </dialog>
+
+  <script src="/js/app.js" type="module"></script>
+</body>
+</html>

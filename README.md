@@ -1,8 +1,9 @@
-# Ode — digital menu
+# Ode — website & menu
 
-Bilingual (ქა / EN) menu for Ode cafe with an admin panel to manage products, categories and cafe details.
+Bilingual (ქა / EN) website for Ode restaurant, with its menu and an admin panel to manage products, categories and cafe details.
 
-- **Menu** — `/`
+- **Website** — `/`
+- **Menu** — `/menu`
 - **Admin** — `/admin`
 
 ## Run
@@ -17,7 +18,12 @@ Open http://localhost:3000. The admin password defaults to `ode-admin` locally �
 ## How it works
 
 - `server.js` — Express server: public menu API, admin API, image uploads (re-encoded to WebP with sharp).
-- `public/` — the menu (`index.html`, `css/`, `js/`) and admin panel (`admin/`). Plain HTML/CSS/JS, no build step.
+- `public/` — plain HTML/CSS/JS, no build step:
+  - website: `index.html`, `css/site.css`, `js/site.js` (texts in both languages live in `js/site.js`)
+  - menu: `menu.html`, `css/app.css`, `js/app.js` (the website reuses `app.css` for the shared header and footer)
+  - admin: `admin/`
+  - photos: `img/` (logo, and the website photos as WebP in `img/site/`)
+- The website reads hours, address, phone, map link and cover from the admin's Cafe tab, and shows the menu's signature dishes. Reservations call or open WhatsApp with the Cafe-tab phone number.
 - `seed/` — the original menu (138 products, 19 categories) and photos, imported from the old menu.
 - `data/` — the live menu (`db.json`) and uploaded photos. Created from `seed/` on first run. Not committed.
 

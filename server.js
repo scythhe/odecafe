@@ -272,6 +272,11 @@ app.get('/media/w/:w/:name', async (req, res, next) => {
   } catch (err) { next(err); }
 });
 app.use('/media', express.static(UPLOAD_DIR, longCache), express.static(SEED_IMG, longCache));
+// odecafe.com → website (public/index.html) · /menu → menu (public/menu.html) · /admin → admin
+app.use((req, res, next) => {
+  if (req.path === '/menu/') return res.redirect(301, '/menu' + req.url.slice(req.path.length));
+  next();
+});
 app.use(express.static(path.join(ROOT, 'public'), { extensions: ['html'] }));
 app.get('/admin', (_req, res) => res.sendFile(path.join(ROOT, 'public', 'admin', 'index.html')));
 

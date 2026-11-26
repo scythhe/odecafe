@@ -258,6 +258,7 @@ mark { background: rgb(232 176 113 / .28); color: inherit; border-radius: 4px; p
 .footer-inner { max-width: 1400px; margin: 0 auto; display: grid; gap: 26px; grid-template-columns: 1fr 1fr; }
 .footer .fmark { grid-column: 1 / -1; width: 150px; height: auto; opacity: .92; }
 .footer h4 { margin: 0 0 6px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--faint); font-weight: 700; }
+html[lang="ka"] .footer h4 { font-size: 13px; letter-spacing: 0; font-weight: 600; }
 .footer p { margin: 0; color: var(--muted); line-height: 1.7; font-size: 14px; }
 .footer .contact { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
 .pill-link { display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 99px; background: var(--surface); border: 1px solid var(--line); color: var(--text); font-size: 14px; font-weight: 600; transition: scale .2s, border-color .2s; }
