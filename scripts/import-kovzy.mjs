@@ -10,7 +10,6 @@ const SEED = path.join(ROOT, 'seed');
 const IMG_DIR = path.join(SEED, 'images');
 const API = 'https://odecafe.kovzy.com/api';
 const BUCKET = 'https://storage.googleapis.com/kovzy-prod-images-x15cbi78ocz8iei2/';
-const COVER = 'c11365dcdf07a9a200f5217354ba54c3440f1ca6554c9bec6b99866e6784e3b7';
 const KA = 1, EN = 2;
 const hasGeorgian = (s) => /[Ⴀ-ჿ]/.test(s || '');
 

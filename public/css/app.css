@@ -369,7 +369,7 @@ body:has(dialog[open]) { overflow: hidden; }
 .notice-label { margin: 0 0 6px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
 html[lang="ka"] .notice-label { font-size: 13.5px; letter-spacing: .02em; font-weight: 600; }
 .notice-main { margin: 0; display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: 0 12px; font-size: 22px; font-weight: 600; line-height: 1.2; }
-.notice-main b { font: italic 400 76px/1 var(--serif); color: var(--accent); letter-spacing: -.03em; }
+.notice-main b { font: normal 400 76px/1 var(--serif); color: var(--accent); letter-spacing: -.03em; }
 html[lang="ka"] .notice-main { font-size: 24px; }
 .notice-alt { margin: 6px 0 0; color: var(--faint); font-size: 14px; font-weight: 600; }
 .notice-alt:empty { display: none; }
