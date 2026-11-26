@@ -5,7 +5,7 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const T = {
   en: {
     menu: 'Menu', viewMenu: 'View menu', reserve: 'Reserve a table',
-    liveKicker: 'Live music', liveTitle: 'Live piano',
+    liveTitle: 'Live piano',
     aboutEyebrow: 'About Ode',
     aboutText: 'Ode is a restaurant in the center of Tbilisi featuring a cozy dining room, a terrace, and warm hospitality. It is ideal for leisurely lunches, family gatherings, and elegant dinners accompanied by live piano music.',
     factTerrace: 'Terrace', factHall: 'Dining room', factPiano: 'Live piano',
@@ -21,7 +21,7 @@ const T = {
   },
   ka: {
     menu: 'მენიუ', viewMenu: 'მენიუს ნახვა', reserve: 'დაჯავშნა',
-    liveKicker: 'ცოცხალი მუსიკა', liveTitle: 'ცოცხალი პიანინო',
+    liveTitle: 'ცოცხალი პიანინო',
     aboutEyebrow: 'ოდეს შესახებ',
     aboutText: 'ოდე თბილისის ცენტრში მდებარე რესტორანია მყუდრო დარბაზით, ტერასითა და თბილი მასპინძლობით. აქ იდეალურია დაუჩქარებელი სადილი, ოჯახური შეკრება თუ ელეგანტური ვახშამი ცოცხალი ფორტეპიანოს თანხლებით.',
     factTerrace: 'ტერასა', factHall: 'დარბაზი', factPiano: 'ცოცხალი ფორტეპიანო',
@@ -102,21 +102,10 @@ function render() {
 }
 
 function renderStatus() {
+  // shows the working hours (green light always on), not a live open/closed state
   const { open, close } = data.settings.hours || {};
   if (!open || !close) return;
-  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tbilisi' }));
-  const toMin = (x) => { const [h, m] = x.split(':').map(Number); return h * 60 + m; };
-  const o = toMin(open);
-  let c = toMin(close);
-  if (c <= o) c += 1440;
-  let m = now.getHours() * 60 + now.getMinutes();
-  if (m < o) m += 1440;
-  const isOpen = m >= o && m < c;
-  const el = $('#status');
-  el.classList.toggle('closed', !isOpen);
-  el.querySelector('span').textContent = lang === 'ka'
-    ? (isOpen ? `ღიაა ${close}-მდე` : `დაკეტილია · გაიხსნება ${open}-ზე`)
-    : (isOpen ? `Open · until ${close}` : `Closed · opens at ${open}`);
+  $('#status span').textContent = `${lang === 'ka' ? 'სამუშაო საათები' : 'Hours'} ${open} — ${close}`;
 }
 
 // signature dishes from the live menu (managed in the admin)

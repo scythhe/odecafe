@@ -95,21 +95,10 @@ function renderStatic() {
 }
 
 function renderStatus() {
+  // shows the working hours (green light always on), not a live open/closed state
   const { open, close } = menu.settings.hours || {};
   if (!open || !close) return;
-  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tbilisi' }));
-  const toMin = (s) => { const [h, m] = s.split(':').map(Number); return h * 60 + m; };
-  const o = toMin(open);
-  let c = toMin(close);
-  if (c <= o) c += 1440;
-  let m = now.getHours() * 60 + now.getMinutes();
-  if (m < o) m += 1440;
-  const isOpen = m >= o && m < c;
-  const el = $('#status');
-  el.classList.toggle('closed', !isOpen);
-  el.querySelector('span').textContent = lang === 'ka'
-    ? (isOpen ? `ღიაა ${close}-მდე` : `დაკეტილია · გაიხსნება ${open}-ზე`)
-    : (isOpen ? `Open · until ${close}` : `Closed · opens at ${open}`);
+  $('#status span').textContent = `${lang === 'ka' ? 'სამუშაო საათები' : 'Hours'} ${open} — ${close}`;
 }
 
 // ---------- menu ----------
