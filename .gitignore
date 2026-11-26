@@ -1,5 +1,8 @@
 node_modules/
 data/
+dist/
+.netlify/
+lib/deploy-context.mjs
 .env
 *.log
 .DS_Store

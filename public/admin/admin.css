@@ -220,6 +220,12 @@ input[type="time"]::-webkit-calendar-picker-indicator { filter: invert(.7); }
 .cat .del { display: grid; }
 @media (min-width: 900px) { .cat { grid-template-columns: auto minmax(0, 1fr) auto; } .cat-names { grid-template-columns: 1fr 1fr; gap: 8px; } .cat input[data-k="ka"] { height: 38px; } }
 
+/* backup */
+.backup { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 32px; padding: 16px; border-radius: 18px; border: 1px dashed var(--line-2); }
+.backup small { display: block; color: var(--faint); font-size: 13px; }
+.backup-actions { display: flex; gap: 8px; }
+.btn.ghost-box { background: var(--surface); color: var(--text); cursor: pointer; }
+
 /* settings */
 .popup-box { display: grid; gap: 10px; padding: 12px; border-radius: 20px; border: 1px solid var(--line); background: rgb(232 176 113 / .04); }
 .popup-box .toggle-row { background: var(--surface); }

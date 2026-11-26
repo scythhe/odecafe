@@ -388,9 +388,35 @@ $('#editorDelete').addEventListener('click', async () => {
 });
 
 // image upload (tap or drag & drop)
+// Photos are resized here in the browser, then uploaded together with smaller copies for phones.
+// Keeps uploads small and fast on mobile data, and the server needs no image library.
+async function encode(bitmap, maxW, quality) {
+  const scale = Math.min(1, maxW / bitmap.width);
+  const canvas = document.createElement('canvas');
+  canvas.width = Math.round(bitmap.width * scale);
+  canvas.height = Math.round(bitmap.height * scale);
+  const ctx = canvas.getContext('2d');
+  ctx.imageSmoothingQuality = 'high';
+  ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  const blob = (type) => new Promise((res) => canvas.toBlob(res, type, quality));
+  const webp = await blob('image/webp');
+  // older Safari can't encode WebP and silently returns PNG — use JPEG there
+  return webp?.type === 'image/webp' ? webp : blob('image/jpeg');
+}
+
 async function upload(file, kind = 'product') {
+  let bitmap;
+  try { bitmap = await createImageBitmap(file); } catch {
+    throw new Error('This photo format isn’t supported — please use a JPG or PNG');
+  }
   const fd = new FormData();
-  fd.append('image', file);
+  if (kind === 'cover') {
+    fd.append('image', await encode(bitmap, 2400, 0.85), 'cover');
+  } else {
+    fd.append('image', await encode(bitmap, 1600, 0.85), 'photo');
+    for (const [w, q] of [[1080, 0.83], [640, 0.8], [360, 0.78]]) fd.append(`w${w}`, await encode(bitmap, w, q), `w${w}`);
+  }
+  bitmap.close?.();
   return (await api('POST', `/api/admin/upload?kind=${kind}`, fd)).url;
 }
 function dropzone(zone, input, onFile) {
@@ -522,6 +548,23 @@ dropzone($('#coverDrop'), $('#coverFile'), async (file) => {
     renderSettings();
     toast('Cover updated');
   } catch (e) { fail(e); } finally { zone.classList.remove('busy'); }
+});
+
+// ---------- backup restore ----------
+$('#restoreFile').addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  e.target.value = '';
+  if (!file) return;
+  let backup;
+  try { backup = JSON.parse(await file.text()); } catch { return toast('That file is not an Ode menu backup', true); }
+  const n = backup?.products?.length ?? 0;
+  if (!(await confirmBox('Restore backup?', `The current menu will be replaced with this backup (${n} products). Download a backup first if you might need today’s version.`, 'Restore'))) return;
+  try {
+    await api('POST', '/api/admin/import', backup);
+    data = await api('GET', '/api/admin/menu');
+    renderAll();
+    toast('Backup restored');
+  } catch (err) { fail(err); }
 });
 
 // ---------- boot ----------
