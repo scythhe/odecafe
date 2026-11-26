@@ -491,7 +491,10 @@ function renderSettings() {
   const s = data.settings;
   const f = $('#settingsForm');
   const get = (path) => path.split('.').reduce((o, k) => o?.[k], s);
-  $$('input[name]', f).forEach((el) => { el.value = get(el.name) ?? ''; });
+  $$('input[name]', f).forEach((el) => {
+    if (el.type === 'checkbox') el.checked = get(el.name) !== false;
+    else el.value = get(el.name) ?? '';
+  });
   if (s.cover) $('#coverImg').src = s.cover;
   $('#coverDrop').classList.toggle('has', !!s.cover);
 }
@@ -500,7 +503,8 @@ $('#settingsForm').addEventListener('submit', async (e) => {
   const body = {};
   $$('input[name]', e.currentTarget).forEach((el) => {
     const [a, b] = el.name.split('.');
-    if (b) (body[a] ??= {})[b] = el.value; else body[a] = el.value;
+    const v = el.type === 'checkbox' ? el.checked : el.value;
+    if (b) (body[a] ??= {})[b] = v; else body[a] = v;
   });
   try {
     data.settings = await api('PUT', '/api/admin/settings', body);

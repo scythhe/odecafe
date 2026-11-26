@@ -116,7 +116,8 @@ for (const id of ['p130', 'p27', 'p42', 'p58', 'p81', 'p8']) {
 
 const settings = {
   name: 'Ode',
-  tagline: { en: 'Cafe & wine bar', ka: 'კაფე & ღვინის ბარი' },
+  tagline: { en: 'Wine & kitchen', ka: 'ღვინო და სამზარეულო' },
+  notice: { en: 'Tax +15%', ka: 'დღგ +15%', enabled: true },
   hours: { open: '09:00', close: '00:00' },
   phone: '+995 599 93 84 37',
   email: 'ode.cafe18@gmail.com',
@@ -124,7 +125,7 @@ const settings = {
   mapUrl: 'https://maps.app.goo.gl/8yqYCDWy1q1xCM9g7',
   instagram: '',
   currency: '₾',
-  cover: await download(COVER, '-l'),
+  cover: '/media/cover-ode.webp', // photo supplied by the cafe (seed/images/cover-ode.webp)
 };
 
 await writeFile(path.join(SEED, 'menu.json'), JSON.stringify({ settings, categories, products }, null, 2));

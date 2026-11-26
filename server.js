@@ -78,10 +78,10 @@ app.get('/api/menu', (_req, res) => {
     .sort(byOrder)
     .map(({ id, categoryId, name, description, price, image, featured }) => ({ id, categoryId, name, description, price, image, featured }));
   const withItems = new Set(products.map((p) => p.categoryId));
-  const { name, tagline, hours, phone, email, address, mapUrl, instagram, currency, cover } = state.settings;
+  const { name, tagline, hours, phone, email, address, mapUrl, instagram, currency, cover, notice } = state.settings;
   res.set('Cache-Control', 'no-cache');
   res.json({
-    settings: { name, tagline, hours, phone, email, address, mapUrl, instagram, currency, cover },
+    settings: { name, tagline, hours, phone, email, address, mapUrl, instagram, currency, cover, notice },
     categories: categories.filter((c) => withItems.has(c.id)).map(({ id, name }) => ({ id, name })),
     products,
   });
@@ -196,6 +196,7 @@ admin.put('/settings', async (req, res) => {
   if ('phone' in b) s.phone = str(b.phone, 40);
   if ('email' in b) s.email = str(b.email, 80);
   if ('instagram' in b) s.instagram = str(b.instagram, 120);
+  if ('notice' in b) s.notice = { ...i18n(b.notice, 120), enabled: b.notice?.enabled !== false };
   if ('mapUrl' in b) {
     const url = str(b.mapUrl, 600);
     if (url && !/^https:\/\//.test(url)) return bad(res, 'Map link must start with https://');

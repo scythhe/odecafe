@@ -6,12 +6,12 @@ const T = {
   en: {
     menu: 'Menu', search: 'Search the menu', signature: 'Signature', noResults: 'No matches',
     tryElse: 'Try another word', results: 'Results', hours: 'Hours', address: 'Address', daily: 'Every day',
-    call: 'Call', directions: 'Directions', unavailable: 'The menu is unavailable right now.',
+    call: 'Call', directions: 'Directions', notice: 'Please note', gotIt: 'Got it', unavailable: 'The menu is unavailable right now.',
   },
   ka: {
     menu: 'მენიუ', search: 'მენიუში ძებნა', signature: 'რჩეული', noResults: 'ვერაფერი მოიძებნა',
     tryElse: 'სცადეთ სხვა სიტყვა', results: 'შედეგები', hours: 'სამუშაო საათები', address: 'მისამართი', daily: 'ყოველდღე',
-    call: 'დარეკვა', directions: 'რუკაზე ნახვა', unavailable: 'მენიუ დროებით მიუწვდომელია.',
+    call: 'დარეკვა', directions: 'რუკაზე ნახვა', notice: 'გთხოვთ, გაითვალისწინოთ', gotIt: 'გასაგებია', unavailable: 'მენიუ დროებით მიუწვდომელია.',
   },
 };
 
@@ -59,7 +59,7 @@ function applyLang() {
 function switchLang() {
   lang = lang === 'ka' ? 'en' : 'ka';
   store.set('ode.lang', lang);
-  const update = () => { applyLang(); renderStatic(); renderMenu(); if (sheet.open) fillSheet(current, 0); };
+  const update = () => { applyLang(); renderStatic(); renderMenu(); if (sheet.open) fillSheet(current, 0); if (notice.open) fillNotice(); };
   if (document.startViewTransition && !reduceMotion) document.startViewTransition(update);
   else update();
 }
@@ -72,7 +72,6 @@ function renderStatic() {
     hero.addEventListener('load', () => hero.classList.add('loaded'), { once: true });
     hero.src = s.cover;
   }
-  $('#tagline').textContent = tr(s.tagline);
   const addr = $('#heroAddr');
   addr.hidden = !tr(s.address);
   addr.querySelector('span').textContent = tr(s.address);
@@ -87,7 +86,7 @@ function renderStatic() {
   ].filter(Boolean).join('');
   $('#footer').innerHTML = `
     <div class="footer-inner">
-      <div class="fmark">ode<span>.</span></div>
+      <img class="fmark" src="/img/logo.webp" alt="Ode — wine & kitchen" width="474" height="394" loading="lazy">
       <div><h4>${t('hours')}</h4><p>${t('daily')}<br>${esc(s.hours?.open || '')} — ${esc(s.hours?.close || '')}</p></div>
       <div><h4>${t('address')}</h4>${s.mapUrl ? `<a class="addr" href="${esc(s.mapUrl)}" target="_blank" rel="noopener">${esc(tr(s.address))}</a>` : `<p>${esc(tr(s.address))}</p>`}</div>
       <div class="contact">${links}</div>
@@ -328,6 +327,38 @@ function sheetGestures() {
   sheet.addEventListener('pointercancel', end);
 }
 
+// ---------- popup shown on every visit (e.g. "Tax +15%") ----------
+const notice = $('#notice');
+// "+15%" (or any percentage / number) is set large in the accent colour
+const noticeHTML = (text) => esc(text).replace(/([+−-]?\s?\d+(?:[.,]\d+)?\s?%?)/, '<b>$1</b>');
+function fillNotice() {
+  const n = menu.settings.notice || {};
+  const main = n[lang] || n.en || n.ka || '';
+  const alt = n[lang === 'ka' ? 'en' : 'ka'] || '';
+  $('#noticeMain').innerHTML = noticeHTML(main);
+  $('#noticeAlt').textContent = alt && alt !== main ? alt : '';
+  return !!main;
+}
+function showNotice() {
+  if (menu.settings.notice?.enabled === false || !fillNotice()) return;
+  notice.showModal();
+  notice.querySelector('.notice-ok').focus({ preventScroll: true });
+  requestAnimationFrame(() => requestAnimationFrame(() => notice.classList.add('show')));
+}
+async function closeNotice() {
+  if (!notice.open || notice.classList.contains('closing')) return;
+  notice.classList.add('closing');
+  notice.classList.remove('show');
+  await wait(reduceMotion ? 0 : 320);
+  notice.close();
+  notice.classList.remove('closing');
+}
+notice.addEventListener('click', (e) => { if (e.target === notice || e.target.closest('[data-close]')) closeNotice(); });
+notice.addEventListener('cancel', (e) => { e.preventDefault(); closeNotice(); });
+
+// scroll position where the category rail docks under the (always visible) top bar
+const menuTop = () => $('#top').offsetHeight - $('#topbar').offsetHeight;
+
 // ---------- events ----------
 function bindUI() {
   $('#langBtn').addEventListener('click', switchLang);
@@ -362,7 +393,7 @@ function bindUI() {
     clearTimeout(deb);
     deb = setTimeout(() => {
       renderMenu();
-      const top = $('#rail').offsetTop;
+      const top = menuTop();
       if (window.scrollY < top - 1 || q.value) window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
     }, 140);
   });
@@ -390,9 +421,9 @@ function bindUI() {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(() => {
-      const stuck = rail.getBoundingClientRect().top <= 0.5;
+      const stuck = rail.getBoundingClientRect().top <= topbar.offsetHeight + 0.5;
       rail.classList.toggle('stuck', stuck);
-      topbar.classList.toggle('hide', stuck);
+      topbar.classList.toggle('solid', window.scrollY > 24);
       toTop.classList.toggle('show', window.scrollY > innerHeight * 2);
       updateSpy();
       ticking = false;
@@ -403,7 +434,7 @@ function bindUI() {
   toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
   $('#toMenu').addEventListener('click', (e) => {
     e.preventDefault();
-    window.scrollTo({ top: rail.offsetTop, behavior: reduceMotion ? 'auto' : 'smooth' });
+    window.scrollTo({ top: menuTop(), behavior: reduceMotion ? 'auto' : 'smooth' });
   });
 
   let rw;
@@ -424,4 +455,5 @@ byId = new Map(menu.products.map((p) => [p.id, p]));
 renderStatic();
 renderMenu();
 bindUI();
+setTimeout(showNotice, reduceMotion ? 0 : 650);
 if (location.hash.length > 1) document.getElementById(location.hash.slice(1))?.scrollIntoView();

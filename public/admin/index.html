@@ -16,7 +16,7 @@
   <!-- login -->
   <section class="login" id="login" hidden>
     <form class="login-card" id="loginForm">
-      <div class="login-mark">ode<span>.</span></div>
+      <img class="login-mark" src="/img/logo.webp" alt="Ode" width="474" height="394">
       <p class="login-sub">Admin</p>
       <label class="field">
         <span>Password</span>
@@ -30,7 +30,7 @@
   <!-- app -->
   <div class="app" id="app" hidden>
     <aside class="side">
-      <div class="side-mark">ode<span>.</span></div>
+      <img class="side-mark" src="/img/logo-mark.webp" alt="Ode" width="474" height="296">
       <nav class="tabs" id="tabs">
         <button type="button" data-view="products" class="active">
           <svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg>
@@ -102,6 +102,16 @@
               <span class="drop-loading"></span>
               <input type="file" accept="image/*" id="coverFile" hidden>
             </label>
+          </div>
+          <div class="popup-box">
+            <label class="toggle-row">
+              <div><b>Popup on every visit</b><small>Guests see it each time they open the menu</small></div>
+              <input type="checkbox" name="notice.enabled" class="switch">
+            </label>
+            <div class="grid2 tight">
+              <label class="field"><span>Popup text · EN</span><input name="notice.en" maxlength="120" placeholder="Tax +15%"></label>
+              <label class="field"><span>Popup text · KA</span><input name="notice.ka" maxlength="120" placeholder="დღგ +15%" lang="ka"></label>
+            </div>
           </div>
           <div class="grid2">
             <label class="field"><span>Tagline · EN</span><input name="tagline.en" maxlength="80"></label>

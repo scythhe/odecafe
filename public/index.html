@@ -14,7 +14,7 @@
 </head>
 <body>
   <header class="topbar" id="topbar">
-    <a class="brand" href="#top" aria-label="Ode">ode<span>.</span></a>
+    <a class="brand" href="#top" aria-label="Ode"><img src="/img/logo-mark.webp" alt="Ode" width="474" height="296"></a>
     <button class="lang" id="langBtn" type="button" aria-label="Language / ენა">
       <span data-l="ka">ქა</span><span data-l="en">EN</span>
     </button>
@@ -24,10 +24,7 @@
     <div class="hero-media"><img id="heroImg" alt="" fetchpriority="high" decoding="async"></div>
     <div class="hero-content">
       <p class="status" id="status"><i></i><span></span></p>
-      <h1 class="wordmark" aria-label="Ode">
-        <span style="--d:0">o</span><span style="--d:1">d</span><span style="--d:2">e</span>
-      </h1>
-      <p class="tagline" id="tagline"></p>
+      <h1 class="hero-logo"><img src="/img/logo.webp" alt="Ode — wine & kitchen" width="474" height="394" fetchpriority="high"></h1>
       <a class="hero-addr" id="heroAddr" target="_blank" rel="noopener" hidden>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
         <span></span>
@@ -80,6 +77,19 @@
           </div>
         </div>
       </div>
+    </div>
+  </dialog>
+
+  <dialog class="notice" id="notice" aria-labelledby="noticeMain">
+    <div class="notice-card">
+      <button class="close notice-x" data-close type="button" aria-label="Close">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <img class="notice-logo" src="/img/logo.webp" alt="" width="474" height="394">
+      <p class="notice-label" data-i18n="notice"></p>
+      <p class="notice-main" id="noticeMain"></p>
+      <p class="notice-alt" id="noticeAlt"></p>
+      <button class="notice-ok" data-close type="button" data-i18n="gotIt"></button>
     </div>
   </dialog>
 
