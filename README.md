@@ -13,7 +13,7 @@ npm install
 npm start
 ```
 
-Open http://localhost:3000. The admin password defaults to `ode-admin` locally — set `ADMIN_PASSWORD` before deploying (see `.env.example`).
+Open http://localhost:3000. `npm start` reads `ADMIN_PASSWORD` and `SESSION_SECRET` from a local `.env` file (never committed — see `.env.example`); without one, the admin password falls back to `ode-admin` for local testing only. On Netlify the same values are set under Environment variables.
 
 ## How it works
 
