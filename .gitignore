@@ -7,3 +7,6 @@ lib/deploy-context.mjs
 *.log
 .DS_Store
 Thumbs.db
+
+# local reference photos, not part of the site
+public/img/WhatsApp Image*
