@@ -4,6 +4,9 @@ name = "odecafe"
 main = "cloudflare/worker.mjs"
 compatibility_date = "2025-10-01"
 compatibility_flags = ["nodejs_compat"]
+# ADMIN_PASSWORD / SESSION_SECRET are set in the dashboard (Settings → Variables and secrets);
+# keep them on every deploy instead of resetting to this file.
+keep_vars = true
 
 # build the static files (pages + resized menu photos) before every deploy / dev run
 [build]
