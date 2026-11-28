@@ -62,6 +62,17 @@ Netlify builds automatically on every push (`netlify.toml`, build: `npm run buil
 2. **Branch deploys**: to test a branch (e.g. `odecafe-netlify`) before it goes live, enable branch deploys under Build & deploy → Branches and deploy contexts. It's served at `odecafe-netlify--<site>.netlify.app`.
 3. **Data**: each branch has its own store, so testing never touches the live menu. The live site uses the store `ode-live`. A new store starts from `seed/menu.json`; to move data between them, use **Backup → Download** on one and **Restore** on the other.
 
+## Deploying on Cloudflare (Workers, free — no badge)
+
+Static pages and menu photos are served from `dist/`; the API and uploaded photos run in a Worker (`cloudflare/worker.mjs`) with data in a D1 database (`lib/storage-d1.js`). Config: `wrangler.toml`.
+
+1. **D1 database**: Cloudflare → Storage & Databases → D1 → Create → name `ode`. Put its ID in `wrangler.toml` (`database_id`) and push.
+2. **Connect the repo**: Workers & Pages → Create → Import a repository → `scythhe/odecafe`. Build command is taken from `wrangler.toml`; deploy command `npx wrangler deploy`.
+3. **Secrets** (Worker → Settings → Variables and Secrets, type *Secret*): `ADMIN_PASSWORD`, `SESSION_SECRET`.
+4. **Domain**: add the domain to Cloudflare, point its nameservers there, then Worker → Settings → Domains & Routes → add `odecafe.ge` and `www.odecafe.ge`.
+
+Local test in Cloudflare's runtime: put test values in `.dev.vars` (ignored by Git), then `npm run cf:dev` → http://localhost:8787. Photos are stored in D1, whose rows are limited to 2 MB; the admin keeps uploads under that automatically.
+
 ## Deploying elsewhere
 
 Any Node 20+ host works with `npm start`. `data/` must live on **persistent storage** (e.g. a Render disk or Railway volume — point `DATA_DIR` at it), otherwise admin edits are lost on redeploy.

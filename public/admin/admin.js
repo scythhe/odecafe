@@ -422,11 +422,20 @@ async function upload(file, kind = 'product') {
   try { bitmap = await createImageBitmap(file); } catch {
     throw new Error('This photo format isn’t supported — please use a JPG or PNG');
   }
+  // keep each file under ~1.6 MB (hosting limit is 1.9 MB): step quality, then size, down if needed
+  const fit = async (maxW, q) => {
+    let blob;
+    for (const [w, quality] of [[maxW, q], [maxW, 0.72], [maxW, 0.6], [Math.round(maxW * 0.75), 0.6]]) {
+      blob = await encode(bitmap, w, quality);
+      if (blob.size <= 1.6 * 1024 * 1024) break;
+    }
+    return blob;
+  };
   const fd = new FormData();
   if (kind === 'cover') {
-    fd.append('image', await encode(bitmap, 2400, 0.85), 'cover');
+    fd.append('image', await fit(2400, 0.85), 'cover');
   } else {
-    fd.append('image', await encode(bitmap, 1600, 0.85), 'photo');
+    fd.append('image', await fit(1600, 0.85), 'photo');
     for (const [w, q] of [[1080, 0.83], [640, 0.8], [360, 0.78]]) fd.append(`w${w}`, await encode(bitmap, w, q), `w${w}`);
   }
   bitmap.close?.();

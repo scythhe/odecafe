@@ -10,3 +10,7 @@ Thumbs.db
 
 # local reference photos, not part of the site
 public/img/WhatsApp Image*
+
+# Cloudflare local dev
+.wrangler/
+.dev.vars
