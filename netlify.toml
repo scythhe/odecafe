@@ -1,0 +1,26 @@
+# Netlify: website, /menu and /admin are static files; the API and uploaded photos
+# come from one function (netlify/functions/api.mjs) with data in Netlify Blobs.
+
+[build]
+  command = "npm run build:netlify"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+
+# /api/* and /media/* go to the function — declared in the function itself (config.path),
+# with built files (the menu photos) taking priority.
+
+# Pages
+[[redirects]]
+  from = "/menu"
+  to = "/menu.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200

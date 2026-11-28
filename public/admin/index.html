@@ -127,6 +127,17 @@
           </div>
           <div class="form-actions"><button class="btn primary" type="submit">Save changes</button></div>
         </form>
+
+        <div class="backup">
+          <div>
+            <b>Backup</b>
+            <small>Save the whole menu to a file, or restore one</small>
+          </div>
+          <div class="backup-actions">
+            <a class="btn ghost-box" href="/api/admin/export" download>Download</a>
+            <label class="btn ghost-box">Restore<input type="file" accept="application/json,.json" id="restoreFile" hidden></label>
+          </div>
+        </div>
       </section>
     </main>
   </div>
