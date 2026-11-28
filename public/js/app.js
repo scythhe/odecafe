@@ -1,4 +1,6 @@
 // ============ Ode — menu ============
+import { initialLang, saveLang, applyDocLang, mountPicker, pick } from './lang.js';
+
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
@@ -6,28 +8,50 @@ const T = {
   en: {
     menu: 'Menu', search: 'Search the menu', signature: 'Signature', noResults: 'No matches',
     tryElse: 'Try another word', results: 'Results', hours: 'Hours', address: 'Address', daily: 'Every day',
-    call: 'Call', directions: 'Directions', notice: 'Please note', gotIt: 'Got it', unavailable: 'The menu is unavailable right now.',
+    call: 'Call', directions: 'Directions', notice: 'Please note', unavailable: 'The menu is unavailable right now.',
   },
   ka: {
     menu: 'მენიუ', search: 'მენიუში ძებნა', signature: 'რჩეული', noResults: 'ვერაფერი მოიძებნა',
     tryElse: 'სცადეთ სხვა სიტყვა', results: 'შედეგები', hours: 'სამუშაო საათები', address: 'მისამართი', daily: 'ყოველდღე',
-    call: 'დარეკვა', directions: 'რუკაზე ნახვა', notice: 'გთხოვთ, გაითვალისწინოთ', gotIt: 'გასაგებია', unavailable: 'მენიუ დროებით მიუწვდომელია.',
+    call: 'დარეკვა', directions: 'რუკაზე ნახვა', notice: 'გთხოვთ, გაითვალისწინოთ', unavailable: 'მენიუ დროებით მიუწვდომელია.',
+  },
+  ru: {
+    menu: 'Меню', search: 'Поиск по меню', signature: 'Фирменные', noResults: 'Ничего не найдено',
+    tryElse: 'Попробуйте другое слово', results: 'Результаты', hours: 'Часы работы', address: 'Адрес', daily: 'Ежедневно',
+    call: 'Позвонить', directions: 'Как добраться', notice: 'Обратите внимание', unavailable: 'Меню временно недоступно.',
+  },
+  es: {
+    menu: 'Menú', search: 'Buscar en el menú', signature: 'De la casa', noResults: 'Sin resultados',
+    tryElse: 'Pruebe con otra palabra', results: 'Resultados', hours: 'Horario', address: 'Dirección', daily: 'Todos los días',
+    call: 'Llamar', directions: 'Cómo llegar', notice: 'Tenga en cuenta', unavailable: 'El menú no está disponible ahora.',
+  },
+  tr: {
+    menu: 'Menü', search: 'Menüde ara', signature: 'Şefin önerileri', noResults: 'Sonuç bulunamadı',
+    tryElse: 'Başka bir kelime deneyin', results: 'Sonuçlar', hours: 'Çalışma saatleri', address: 'Adres', daily: 'Her gün',
+    call: 'Ara', directions: 'Yol tarifi', notice: 'Lütfen dikkat', unavailable: 'Menü şu anda kullanılamıyor.',
+  },
+  ar: {
+    menu: 'القائمة', search: 'ابحث في القائمة', signature: 'أطباق مميزة', noResults: 'لا توجد نتائج',
+    tryElse: 'جرّب كلمة أخرى', results: 'النتائج', hours: 'ساعات العمل', address: 'العنوان', daily: 'يومياً',
+    call: 'اتصل', directions: 'الاتجاهات', notice: 'يرجى الملاحظة', unavailable: 'القائمة غير متاحة حالياً.',
+  },
+  zh: {
+    menu: '菜单', search: '搜索菜单', signature: '招牌菜', noResults: '未找到结果',
+    tryElse: '试试其他关键词', results: '搜索结果', hours: '营业时间', address: '地址', daily: '每天',
+    call: '致电', directions: '路线', notice: '请注意', unavailable: '菜单暂时无法显示。',
   },
 };
 
-const store = {
-  get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
-  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
-};
 try { localStorage.removeItem('ode.cart'); } catch {}
 
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-let lang = store.get('ode.lang', 'ka');
+let lang = initialLang(); // shared with the website
+let picker;
 let menu = { settings: {}, categories: [], products: [] };
 let byId = new Map();
 
-const t = (k) => T[lang][k] ?? k;
-const tr = (o) => (o ? o[lang] || o.en || o.ka || '' : '');
+const t = (k) => T[lang]?.[k] ?? T.en[k] ?? k;
+const tr = (o) => pick(o, lang);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const money = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(2));
 const priceHTML = (n) => `${money(n)}<small>${esc(menu.settings.currency || '₾')}</small>`;
@@ -51,15 +75,15 @@ const icons = {
 
 // ---------- language ----------
 function applyLang() {
-  document.documentElement.lang = lang;
+  applyDocLang(lang);
   $$('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
   $('#q').placeholder = t('search');
 }
 
-function switchLang() {
-  lang = lang === 'ka' ? 'en' : 'ka';
-  store.set('ode.lang', lang);
-  const update = () => { applyLang(); renderStatic(); renderMenu(); if (sheet.open) fillSheet(current, 0); if (notice.open) fillNotice(); };
+function switchLang(code) {
+  lang = code;
+  saveLang(code);
+  const update = () => { applyLang(); renderStatic(); renderMenu(); fillNotice(); picker?.sync(); if (sheet.open) fillSheet(current, 0); };
   if (document.startViewTransition && !reduceMotion) document.startViewTransition(update);
   else update();
 }
@@ -98,7 +122,7 @@ function renderStatus() {
   // shows the working hours (green light always on), not a live open/closed state
   const { open, close } = menu.settings.hours || {};
   if (!open || !close) return;
-  $('#status span').textContent = `${lang === 'ka' ? 'სამუშაო საათები' : 'Hours'} ${open} — ${close}`;
+  $('#status span').textContent = `${t('hours')} ${open} — ${close}`;
 }
 
 // ---------- menu ----------
@@ -128,7 +152,7 @@ function renderMenu() {
 
   if (q) {
     const hits = menu.products.filter((p) =>
-      [p.name.en, p.name.ka, p.description?.en, p.description?.ka].some((s) => s?.toLowerCase().includes(q)));
+      [...Object.values(p.name || {}), ...Object.values(p.description || {})].some((s) => String(s).toLowerCase().includes(q)));
     main.innerHTML = hits.length
       ? `<section class="section" data-list="search"><div class="section-head"><h2>${t('results')}</h2><span class="count">${hits.length}</span><span class="rule"></span></div>
          <div class="grid">${hits.map((p, i) => cardHTML(p, i, q)).join('')}</div></section>`
@@ -316,41 +340,30 @@ function sheetGestures() {
   sheet.addEventListener('pointercancel', end);
 }
 
-// ---------- popup shown on every visit (e.g. "Tax +15%") ----------
-const notice = $('#notice');
-// "+15%" (or any percentage / number) is set large in the accent colour
-const noticeHTML = (text) => esc(text).replace(/([+−-]?\s?\d+(?:[.,]\d+)?\s?%?)/, '<b>$1</b>');
+// ---------- note in the header corner on every visit (e.g. "Tax +15%"), closeable with ✕ ----------
+const note = $('#heroNote');
+let noteClosed = false;
+// "+15%" / "%15" (or any number) is set large in the accent colour
+const noticeHTML = (text) => esc(text).replace(/([+−-]?\s?%?\d+(?:[.,]\d+)?\s?%?)/, '<b>$1</b>');
 function fillNotice() {
   const n = menu.settings.notice || {};
-  const main = n[lang] || n.en || n.ka || '';
-  const alt = n[lang === 'ka' ? 'en' : 'ka'] || '';
-  $('#noticeMain').innerHTML = noticeHTML(main);
-  $('#noticeAlt').textContent = alt && alt !== main ? alt : '';
-  return !!main;
+  const text = tr(n);
+  $('#noticeMain').innerHTML = noticeHTML(text);
+  note.hidden = noteClosed || n.enabled === false || !text;
 }
-function showNotice() {
-  if (menu.settings.notice?.enabled === false || !fillNotice()) return;
-  notice.showModal();
-  notice.querySelector('.notice-ok').focus({ preventScroll: true });
-  requestAnimationFrame(() => requestAnimationFrame(() => notice.classList.add('show')));
-}
-async function closeNotice() {
-  if (!notice.open || notice.classList.contains('closing')) return;
-  notice.classList.add('closing');
-  notice.classList.remove('show');
+$('#noteClose').addEventListener('click', async () => {
+  noteClosed = true; // stays closed for this visit, comes back next time
+  note.classList.add('gone');
   await wait(reduceMotion ? 0 : 320);
-  notice.close();
-  notice.classList.remove('closing');
-}
-notice.addEventListener('click', (e) => { if (e.target === notice || e.target.closest('[data-close]')) closeNotice(); });
-notice.addEventListener('cancel', (e) => { e.preventDefault(); closeNotice(); });
+  note.hidden = true;
+});
 
 // scroll position where the category rail docks under the (always visible) top bar
 const menuTop = () => $('#top').offsetHeight - $('#topbar').offsetHeight;
 
 // ---------- events ----------
 function bindUI() {
-  $('#langBtn').addEventListener('click', switchLang);
+  picker = mountPicker($('#langPick'), () => lang, switchLang);
 
   $('#menu').addEventListener('click', (e) => {
     const item = e.target.closest('[data-id]');
@@ -444,5 +457,5 @@ byId = new Map(menu.products.map((p) => [p.id, p]));
 renderStatic();
 renderMenu();
 bindUI();
-setTimeout(showNotice, reduceMotion ? 0 : 650);
+fillNotice();
 if (location.hash.length > 1) document.getElementById(location.hash.slice(1))?.scrollIntoView();

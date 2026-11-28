@@ -1,0 +1,932 @@
+{
+  "_order": [
+    "ru",
+    "es",
+    "tr",
+    "ar",
+    "zh"
+  ],
+  "_note": "Menu names in the extra languages. Applied to the menu data by scripts/apply-translations.mjs. Brands stay in Latin letters. Wines are translated by pattern (see wine section).",
+  "categories": {
+    "c1": [
+      "Закуски",
+      "Entrantes",
+      "Mezeler",
+      "المقبلات",
+      "前菜"
+    ],
+    "c2": [
+      "Салаты",
+      "Ensaladas",
+      "Salatalar",
+      "السلطات",
+      "沙拉"
+    ],
+    "c3": [
+      "Основные блюда",
+      "Platos principales",
+      "Ana yemekler",
+      "الأطباق الرئيسية",
+      "主菜"
+    ],
+    "c4": [
+      "Супы",
+      "Sopas",
+      "Çorbalar",
+      "الشوربات",
+      "汤"
+    ],
+    "c5": [
+      "Выпечка",
+      "Horneados",
+      "Fırın ürünleri",
+      "المخبوزات",
+      "烘焙"
+    ],
+    "c6": [
+      "Паста",
+      "Pasta",
+      "Makarna",
+      "المعكرونة",
+      "意面"
+    ],
+    "c7": [
+      "Гриль",
+      "A la parrilla",
+      "Izgara",
+      "المشاوي",
+      "烧烤"
+    ],
+    "c8": [
+      "Гарниры",
+      "Guarniciones",
+      "Garnitürler",
+      "الأطباق الجانبية",
+      "配菜"
+    ],
+    "c10": [
+      "Кофе",
+      "Café",
+      "Kahve",
+      "القهوة",
+      "咖啡"
+    ],
+    "c11": [
+      "Десерты",
+      "Postres",
+      "Tatlılar",
+      "الحلويات",
+      "甜点"
+    ],
+    "c12": [
+      "Прохладительные напитки",
+      "Bebidas frías",
+      "Soğuk içecekler",
+      "المشروبات الباردة",
+      "冷饮"
+    ],
+    "c17": [
+      "Домашнее вино",
+      "Vino de la casa",
+      "Ev şarabı",
+      "نبيذ منزلي",
+      "自酿葡萄酒"
+    ],
+    "c19": [
+      "Натуральное квеври вино",
+      "Vino natural de qvevri",
+      "Doğal kvevri şarabı",
+      "نبيذ كفيفري طبيعي",
+      "天然陶罐葡萄酒"
+    ],
+    "c20": [
+      "Био вино премиум-класса",
+      "Vino ecológico premium",
+      "Premium organik şarap",
+      "نبيذ عضوي فاخر",
+      "高端有机葡萄酒"
+    ],
+    "c18": [
+      "Вино в бутылках",
+      "Vino embotellado",
+      "Şişe şarap",
+      "نبيذ معبأ",
+      "瓶装葡萄酒"
+    ],
+    "c21": [
+      "Просекко",
+      "Prosecco",
+      "Prosecco",
+      "بروسيكو",
+      "普罗塞克"
+    ],
+    "c13": [
+      "Пиво",
+      "Cerveza",
+      "Bira",
+      "البيرة",
+      "啤酒"
+    ],
+    "c14": [
+      "Коктейли",
+      "Cócteles",
+      "Kokteyller",
+      "الكوكتيلات",
+      "鸡尾酒"
+    ],
+    "c15": [
+      "Крепкие напитки",
+      "Licores",
+      "Alkollü içkiler",
+      "المشروبات الروحية",
+      "烈酒"
+    ]
+  },
+  "products": {
+    "p1": [
+      "Хумус",
+      "Hummus",
+      "Humus",
+      "حمص",
+      "鹰嘴豆泥"
+    ],
+    "p3": [
+      "Брускетта с лососем",
+      "Bruschetta de salmón",
+      "Somonlu bruschetta",
+      "بروسكيتا بالسلمون",
+      "三文鱼意式烤面包"
+    ],
+    "p4": [
+      "Брускетта с прошутто",
+      "Bruschetta de prosciutto",
+      "Prosciuttolu bruschetta",
+      "بروسكيتا بالبروشوتو",
+      "帕尔玛火腿意式烤面包"
+    ],
+    "p5": [
+      "Сырная тарелка",
+      "Tabla de quesos",
+      "Peynir tabağı",
+      "طبق أجبان",
+      "奶酪拼盘"
+    ],
+    "p6": [
+      "Сырная тарелка с прошутто и колбасой",
+      "Tabla de quesos con prosciutto y embutido",
+      "Prosciutto ve sucuklu peynir tabağı",
+      "طبق أجبان مع بروشوتو ونقانق",
+      "奶酪拼盘配火腿和香肠"
+    ],
+    "p8": [
+      "Грузинский салат с орехами и кахетинским маслом",
+      "Ensalada georgiana con nueces y aceite de Kajeti",
+      "Cevizli ve Kakheti yağlı Gürcü salatası",
+      "سلطة جورجية بالجوز وزيت كاخيتي",
+      "格鲁吉亚核桃沙拉配卡赫季油"
+    ],
+    "p9": [
+      "Салат с прошутто и сливочным сыром",
+      "Ensalada de prosciutto y queso crema",
+      "Prosciutto ve krem peynirli salata",
+      "سلطة بروشوتو وجبن كريمي",
+      "火腿奶油奶酪沙拉"
+    ],
+    "p10": [
+      "Салат со стейком из говядины",
+      "Ensalada con filete de ternera",
+      "Dana bonfileli salata",
+      "سلطة ستيك لحم البقر",
+      "牛排沙拉"
+    ],
+    "p11": [
+      "Капрезе",
+      "Caprese",
+      "Caprese",
+      "كابريزي",
+      "卡普里沙拉"
+    ],
+    "p12": [
+      "Цезарь с курицей",
+      "César con pollo",
+      "Tavuklu Sezar",
+      "سيزر بالدجاج",
+      "鸡肉凯撒沙拉"
+    ],
+    "p13": [
+      "Цезарь с креветками",
+      "César con gambas",
+      "Karidesli Sezar",
+      "سيزر بالروبيان",
+      "鲜虾凯撒沙拉"
+    ],
+    "p14": [
+      "Салат с лососем и авокадо",
+      "Ensalada de salmón y aguacate",
+      "Somon ve avokado salatası",
+      "سلطة السلمون والأفوكادو",
+      "三文鱼牛油果沙拉"
+    ],
+    "p16": [
+      "Хинклука",
+      "Khinkluka",
+      "Khinkluka",
+      "خينكلوكا",
+      "格鲁吉亚小包子"
+    ],
+    "p17": [
+      "Баклажаны с орехами",
+      "Berenjenas con nueces",
+      "Cevizli patlıcan",
+      "باذنجان بالجوز",
+      "核桃酱茄子卷"
+    ],
+    "p18": [
+      "Грибы с сулугуни",
+      "Champiñones con queso sulguni",
+      "Sulguni peynirli mantar",
+      "فطر مع جبن سولوغوني",
+      "苏古尼奶酪烤蘑菇"
+    ],
+    "p19": [
+      "Рулетики из форели с орехами и салатом",
+      "Rollitos de trucha con nueces y ensalada",
+      "Cevizli alabalık rulo ve salata",
+      "لفائف السلمون المرقط بالجوز مع سلطة",
+      "核桃鳟鱼卷配沙拉"
+    ],
+    "p20": [
+      "Чашушули из говядины",
+      "Chashushuli de ternera",
+      "Dana chashushuli",
+      "تشاشوشولي لحم البقر",
+      "格鲁吉亚炖牛肉"
+    ],
+    "p21": [
+      "Оджахури со свининой и картофелем",
+      "Ojakhuri de cerdo con patatas",
+      "Domuz eti ve patatesli ojakhuri",
+      "أوجاخوري بلحم الخنزير والبطاطس",
+      "格鲁吉亚土豆炒猪肉"
+    ],
+    "p23": [
+      "Надуги с сулугуни",
+      "Nadughi con queso sulguni",
+      "Sulguni peynirli nadughi",
+      "ناضوغي مع جبن سولوغوني",
+      "苏古尼奶酪卷配鲜奶酪"
+    ],
+    "p127": [
+      "Аджапсандали",
+      "Ajapsandali",
+      "Ajapsandali",
+      "أجابساندالي",
+      "格鲁吉亚炖蔬菜"
+    ],
+    "p130": [
+      "Хинкали",
+      "Khinkali",
+      "Khinkali",
+      "خينكالي",
+      "格鲁吉亚汤包"
+    ],
+    "p141": [
+      "Тушёные грибы",
+      "Guiso de champiñones",
+      "Mantar güveç",
+      "يخنة الفطر",
+      "炖蘑菇"
+    ],
+    "p24": [
+      "Грибной крем-суп",
+      "Crema de champiñones",
+      "Kremalı mantar çorbası",
+      "شوربة كريمة الفطر",
+      "蘑菇奶油汤"
+    ],
+    "p25": [
+      "Томатный крем-суп",
+      "Crema de tomate",
+      "Kremalı domates çorbası",
+      "شوربة كريمة الطماطم",
+      "番茄奶油汤"
+    ],
+    "p26": [
+      "Харчо",
+      "Kharcho",
+      "Kharcho",
+      "خارتشو",
+      "格鲁吉亚牛肉汤"
+    ],
+    "p128": [
+      "Тыквенный крем-суп",
+      "Crema de calabaza",
+      "Kremalı balkabağı çorbası",
+      "شوربة كريمة اليقطين",
+      "南瓜奶油汤"
+    ],
+    "p139": [
+      "Чихиртма",
+      "Chikhirtma",
+      "Chikhirtma",
+      "تشيخيرتما",
+      "格鲁吉亚鸡汤"
+    ],
+    "p140": [
+      "Крем-суп из брокколи",
+      "Crema de brócoli",
+      "Kremalı brokoli çorbası",
+      "شوربة كريمة البروكلي",
+      "西兰花奶油汤"
+    ],
+    "p27": [
+      "Хачапури по-аджарски",
+      "Khachapuri adjaruli",
+      "Acara haçapurisi",
+      "خاتشابوري أجاري",
+      "阿扎尔奶酪船"
+    ],
+    "p28": [
+      "Аджарули со шпинатом",
+      "Adjaruli con espinacas",
+      "Ispanaklı acaruli",
+      "أجارولي بالسبانخ",
+      "菠菜奶酪船"
+    ],
+    "p29": [
+      "Аджарули по-шкмерски",
+      "Adjaruli estilo shkmeruli",
+      "Şkmeruli usulü acaruli",
+      "أجارولي على طريقة شكميرولي",
+      "蒜香奶油奶酪船"
+    ],
+    "p30": [
+      "Аджарули с креветками",
+      "Adjaruli con gambas",
+      "Karidesli acaruli",
+      "أجارولي بالروبيان",
+      "鲜虾奶酪船"
+    ],
+    "p31": [
+      "Пицца пепперони",
+      "Pizza pepperoni",
+      "Pepperoni pizza",
+      "بيتزا ببروني",
+      "意式辣香肠披萨"
+    ],
+    "p32": [
+      "Пицца четыре сыра",
+      "Pizza cuatro quesos",
+      "Dört peynirli pizza",
+      "بيتزا الأجبان الأربعة",
+      "四种奶酪披萨"
+    ],
+    "p33": [
+      "Пицца капричоза",
+      "Pizza capricciosa",
+      "Capricciosa pizza",
+      "بيتزا كابريتشوزا",
+      "随心披萨"
+    ],
+    "p34": [
+      "Паста карбонара",
+      "Pasta carbonara",
+      "Carbonara makarna",
+      "باستا كاربونارا",
+      "卡博纳拉意面"
+    ],
+    "p35": [
+      "Паста с грибами и песто",
+      "Pasta con champiñones y pesto",
+      "Mantarlı ve pestolu makarna",
+      "باستا بالفطر والبيستو",
+      "蘑菇青酱意面"
+    ],
+    "p36": [
+      "Паста с креветками",
+      "Pasta con gambas",
+      "Karidesli makarna",
+      "باستا بالروبيان",
+      "鲜虾意面"
+    ],
+    "p37": [
+      "Паста с курицей и сливками",
+      "Pasta con pollo y nata",
+      "Tavuklu ve kremalı makarna",
+      "باستا بالدجاج والكريمة",
+      "奶油鸡肉意面"
+    ],
+    "p38": [
+      "Овощи на гриле",
+      "Verduras a la parrilla",
+      "Izgara sebzeler",
+      "خضار مشوية",
+      "烤时蔬"
+    ],
+    "p39": [
+      "Барбекю: креветки",
+      "Barbacoa: gambas",
+      "Mangal: karides",
+      "شواء: روبيان",
+      "烧烤：鲜虾"
+    ],
+    "p40": [
+      "Барбекю: курица",
+      "Barbacoa: pollo",
+      "Mangal: tavuk",
+      "شواء: دجاج",
+      "烧烤：鸡肉"
+    ],
+    "p41": [
+      "Барбекю: свинина",
+      "Barbacoa: cerdo",
+      "Mangal: domuz eti",
+      "شواء: لحم خنزير",
+      "烧烤：猪肉"
+    ],
+    "p42": [
+      "Стейк из говядины с трюфельным соусом",
+      "Filete de ternera con salsa de trufa",
+      "Trüf soslu dana biftek",
+      "ستيك لحم البقر بصلصة الكمأة",
+      "松露酱牛排"
+    ],
+    "p43": [
+      "Стейк из говядины с соусом блю чиз",
+      "Filete de ternera con salsa de queso azul",
+      "Rokfor soslu dana biftek",
+      "ستيك لحم البقر بصلصة الجبن الأزرق",
+      "蓝纹奶酪酱牛排"
+    ],
+    "p44": [
+      "Стейк из лосося со свекольным соусом",
+      "Salmón a la plancha con salsa de remolacha",
+      "Pancar soslu somon biftek",
+      "ستيك السلمون بصلصة الشمندر",
+      "甜菜酱三文鱼排"
+    ],
+    "p45": [
+      "Картофель фри",
+      "Patatas fritas",
+      "Patates kızartması",
+      "بطاطس مقلية",
+      "薯条"
+    ],
+    "p46": [
+      "Картофель по-деревенски",
+      "Patatas caseras",
+      "Köy usulü patates",
+      "بطاطس على الطريقة المنزلية",
+      "乡村土豆"
+    ],
+    "p47": [
+      "Ризотто с грибами и песто",
+      "Risotto con champiñones y pesto",
+      "Mantarlı ve pestolu risotto",
+      "ريزوتو بالفطر والبيستو",
+      "蘑菇青酱烩饭"
+    ],
+    "p51": [
+      "Эспрессо",
+      "Espresso",
+      "Espresso",
+      "إسبريسو",
+      "意式浓缩咖啡"
+    ],
+    "p52": [
+      "Американо",
+      "Americano",
+      "Americano",
+      "أمريكانو",
+      "美式咖啡"
+    ],
+    "p53": [
+      "Латте",
+      "Latte",
+      "Latte",
+      "لاتيه",
+      "拿铁"
+    ],
+    "p54": [
+      "Капучино",
+      "Capuchino",
+      "Cappuccino",
+      "كابتشينو",
+      "卡布奇诺"
+    ],
+    "p55": [
+      "Холодный кофе",
+      "Café helado",
+      "Soğuk kahve",
+      "قهوة مثلجة",
+      "冰咖啡"
+    ],
+    "p56": [
+      "Холодный кофе с мороженым",
+      "Café helado con helado",
+      "Dondurmalı soğuk kahve",
+      "قهوة مثلجة مع آيس كريم",
+      "冰淇淋冰咖啡"
+    ],
+    "p57": [
+      "Мороженое",
+      "Helado",
+      "Dondurma",
+      "آيس كريم",
+      "冰淇淋"
+    ],
+    "p58": [
+      "Чизкейк с лесными ягодами",
+      "Tarta de queso con frutos del bosque",
+      "Orman meyveli cheesecake",
+      "تشيز كيك بالتوت البري",
+      "野莓芝士蛋糕"
+    ],
+    "p59": [
+      "Лава-кейк с мороженым",
+      "Volcán de chocolate con helado",
+      "Dondurmalı lav kek",
+      "كعكة الحمم مع آيس كريم",
+      "熔岩蛋糕配冰淇淋"
+    ],
+    "p60": [
+      "Яблочный штрудель",
+      "Strudel de manzana",
+      "Elmalı strudel",
+      "شترودل التفاح",
+      "苹果卷"
+    ],
+    "p62": [
+      "Фруктовая тарелка",
+      "Bandeja de frutas",
+      "Meyve tabağı",
+      "طبق فواكه",
+      "水果拼盘"
+    ],
+    "p63": [
+      "Вода",
+      "Agua",
+      "Su",
+      "مياه",
+      "矿泉水"
+    ],
+    "p64": [
+      "Боржоми",
+      "Borjomi",
+      "Borjomi",
+      "بورجومي",
+      "博尔若米矿泉水"
+    ],
+    "p65": [
+      "Coca-Cola",
+      "Coca-Cola",
+      "Coca-Cola",
+      "Coca-Cola",
+      "可口可乐"
+    ],
+    "p66": [
+      "Fanta",
+      "Fanta",
+      "Fanta",
+      "Fanta",
+      "芬达"
+    ],
+    "p67": [
+      "Sprite",
+      "Sprite",
+      "Sprite",
+      "Sprite",
+      "雪碧"
+    ],
+    "p68": [
+      "Домашний лимонад: цитрус",
+      "Limonada casera: cítricos",
+      "Ev yapımı limonata: narenciye",
+      "ليموناضة منزلية: حمضيات",
+      "自制柠檬水：柑橘"
+    ],
+    "p69": [
+      "Домашний лимонад: ягоды",
+      "Limonada casera: frutos rojos",
+      "Ev yapımı limonata: orman meyveleri",
+      "ليموناضة منزلية: توت",
+      "自制柠檬水：浆果"
+    ],
+    "p70": [
+      "Домашний лимонад: маракуйя",
+      "Limonada casera: maracuyá",
+      "Ev yapımı limonata: çarkıfelek",
+      "ليموناضة منزلية: باشن فروت",
+      "自制柠檬水：百香果"
+    ],
+    "p71": [
+      "Свежевыжатый апельсиновый сок",
+      "Zumo de naranja natural",
+      "Taze portakal suyu",
+      "عصير برتقال طازج",
+      "鲜榨橙汁"
+    ],
+    "p72": [
+      "Свежевыжатый грейпфрутовый сок",
+      "Zumo de pomelo natural",
+      "Taze greyfurt suyu",
+      "عصير جريب فروت طازج",
+      "鲜榨西柚汁"
+    ],
+    "p73": [
+      "Сок",
+      "Zumo",
+      "Meyve suyu",
+      "عصير",
+      "果汁"
+    ],
+    "p74": [
+      "Клубничный милкшейк",
+      "Batido de fresa",
+      "Çilekli milkshake",
+      "ميلك شيك الفراولة",
+      "草莓奶昔"
+    ],
+    "p75": [
+      "Шоколадный милкшейк",
+      "Batido de chocolate",
+      "Çikolatalı milkshake",
+      "ميلك شيك الشوكولاتة",
+      "巧克力奶昔"
+    ],
+    "p76": [
+      "Банановый милкшейк",
+      "Batido de plátano",
+      "Muzlu milkshake",
+      "ميلك شيك الموز",
+      "香蕉奶昔"
+    ],
+    "p137": [
+      "Просекко",
+      "Prosecco",
+      "Prosecco",
+      "بروسيكو",
+      "普罗塞克"
+    ],
+    "p138": [
+      "Просекко 180 мл",
+      "Prosecco 180 ml",
+      "Prosecco 180 ml",
+      "بروسيكو 180 مل",
+      "普罗塞克 180毫升"
+    ],
+    "p77": [
+      "Натахтари",
+      "Natakhtari",
+      "Natakhtari",
+      "Natakhtari",
+      "Natakhtari"
+    ],
+    "p78": [
+      "Löwenbräu",
+      "Löwenbräu",
+      "Löwenbräu",
+      "Löwenbräu",
+      "Löwenbräu"
+    ],
+    "p79": [
+      "Corona",
+      "Corona",
+      "Corona",
+      "Corona",
+      "Corona"
+    ],
+    "p131": [
+      "Black Lion",
+      "Black Lion",
+      "Black Lion",
+      "Black Lion",
+      "Black Lion"
+    ],
+    "p81": [
+      "Апероль",
+      "Aperol",
+      "Aperol",
+      "أبيرول",
+      "阿佩罗"
+    ],
+    "p82": [
+      "Джин-тоник",
+      "Gin-tonic",
+      "Cin tonik",
+      "جن وتونيك",
+      "金汤力"
+    ],
+    "p83": [
+      "Негрони",
+      "Negroni",
+      "Negroni",
+      "نيغروني",
+      "内格罗尼"
+    ],
+    "p84": [
+      "Пина колада",
+      "Piña colada",
+      "Piña colada",
+      "بينا كولادا",
+      "椰林飘香"
+    ],
+    "p85": [
+      "Коктейль с маракуйей",
+      "Cóctel de maracuyá",
+      "Çarkıfelek kokteyli",
+      "كوكتيل باشن فروت",
+      "百香果鸡尾酒"
+    ]
+  },
+  "descriptions": {
+    "p10": [
+      "С соусом дижонская горчица",
+      "Con salsa de mostaza de Dijon",
+      "Dijon hardal soslu",
+      "مع صلصة خردل ديجون",
+      "配第戎芥末酱"
+    ],
+    "p11": [
+      "Соус песто",
+      "Salsa pesto",
+      "Pesto sos",
+      "صلصة البيستو",
+      "青酱"
+    ],
+    "p130": [
+      "Говядина и свинина",
+      "Ternera y cerdo",
+      "Dana ve domuz eti",
+      "لحم بقر ولحم خنزير",
+      "牛肉猪肉馅"
+    ]
+  },
+  "wine": {
+    "names": {
+      "Rkatsiteli": [
+        "Ркацители",
+        "Rkatsiteli",
+        "Rkatsiteli",
+        "ركاتسيتيلي",
+        "白羽"
+      ],
+      "Saperavi": [
+        "Саперави",
+        "Saperavi",
+        "Saperavi",
+        "سابيرافي",
+        "萨别拉维"
+      ],
+      "Kindzmarauli": [
+        "Киндзмараули",
+        "Kindzmarauli",
+        "Kindzmarauli",
+        "كينزمارولي",
+        "金兹马拉乌利"
+      ],
+      "Alazani valley": [
+        "Алазанская долина",
+        "Valle de Alazani",
+        "Alazani Vadisi",
+        "وادي ألازاني",
+        "阿拉扎尼河谷"
+      ],
+      "Krakhuna": [
+        "Крахуна",
+        "Krakhuna",
+        "Krakhuna",
+        "كراخونا",
+        "克拉胡纳"
+      ],
+      "Khikhvi": [
+        "Хихви",
+        "Khikhvi",
+        "Khikhvi",
+        "خيخفي",
+        "基赫维"
+      ],
+      "Kisi": [
+        "Киси",
+        "Kisi",
+        "Kisi",
+        "كيسي",
+        "基西"
+      ],
+      "Mtsvane": [
+        "Мцване",
+        "Mtsvane",
+        "Mtsvane",
+        "متسفاني",
+        "姆茨瓦内"
+      ],
+      "Tsinandali": [
+        "Цинандали",
+        "Tsinandali",
+        "Tsinandali",
+        "تسيناندالي",
+        "齐南达利"
+      ],
+      "Tvishi": [
+        "Твиши",
+        "Tvishi",
+        "Tvishi",
+        "تفيشي",
+        "特维希"
+      ],
+      "Rose": [
+        "Розе",
+        "Vino",
+        "Roze",
+        "روزيه",
+        "葡萄酒"
+      ],
+      "Sparkling wine Brut": [
+        "Игристое вино брют",
+        "Vino espumoso brut",
+        "Köpüklü şarap brut",
+        "نبيذ فوار بروت",
+        "干型起泡酒"
+      ],
+      "Petnat": [
+        "Пет-нат",
+        "Pét-nat",
+        "Pet-nat",
+        "بيت-نات",
+        "自然起泡酒"
+      ],
+      "Saperavi chacha": [
+        "Чача из саперави",
+        "Chacha de saperavi",
+        "Saperavi çaçası",
+        "تشاتشا سابيرافي",
+        "萨别拉维恰恰"
+      ],
+      "Fruit chacha": [
+        "Фруктовая чача",
+        "Chacha de frutas",
+        "Meyve çaçası",
+        "تشاتشا الفواكه",
+        "水果恰恰"
+      ]
+    },
+    "styles": {
+      "white dry": [
+        "белое сухое",
+        "blanco seco",
+        "beyaz sek",
+        "أبيض جاف",
+        "干白"
+      ],
+      "red dry": [
+        "красное сухое",
+        "tinto seco",
+        "kırmızı sek",
+        "أحمر جاف",
+        "干红"
+      ],
+      "amber dry": [
+        "янтарное сухое",
+        "ámbar seco",
+        "amber sek",
+        "كهرماني جاف",
+        "琥珀干型"
+      ],
+      "white semi-sweet": [
+        "белое полусладкое",
+        "blanco semidulce",
+        "beyaz yarı tatlı",
+        "أبيض شبه حلو",
+        "半甜白"
+      ],
+      "red semi-sweet": [
+        "красное полусладкое",
+        "tinto semidulce",
+        "kırmızı yarı tatlı",
+        "أحمر شبه حلو",
+        "半甜红"
+      ],
+      "pink": [
+        "розовое",
+        "rosado",
+        "pembe",
+        "وردي",
+        "桃红"
+      ],
+      "extra brut": [
+        "экстра брют",
+        "extra brut",
+        "ekstra brut",
+        "إكسترا بروت",
+        "超干型"
+      ]
+    },
+    "ml": [
+      "мл",
+      "ml",
+      "ml",
+      "مل",
+      "毫升"
+    ]
+  }
+}

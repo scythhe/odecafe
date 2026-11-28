@@ -3,7 +3,12 @@
     "name": "Ode",
     "tagline": {
       "en": "Wine & kitchen",
-      "ka": "ღვინო და სამზარეულო"
+      "ka": "ღვინო და სამზარეულო",
+      "ru": "Вино и кухня",
+      "es": "Vino y cocina",
+      "tr": "Şarap ve mutfak",
+      "ar": "نبيذ ومطبخ",
+      "zh": "葡萄酒与美食"
     },
     "hours": {
       "open": "13:00",
@@ -13,7 +18,12 @@
     "email": "ode.cafe18@gmail.com",
     "address": {
       "en": "G. Atoneli street 18, Tbilisi, Georgia",
-      "ka": "გ. ათონელის ქ. 18, თბილისი, საქართველო"
+      "ka": "გ. ათონელის ქ. 18, თბილისი, საქართველო",
+      "ru": "ул. Г. Атонели 18, Тбилиси, Грузия",
+      "es": "Calle G. Atoneli 18, Tiflis, Georgia",
+      "tr": "G. Atoneli Caddesi 18, Tiflis, Gürcistan",
+      "ar": "شارع ج. أتونيلي 18، تبليسي، جورجيا",
+      "zh": "格鲁吉亚第比利斯 G. Atoneli 街18号"
     },
     "mapUrl": "https://maps.app.goo.gl/8yqYCDWy1q1xCM9g7",
     "instagram": "",
@@ -22,7 +32,12 @@
     "notice": {
       "en": "Tax +15%",
       "ka": "დღგ +15%",
-      "enabled": true
+      "enabled": true,
+      "ru": "НДС +15%",
+      "es": "IVA +15%",
+      "tr": "KDV %15",
+      "ar": "ضريبة القيمة المضافة +15%",
+      "zh": "增值税 +15%"
     }
   },
   "categories": [
@@ -30,7 +45,12 @@
       "id": "c1",
       "name": {
         "ka": "აპეტაიზერი",
-        "en": "Appetizer"
+        "en": "Appetizer",
+        "ru": "Закуски",
+        "es": "Entrantes",
+        "tr": "Mezeler",
+        "ar": "المقبلات",
+        "zh": "前菜"
       },
       "order": 0,
       "visible": true
@@ -39,7 +59,12 @@
       "id": "c2",
       "name": {
         "ka": "სალათი",
-        "en": "Salad"
+        "en": "Salad",
+        "ru": "Салаты",
+        "es": "Ensaladas",
+        "tr": "Salatalar",
+        "ar": "السلطات",
+        "zh": "沙拉"
       },
       "order": 1,
       "visible": true
@@ -48,7 +73,12 @@
       "id": "c3",
       "name": {
         "ka": "ძირითადი კერძები",
-        "en": "Main Dishes"
+        "en": "Main Dishes",
+        "ru": "Основные блюда",
+        "es": "Platos principales",
+        "tr": "Ana yemekler",
+        "ar": "الأطباق الرئيسية",
+        "zh": "主菜"
       },
       "order": 2,
       "visible": true
@@ -57,7 +87,12 @@
       "id": "c4",
       "name": {
         "ka": "სუპი",
-        "en": "Soup"
+        "en": "Soup",
+        "ru": "Супы",
+        "es": "Sopas",
+        "tr": "Çorbalar",
+        "ar": "الشوربات",
+        "zh": "汤"
       },
       "order": 3,
       "visible": true
@@ -66,7 +101,12 @@
       "id": "c5",
       "name": {
         "ka": "ცომეული",
-        "en": "Baked"
+        "en": "Baked",
+        "ru": "Выпечка",
+        "es": "Horneados",
+        "tr": "Fırın ürünleri",
+        "ar": "المخبوزات",
+        "zh": "烘焙"
       },
       "order": 4,
       "visible": true
@@ -75,7 +115,12 @@
       "id": "c6",
       "name": {
         "ka": "პასტა",
-        "en": "Pasta"
+        "en": "Pasta",
+        "ru": "Паста",
+        "es": "Pasta",
+        "tr": "Makarna",
+        "ar": "المعكرونة",
+        "zh": "意面"
       },
       "order": 5,
       "visible": true
@@ -84,7 +129,12 @@
       "id": "c7",
       "name": {
         "ka": "გრილ პროდუქტი",
-        "en": "Grilled Product"
+        "en": "Grilled Product",
+        "ru": "Гриль",
+        "es": "A la parrilla",
+        "tr": "Izgara",
+        "ar": "المشاوي",
+        "zh": "烧烤"
       },
       "order": 6,
       "visible": true
@@ -93,7 +143,12 @@
       "id": "c8",
       "name": {
         "ka": "გარნირი",
-        "en": "Garnish"
+        "en": "Garnish",
+        "ru": "Гарниры",
+        "es": "Guarniciones",
+        "tr": "Garnitürler",
+        "ar": "الأطباق الجانبية",
+        "zh": "配菜"
       },
       "order": 7,
       "visible": true
@@ -102,7 +157,12 @@
       "id": "c10",
       "name": {
         "ka": "ყავა",
-        "en": "Coffee"
+        "en": "Coffee",
+        "ru": "Кофе",
+        "es": "Café",
+        "tr": "Kahve",
+        "ar": "القهوة",
+        "zh": "咖啡"
       },
       "order": 8,
       "visible": true
@@ -111,7 +171,12 @@
       "id": "c11",
       "name": {
         "ka": "დესერტი",
-        "en": "Dessert"
+        "en": "Dessert",
+        "ru": "Десерты",
+        "es": "Postres",
+        "tr": "Tatlılar",
+        "ar": "الحلويات",
+        "zh": "甜点"
       },
       "order": 9,
       "visible": true
@@ -120,7 +185,12 @@
       "id": "c12",
       "name": {
         "ka": "გამაგრილებელი სასმელი",
-        "en": "Cold Drinks"
+        "en": "Cold Drinks",
+        "ru": "Прохладительные напитки",
+        "es": "Bebidas frías",
+        "tr": "Soğuk içecekler",
+        "ar": "المشروبات الباردة",
+        "zh": "冷饮"
       },
       "order": 10,
       "visible": true
@@ -129,7 +199,12 @@
       "id": "c17",
       "name": {
         "ka": "სახლში დამზადებული ღვინო",
-        "en": "Homemade wine"
+        "en": "Homemade wine",
+        "ru": "Домашнее вино",
+        "es": "Vino de la casa",
+        "tr": "Ev şarabı",
+        "ar": "نبيذ منزلي",
+        "zh": "自酿葡萄酒"
       },
       "order": 11,
       "visible": true
@@ -138,7 +213,12 @@
       "id": "c19",
       "name": {
         "ka": "ნატურალური ქვევრის ღვინო",
-        "en": "Natural Kvevri wine"
+        "en": "Natural Kvevri wine",
+        "ru": "Натуральное квеври вино",
+        "es": "Vino natural de qvevri",
+        "tr": "Doğal kvevri şarabı",
+        "ar": "نبيذ كفيفري طبيعي",
+        "zh": "天然陶罐葡萄酒"
       },
       "order": 12,
       "visible": true
@@ -147,7 +227,12 @@
       "id": "c20",
       "name": {
         "ka": "ბიო მაღალი კლასის ღვინო",
-        "en": "Bio high class wine"
+        "en": "Bio high class wine",
+        "ru": "Био вино премиум-класса",
+        "es": "Vino ecológico premium",
+        "tr": "Premium organik şarap",
+        "ar": "نبيذ عضوي فاخر",
+        "zh": "高端有机葡萄酒"
       },
       "order": 13,
       "visible": true
@@ -156,7 +241,12 @@
       "id": "c18",
       "name": {
         "ka": "ბოთლის ღვინო",
-        "en": "Bottle wine"
+        "en": "Bottle wine",
+        "ru": "Вино в бутылках",
+        "es": "Vino embotellado",
+        "tr": "Şişe şarap",
+        "ar": "نبيذ معبأ",
+        "zh": "瓶装葡萄酒"
       },
       "order": 14,
       "visible": true
@@ -165,7 +255,12 @@
       "id": "c21",
       "name": {
         "ka": "პროსეკო",
-        "en": "Prosecco"
+        "en": "Prosecco",
+        "ru": "Просекко",
+        "es": "Prosecco",
+        "tr": "Prosecco",
+        "ar": "بروسيكو",
+        "zh": "普罗塞克"
       },
       "order": 15,
       "visible": true
@@ -174,7 +269,12 @@
       "id": "c13",
       "name": {
         "ka": "ლუდი",
-        "en": "Beer"
+        "en": "Beer",
+        "ru": "Пиво",
+        "es": "Cerveza",
+        "tr": "Bira",
+        "ar": "البيرة",
+        "zh": "啤酒"
       },
       "order": 16,
       "visible": true
@@ -183,7 +283,12 @@
       "id": "c14",
       "name": {
         "ka": "კოქტეილი",
-        "en": "Cocktails"
+        "en": "Cocktails",
+        "ru": "Коктейли",
+        "es": "Cócteles",
+        "tr": "Kokteyller",
+        "ar": "الكوكتيلات",
+        "zh": "鸡尾酒"
       },
       "order": 17,
       "visible": true
@@ -192,7 +297,12 @@
       "id": "c15",
       "name": {
         "ka": "ალკოჰოლი",
-        "en": "Alcohol"
+        "en": "Alcohol",
+        "ru": "Крепкие напитки",
+        "es": "Licores",
+        "tr": "Alkollü içkiler",
+        "ar": "المشروبات الروحية",
+        "zh": "烈酒"
       },
       "order": 18,
       "visible": true
@@ -204,7 +314,12 @@
       "categoryId": "c1",
       "name": {
         "en": "Hummus",
-        "ka": "ჰუმუსი"
+        "ka": "ჰუმუსი",
+        "ru": "Хумус",
+        "es": "Hummus",
+        "tr": "Humus",
+        "ar": "حمص",
+        "zh": "鹰嘴豆泥"
       },
       "description": {
         "en": "",
@@ -221,7 +336,12 @@
       "categoryId": "c1",
       "name": {
         "en": "Bruschetta: Salmon",
-        "ka": "ბრუსკეტი: ორაგული"
+        "ka": "ბრუსკეტი: ორაგული",
+        "ru": "Брускетта с лососем",
+        "es": "Bruschetta de salmón",
+        "tr": "Somonlu bruschetta",
+        "ar": "بروسكيتا بالسلمون",
+        "zh": "三文鱼意式烤面包"
       },
       "description": {
         "en": "",
@@ -238,7 +358,12 @@
       "categoryId": "c1",
       "name": {
         "en": "Bruschetta: prosciutto",
-        "ka": "ბრუსკეტი: პროშუტო"
+        "ka": "ბრუსკეტი: პროშუტო",
+        "ru": "Брускетта с прошутто",
+        "es": "Bruschetta de prosciutto",
+        "tr": "Prosciuttolu bruschetta",
+        "ar": "بروسكيتا بالبروشوتو",
+        "zh": "帕尔玛火腿意式烤面包"
       },
       "description": {
         "en": "",
@@ -255,7 +380,12 @@
       "categoryId": "c1",
       "name": {
         "en": "Cheese board",
-        "ka": "ყველის ნაკრები"
+        "ka": "ყველის ნაკრები",
+        "ru": "Сырная тарелка",
+        "es": "Tabla de quesos",
+        "tr": "Peynir tabağı",
+        "ar": "طبق أجبان",
+        "zh": "奶酪拼盘"
       },
       "description": {
         "en": "",
@@ -272,7 +402,12 @@
       "categoryId": "c1",
       "name": {
         "en": "Cheese board: Prosciutto and sausage",
-        "ka": "ყველის ნაკრები: პროშუტოთი და პეპერონით"
+        "ka": "ყველის ნაკრები: პროშუტოთი და პეპერონით",
+        "ru": "Сырная тарелка с прошутто и колбасой",
+        "es": "Tabla de quesos con prosciutto y embutido",
+        "tr": "Prosciutto ve sucuklu peynir tabağı",
+        "ar": "طبق أجبان مع بروشوتو ونقانق",
+        "zh": "奶酪拼盘配火腿和香肠"
       },
       "description": {
         "en": "",
@@ -289,7 +424,12 @@
       "categoryId": "c2",
       "name": {
         "en": "Georgian salad with walnuts and kakhuri oil",
-        "ka": "ქართული სალათი ნიგვზით და კახური ზეთით"
+        "ka": "ქართული სალათი ნიგვზით და კახური ზეთით",
+        "ru": "Грузинский салат с орехами и кахетинским маслом",
+        "es": "Ensalada georgiana con nueces y aceite de Kajeti",
+        "tr": "Cevizli ve Kakheti yağlı Gürcü salatası",
+        "ar": "سلطة جورجية بالجوز وزيت كاخيتي",
+        "zh": "格鲁吉亚核桃沙拉配卡赫季油"
       },
       "description": {
         "en": "",
@@ -306,7 +446,12 @@
       "categoryId": "c2",
       "name": {
         "en": "Prosciutto and cream cheese salad",
-        "ka": "კრემ ყველის სალათი პროშუტოთი"
+        "ka": "კრემ ყველის სალათი პროშუტოთი",
+        "ru": "Салат с прошутто и сливочным сыром",
+        "es": "Ensalada de prosciutto y queso crema",
+        "tr": "Prosciutto ve krem peynirli salata",
+        "ar": "سلطة بروشوتو وجبن كريمي",
+        "zh": "火腿奶油奶酪沙拉"
       },
       "description": {
         "en": "",
@@ -323,11 +468,21 @@
       "categoryId": "c2",
       "name": {
         "en": "Steak salad with beef",
-        "ka": "სტეიკ სალათი"
+        "ka": "სტეიკ სალათი",
+        "ru": "Салат со стейком из говядины",
+        "es": "Ensalada con filete de ternera",
+        "tr": "Dana bonfileli salata",
+        "ar": "سلطة ستيك لحم البقر",
+        "zh": "牛排沙拉"
       },
       "description": {
         "en": "With dijon mustard sauce",
-        "ka": ""
+        "ka": "",
+        "ru": "С соусом дижонская горчица",
+        "es": "Con salsa de mostaza de Dijon",
+        "tr": "Dijon hardal soslu",
+        "ar": "مع صلصة خردل ديجون",
+        "zh": "配第戎芥末酱"
       },
       "price": 33,
       "image": "/media/4443a769d83dcca37088.webp",
@@ -340,11 +495,21 @@
       "categoryId": "c2",
       "name": {
         "en": "Caprese",
-        "ka": "კაპრეზე"
+        "ka": "კაპრეზე",
+        "ru": "Капрезе",
+        "es": "Caprese",
+        "tr": "Caprese",
+        "ar": "كابريزي",
+        "zh": "卡普里沙拉"
       },
       "description": {
         "en": "Pesto sauce",
-        "ka": ""
+        "ka": "",
+        "ru": "Соус песто",
+        "es": "Salsa pesto",
+        "tr": "Pesto sos",
+        "ar": "صلصة البيستو",
+        "zh": "青酱"
       },
       "price": 33,
       "image": "/media/d2b1d5def1c037862b8e.webp",
@@ -357,7 +522,12 @@
       "categoryId": "c2",
       "name": {
         "en": "Caesar with chicken",
-        "ka": "ცეზარი ქათმით"
+        "ka": "ცეზარი ქათმით",
+        "ru": "Цезарь с курицей",
+        "es": "César con pollo",
+        "tr": "Tavuklu Sezar",
+        "ar": "سيزر بالدجاج",
+        "zh": "鸡肉凯撒沙拉"
       },
       "description": {
         "en": "",
@@ -374,7 +544,12 @@
       "categoryId": "c2",
       "name": {
         "en": "Caesar with shrimps",
-        "ka": "ცეზარი კრევეტებით"
+        "ka": "ცეზარი კრევეტებით",
+        "ru": "Цезарь с креветками",
+        "es": "César con gambas",
+        "tr": "Karidesli Sezar",
+        "ar": "سيزر بالروبيان",
+        "zh": "鲜虾凯撒沙拉"
       },
       "description": {
         "en": "",
@@ -391,7 +566,12 @@
       "categoryId": "c2",
       "name": {
         "en": "Salmon and avocado salad",
-        "ka": "ორაგულის და ავოკადოს სალათი"
+        "ka": "ორაგულის და ავოკადოს სალათი",
+        "ru": "Салат с лососем и авокадо",
+        "es": "Ensalada de salmón y aguacate",
+        "tr": "Somon ve avokado salatası",
+        "ar": "سلطة السلمون والأفوكادو",
+        "zh": "三文鱼牛油果沙拉"
       },
       "description": {
         "en": "",
@@ -408,7 +588,12 @@
       "categoryId": "c3",
       "name": {
         "en": "Khinkluka",
-        "ka": "ხინკლუკა"
+        "ka": "ხინკლუკა",
+        "ru": "Хинклука",
+        "es": "Khinkluka",
+        "tr": "Khinkluka",
+        "ar": "خينكلوكا",
+        "zh": "格鲁吉亚小包子"
       },
       "description": {
         "en": "",
@@ -425,7 +610,12 @@
       "categoryId": "c3",
       "name": {
         "en": "Eggplants with walnuts",
-        "ka": "ნიგვზიანი ბადრიჯანი"
+        "ka": "ნიგვზიანი ბადრიჯანი",
+        "ru": "Баклажаны с орехами",
+        "es": "Berenjenas con nueces",
+        "tr": "Cevizli patlıcan",
+        "ar": "باذنجان بالجوز",
+        "zh": "核桃酱茄子卷"
       },
       "description": {
         "en": "",
@@ -442,7 +632,12 @@
       "categoryId": "c3",
       "name": {
         "en": "Mushroom with sulguni cheese",
-        "ka": "სოკო კეცზე სულგუნით"
+        "ka": "სოკო კეცზე სულგუნით",
+        "ru": "Грибы с сулугуни",
+        "es": "Champiñones con queso sulguni",
+        "tr": "Sulguni peynirli mantar",
+        "ar": "فطر مع جبن سولوغوني",
+        "zh": "苏古尼奶酪烤蘑菇"
       },
       "description": {
         "en": "",
@@ -459,7 +654,12 @@
       "categoryId": "c3",
       "name": {
         "en": "Trout rolls with walnuts and salad",
-        "ka": "კალმახის ხვეულა ნიგვზით და სალათით"
+        "ka": "კალმახის ხვეულა ნიგვზით და სალათით",
+        "ru": "Рулетики из форели с орехами и салатом",
+        "es": "Rollitos de trucha con nueces y ensalada",
+        "tr": "Cevizli alabalık rulo ve salata",
+        "ar": "لفائف السلمون المرقط بالجوز مع سلطة",
+        "zh": "核桃鳟鱼卷配沙拉"
       },
       "description": {
         "en": "",
@@ -476,7 +676,12 @@
       "categoryId": "c3",
       "name": {
         "en": "Beef chashushuli",
-        "ka": "საქონლის ჩაშუშული"
+        "ka": "საქონლის ჩაშუშული",
+        "ru": "Чашушули из говядины",
+        "es": "Chashushuli de ternera",
+        "tr": "Dana chashushuli",
+        "ar": "تشاشوشولي لحم البقر",
+        "zh": "格鲁吉亚炖牛肉"
       },
       "description": {
         "en": "",
@@ -493,7 +698,12 @@
       "categoryId": "c3",
       "name": {
         "en": "Ojakhuri with pork and potatoes",
-        "ka": "ოჯახური ღორის ხორცით და კარტოფილით"
+        "ka": "ოჯახური ღორის ხორცით და კარტოფილით",
+        "ru": "Оджахури со свининой и картофелем",
+        "es": "Ojakhuri de cerdo con patatas",
+        "tr": "Domuz eti ve patatesli ojakhuri",
+        "ar": "أوجاخوري بلحم الخنزير والبطاطس",
+        "zh": "格鲁吉亚土豆炒猪肉"
       },
       "description": {
         "en": "",
@@ -510,7 +720,12 @@
       "categoryId": "c3",
       "name": {
         "en": "Nadughi with sulguni cheese",
-        "ka": "ნადუღი სულგუნის ფირფიტებში"
+        "ka": "ნადუღი სულგუნის ფირფიტებში",
+        "ru": "Надуги с сулугуни",
+        "es": "Nadughi con queso sulguni",
+        "tr": "Sulguni peynirli nadughi",
+        "ar": "ناضوغي مع جبن سولوغوني",
+        "zh": "苏古尼奶酪卷配鲜奶酪"
       },
       "description": {
         "en": "",
@@ -527,7 +742,12 @@
       "categoryId": "c3",
       "name": {
         "en": "Ajapsandali",
-        "ka": "აჯაფსანდალი"
+        "ka": "აჯაფსანდალი",
+        "ru": "Аджапсандали",
+        "es": "Ajapsandali",
+        "tr": "Ajapsandali",
+        "ar": "أجابساندالي",
+        "zh": "格鲁吉亚炖蔬菜"
       },
       "description": {
         "en": "",
@@ -544,11 +764,21 @@
       "categoryId": "c3",
       "name": {
         "en": "Khinkali",
-        "ka": "ხინკალი"
+        "ka": "ხინკალი",
+        "ru": "Хинкали",
+        "es": "Khinkali",
+        "tr": "Khinkali",
+        "ar": "خينكالي",
+        "zh": "格鲁吉亚汤包"
       },
       "description": {
         "en": "Beef and pork mix",
-        "ka": "საქონლის და ღორის ხორცი"
+        "ka": "საქონლის და ღორის ხორცი",
+        "ru": "Говядина и свинина",
+        "es": "Ternera y cerdo",
+        "tr": "Dana ve domuz eti",
+        "ar": "لحم بقر ولحم خنزير",
+        "zh": "牛肉猪肉馅"
       },
       "price": 25,
       "image": "/media/59ab79bb7728842f5614.webp",
@@ -561,7 +791,12 @@
       "categoryId": "c3",
       "name": {
         "en": "Mushroom stew",
-        "ka": "სოკოს ჩაშუშული"
+        "ka": "სოკოს ჩაშუშული",
+        "ru": "Тушёные грибы",
+        "es": "Guiso de champiñones",
+        "tr": "Mantar güveç",
+        "ar": "يخنة الفطر",
+        "zh": "炖蘑菇"
       },
       "description": {
         "en": "",
@@ -578,7 +813,12 @@
       "categoryId": "c4",
       "name": {
         "en": "Mushroom cream soup",
-        "ka": "სოკოს კრემ სუპი"
+        "ka": "სოკოს კრემ სუპი",
+        "ru": "Грибной крем-суп",
+        "es": "Crema de champiñones",
+        "tr": "Kremalı mantar çorbası",
+        "ar": "شوربة كريمة الفطر",
+        "zh": "蘑菇奶油汤"
       },
       "description": {
         "en": "",
@@ -595,7 +835,12 @@
       "categoryId": "c4",
       "name": {
         "en": "Tomato cream soup",
-        "ka": "პომიდვრის კრემ სუპი"
+        "ka": "პომიდვრის კრემ სუპი",
+        "ru": "Томатный крем-суп",
+        "es": "Crema de tomate",
+        "tr": "Kremalı domates çorbası",
+        "ar": "شوربة كريمة الطماطم",
+        "zh": "番茄奶油汤"
       },
       "description": {
         "en": "",
@@ -612,7 +857,12 @@
       "categoryId": "c4",
       "name": {
         "en": "Kharcho",
-        "ka": "ხარჩო"
+        "ka": "ხარჩო",
+        "ru": "Харчо",
+        "es": "Kharcho",
+        "tr": "Kharcho",
+        "ar": "خارتشو",
+        "zh": "格鲁吉亚牛肉汤"
       },
       "description": {
         "en": "",
@@ -629,7 +879,12 @@
       "categoryId": "c4",
       "name": {
         "en": "Pumpkin cream soup",
-        "ka": "გოგრის კრემ სუპი"
+        "ka": "გოგრის კრემ სუპი",
+        "ru": "Тыквенный крем-суп",
+        "es": "Crema de calabaza",
+        "tr": "Kremalı balkabağı çorbası",
+        "ar": "شوربة كريمة اليقطين",
+        "zh": "南瓜奶油汤"
       },
       "description": {
         "en": "",
@@ -646,7 +901,12 @@
       "categoryId": "c4",
       "name": {
         "en": "Chikhirtma",
-        "ka": "ჩიხირთმა"
+        "ka": "ჩიხირთმა",
+        "ru": "Чихиртма",
+        "es": "Chikhirtma",
+        "tr": "Chikhirtma",
+        "ar": "تشيخيرتما",
+        "zh": "格鲁吉亚鸡汤"
       },
       "description": {
         "en": "",
@@ -663,7 +923,12 @@
       "categoryId": "c4",
       "name": {
         "en": "Broccoli cream soup",
-        "ka": "ბროკოლის კრემ სუპი"
+        "ka": "ბროკოლის კრემ სუპი",
+        "ru": "Крем-суп из брокколи",
+        "es": "Crema de brócoli",
+        "tr": "Kremalı brokoli çorbası",
+        "ar": "شوربة كريمة البروكلي",
+        "zh": "西兰花奶油汤"
       },
       "description": {
         "en": "",
@@ -680,7 +945,12 @@
       "categoryId": "c5",
       "name": {
         "en": "Adjarian Khachapuri",
-        "ka": "აჭარული ხაჭაპური"
+        "ka": "აჭარული ხაჭაპური",
+        "ru": "Хачапури по-аджарски",
+        "es": "Khachapuri adjaruli",
+        "tr": "Acara haçapurisi",
+        "ar": "خاتشابوري أجاري",
+        "zh": "阿扎尔奶酪船"
       },
       "description": {
         "en": "",
@@ -697,7 +967,12 @@
       "categoryId": "c5",
       "name": {
         "en": "Adjaruli with spinach",
-        "ka": "აჭარული ისპანახით"
+        "ka": "აჭარული ისპანახით",
+        "ru": "Аджарули со шпинатом",
+        "es": "Adjaruli con espinacas",
+        "tr": "Ispanaklı acaruli",
+        "ar": "أجارولي بالسبانخ",
+        "zh": "菠菜奶酪船"
       },
       "description": {
         "en": "",
@@ -714,7 +989,12 @@
       "categoryId": "c5",
       "name": {
         "en": "Adjaruli shkmerulad",
-        "ka": "აჭარული შქმერულად"
+        "ka": "აჭარული შქმერულად",
+        "ru": "Аджарули по-шкмерски",
+        "es": "Adjaruli estilo shkmeruli",
+        "tr": "Şkmeruli usulü acaruli",
+        "ar": "أجارولي على طريقة شكميرولي",
+        "zh": "蒜香奶油奶酪船"
       },
       "description": {
         "en": "",
@@ -731,7 +1011,12 @@
       "categoryId": "c5",
       "name": {
         "en": "Adjaruli with shrimps",
-        "ka": "აჭარული კრევეტებით"
+        "ka": "აჭარული კრევეტებით",
+        "ru": "Аджарули с креветками",
+        "es": "Adjaruli con gambas",
+        "tr": "Karidesli acaruli",
+        "ar": "أجارولي بالروبيان",
+        "zh": "鲜虾奶酪船"
       },
       "description": {
         "en": "",
@@ -748,7 +1033,12 @@
       "categoryId": "c5",
       "name": {
         "en": "Pizza Pepperoni",
-        "ka": "პიცა პეპერონი"
+        "ka": "პიცა პეპერონი",
+        "ru": "Пицца пепперони",
+        "es": "Pizza pepperoni",
+        "tr": "Pepperoni pizza",
+        "ar": "بيتزا ببروني",
+        "zh": "意式辣香肠披萨"
       },
       "description": {
         "en": "",
@@ -765,7 +1055,12 @@
       "categoryId": "c5",
       "name": {
         "en": "Pizza 4 cheese",
-        "ka": "პიცა 4 ყველით"
+        "ka": "პიცა 4 ყველით",
+        "ru": "Пицца четыре сыра",
+        "es": "Pizza cuatro quesos",
+        "tr": "Dört peynirli pizza",
+        "ar": "بيتزا الأجبان الأربعة",
+        "zh": "四种奶酪披萨"
       },
       "description": {
         "en": "",
@@ -782,7 +1077,12 @@
       "categoryId": "c5",
       "name": {
         "en": "Pizza capricciosa",
-        "ka": "პიცა კაპრიჩოზა"
+        "ka": "პიცა კაპრიჩოზა",
+        "ru": "Пицца капричоза",
+        "es": "Pizza capricciosa",
+        "tr": "Capricciosa pizza",
+        "ar": "بيتزا كابريتشوزا",
+        "zh": "随心披萨"
       },
       "description": {
         "en": "",
@@ -799,7 +1099,12 @@
       "categoryId": "c6",
       "name": {
         "en": "Pasta Carbonara",
-        "ka": "პასტა კარბონარა"
+        "ka": "პასტა კარბონარა",
+        "ru": "Паста карбонара",
+        "es": "Pasta carbonara",
+        "tr": "Carbonara makarna",
+        "ar": "باستا كاربونارا",
+        "zh": "卡博纳拉意面"
       },
       "description": {
         "en": "",
@@ -816,7 +1121,12 @@
       "categoryId": "c6",
       "name": {
         "en": "Pasta with mushroom and pesto",
-        "ka": "პასტა სოკოთი და პესტოტი"
+        "ka": "პასტა სოკოთი და პესტოტი",
+        "ru": "Паста с грибами и песто",
+        "es": "Pasta con champiñones y pesto",
+        "tr": "Mantarlı ve pestolu makarna",
+        "ar": "باستا بالفطر والبيستو",
+        "zh": "蘑菇青酱意面"
       },
       "description": {
         "en": "",
@@ -833,7 +1143,12 @@
       "categoryId": "c6",
       "name": {
         "en": "Pasta with shrimps",
-        "ka": "პასტა კრევეტებით"
+        "ka": "პასტა კრევეტებით",
+        "ru": "Паста с креветками",
+        "es": "Pasta con gambas",
+        "tr": "Karidesli makarna",
+        "ar": "باستا بالروبيان",
+        "zh": "鲜虾意面"
       },
       "description": {
         "en": "",
@@ -850,7 +1165,12 @@
       "categoryId": "c6",
       "name": {
         "en": "Pasta with chicken and milk cream",
-        "ka": "პასტა ქათმით და ნაღებით"
+        "ka": "პასტა ქათმით და ნაღებით",
+        "ru": "Паста с курицей и сливками",
+        "es": "Pasta con pollo y nata",
+        "tr": "Tavuklu ve kremalı makarna",
+        "ar": "باستا بالدجاج والكريمة",
+        "zh": "奶油鸡肉意面"
       },
       "description": {
         "en": "",
@@ -867,7 +1187,12 @@
       "categoryId": "c7",
       "name": {
         "en": "Grilled vegetables",
-        "ka": "ბოსტნეული გრილზე"
+        "ka": "ბოსტნეული გრილზე",
+        "ru": "Овощи на гриле",
+        "es": "Verduras a la parrilla",
+        "tr": "Izgara sebzeler",
+        "ar": "خضار مشوية",
+        "zh": "烤时蔬"
       },
       "description": {
         "en": "",
@@ -884,7 +1209,12 @@
       "categoryId": "c7",
       "name": {
         "en": "Barbecue: Shrimps",
-        "ka": "ბარბექიუ: კრევეტები"
+        "ka": "ბარბექიუ: კრევეტები",
+        "ru": "Барбекю: креветки",
+        "es": "Barbacoa: gambas",
+        "tr": "Mangal: karides",
+        "ar": "شواء: روبيان",
+        "zh": "烧烤：鲜虾"
       },
       "description": {
         "en": "",
@@ -901,7 +1231,12 @@
       "categoryId": "c7",
       "name": {
         "en": "Barbecue: Chicken",
-        "ka": "ბარბექიუ: ქათამი"
+        "ka": "ბარბექიუ: ქათამი",
+        "ru": "Барбекю: курица",
+        "es": "Barbacoa: pollo",
+        "tr": "Mangal: tavuk",
+        "ar": "شواء: دجاج",
+        "zh": "烧烤：鸡肉"
       },
       "description": {
         "en": "",
@@ -918,7 +1253,12 @@
       "categoryId": "c7",
       "name": {
         "en": "Barbecue: Pork",
-        "ka": "ბარბექიუ: ღორი"
+        "ka": "ბარბექიუ: ღორი",
+        "ru": "Барбекю: свинина",
+        "es": "Barbacoa: cerdo",
+        "tr": "Mangal: domuz eti",
+        "ar": "شواء: لحم خنزير",
+        "zh": "烧烤：猪肉"
       },
       "description": {
         "en": "",
@@ -935,7 +1275,12 @@
       "categoryId": "c7",
       "name": {
         "en": "Beef steak with truffle sauce",
-        "ka": "საქონლის სტეიკი ტრუფელის სოუსით"
+        "ka": "საქონლის სტეიკი ტრუფელის სოუსით",
+        "ru": "Стейк из говядины с трюфельным соусом",
+        "es": "Filete de ternera con salsa de trufa",
+        "tr": "Trüf soslu dana biftek",
+        "ar": "ستيك لحم البقر بصلصة الكمأة",
+        "zh": "松露酱牛排"
       },
       "description": {
         "en": "",
@@ -952,7 +1297,12 @@
       "categoryId": "c7",
       "name": {
         "en": "Beef steak with blue cheese sauce",
-        "ka": "საქონლის სტეიკი ლურჯი ყველის სოუსით"
+        "ka": "საქონლის სტეიკი ლურჯი ყველის სოუსით",
+        "ru": "Стейк из говядины с соусом блю чиз",
+        "es": "Filete de ternera con salsa de queso azul",
+        "tr": "Rokfor soslu dana biftek",
+        "ar": "ستيك لحم البقر بصلصة الجبن الأزرق",
+        "zh": "蓝纹奶酪酱牛排"
       },
       "description": {
         "en": "",
@@ -969,7 +1319,12 @@
       "categoryId": "c7",
       "name": {
         "en": "Salmon steak with beet sauce",
-        "ka": "ორაგულის სტეიკი ჭარხლის სოუსით"
+        "ka": "ორაგულის სტეიკი ჭარხლის სოუსით",
+        "ru": "Стейк из лосося со свекольным соусом",
+        "es": "Salmón a la plancha con salsa de remolacha",
+        "tr": "Pancar soslu somon biftek",
+        "ar": "ستيك السلمون بصلصة الشمندر",
+        "zh": "甜菜酱三文鱼排"
       },
       "description": {
         "en": "",
@@ -986,7 +1341,12 @@
       "categoryId": "c8",
       "name": {
         "en": "French fries",
-        "ka": "კარტოფილი ფრი"
+        "ka": "კარტოფილი ფრი",
+        "ru": "Картофель фри",
+        "es": "Patatas fritas",
+        "tr": "Patates kızartması",
+        "ar": "بطاطس مقلية",
+        "zh": "薯条"
       },
       "description": {
         "en": "",
@@ -1003,7 +1363,12 @@
       "categoryId": "c8",
       "name": {
         "en": "Homemade potatoes",
-        "ka": "კარტოფილი გლეხურად"
+        "ka": "კარტოფილი გლეხურად",
+        "ru": "Картофель по-деревенски",
+        "es": "Patatas caseras",
+        "tr": "Köy usulü patates",
+        "ar": "بطاطس على الطريقة المنزلية",
+        "zh": "乡村土豆"
       },
       "description": {
         "en": "",
@@ -1020,7 +1385,12 @@
       "categoryId": "c8",
       "name": {
         "en": "Risotto with mushroom and pesto",
-        "ka": "რიზოტო ქამა სოკოთი და პესტოთი"
+        "ka": "რიზოტო ქამა სოკოთი და პესტოთი",
+        "ru": "Ризотто с грибами и песто",
+        "es": "Risotto con champiñones y pesto",
+        "tr": "Mantarlı ve pestolu risotto",
+        "ar": "ريزوتو بالفطر والبيستو",
+        "zh": "蘑菇青酱烩饭"
       },
       "description": {
         "en": "",
@@ -1037,7 +1407,12 @@
       "categoryId": "c10",
       "name": {
         "en": "Espresso",
-        "ka": "ესპრესო"
+        "ka": "ესპრესო",
+        "ru": "Эспрессо",
+        "es": "Espresso",
+        "tr": "Espresso",
+        "ar": "إسبريسو",
+        "zh": "意式浓缩咖啡"
       },
       "description": {
         "en": "",
@@ -1054,7 +1429,12 @@
       "categoryId": "c10",
       "name": {
         "en": "Americano",
-        "ka": "ამერიკანო"
+        "ka": "ამერიკანო",
+        "ru": "Американо",
+        "es": "Americano",
+        "tr": "Americano",
+        "ar": "أمريكانو",
+        "zh": "美式咖啡"
       },
       "description": {
         "en": "",
@@ -1071,7 +1451,12 @@
       "categoryId": "c10",
       "name": {
         "en": "Latte",
-        "ka": "ლატე"
+        "ka": "ლატე",
+        "ru": "Латте",
+        "es": "Latte",
+        "tr": "Latte",
+        "ar": "لاتيه",
+        "zh": "拿铁"
       },
       "description": {
         "en": "",
@@ -1088,7 +1473,12 @@
       "categoryId": "c10",
       "name": {
         "en": "Cappuccino",
-        "ka": "კაპუჩინო"
+        "ka": "კაპუჩინო",
+        "ru": "Капучино",
+        "es": "Capuchino",
+        "tr": "Cappuccino",
+        "ar": "كابتشينو",
+        "zh": "卡布奇诺"
       },
       "description": {
         "en": "",
@@ -1105,7 +1495,12 @@
       "categoryId": "c10",
       "name": {
         "en": "Iced coffee",
-        "ka": "ცივი ყავა"
+        "ka": "ცივი ყავა",
+        "ru": "Холодный кофе",
+        "es": "Café helado",
+        "tr": "Soğuk kahve",
+        "ar": "قهوة مثلجة",
+        "zh": "冰咖啡"
       },
       "description": {
         "en": "",
@@ -1122,7 +1517,12 @@
       "categoryId": "c10",
       "name": {
         "en": "Iced coffee with ice cream",
-        "ka": "ცივი ყავა ნაყინით"
+        "ka": "ცივი ყავა ნაყინით",
+        "ru": "Холодный кофе с мороженым",
+        "es": "Café helado con helado",
+        "tr": "Dondurmalı soğuk kahve",
+        "ar": "قهوة مثلجة مع آيس كريم",
+        "zh": "冰淇淋冰咖啡"
       },
       "description": {
         "en": "",
@@ -1139,7 +1539,12 @@
       "categoryId": "c11",
       "name": {
         "en": "Ice Cream",
-        "ka": "ნაყინი"
+        "ka": "ნაყინი",
+        "ru": "Мороженое",
+        "es": "Helado",
+        "tr": "Dondurma",
+        "ar": "آيس كريم",
+        "zh": "冰淇淋"
       },
       "description": {
         "en": "",
@@ -1156,7 +1561,12 @@
       "categoryId": "c11",
       "name": {
         "en": "Cheesecake with berries",
-        "ka": "ჩიზქეიქი ტყის კენკრით"
+        "ka": "ჩიზქეიქი ტყის კენკრით",
+        "ru": "Чизкейк с лесными ягодами",
+        "es": "Tarta de queso con frutos del bosque",
+        "tr": "Orman meyveli cheesecake",
+        "ar": "تشيز كيك بالتوت البري",
+        "zh": "野莓芝士蛋糕"
       },
       "description": {
         "en": "",
@@ -1173,7 +1583,12 @@
       "categoryId": "c11",
       "name": {
         "en": "Lava cake with ice cream",
-        "ka": "ლავა ქეიქი ნაყინით"
+        "ka": "ლავა ქეიქი ნაყინით",
+        "ru": "Лава-кейк с мороженым",
+        "es": "Volcán de chocolate con helado",
+        "tr": "Dondurmalı lav kek",
+        "ar": "كعكة الحمم مع آيس كريم",
+        "zh": "熔岩蛋糕配冰淇淋"
       },
       "description": {
         "en": "",
@@ -1190,7 +1605,12 @@
       "categoryId": "c11",
       "name": {
         "en": "Apple strudel",
-        "ka": "ვაშლის შტრუდელი"
+        "ka": "ვაშლის შტრუდელი",
+        "ru": "Яблочный штрудель",
+        "es": "Strudel de manzana",
+        "tr": "Elmalı strudel",
+        "ar": "شترودل التفاح",
+        "zh": "苹果卷"
       },
       "description": {
         "en": "",
@@ -1207,7 +1627,12 @@
       "categoryId": "c11",
       "name": {
         "en": "Fruit platter",
-        "ka": "ხილის დაფა"
+        "ka": "ხილის დაფა",
+        "ru": "Фруктовая тарелка",
+        "es": "Bandeja de frutas",
+        "tr": "Meyve tabağı",
+        "ar": "طبق فواكه",
+        "zh": "水果拼盘"
       },
       "description": {
         "en": "",
@@ -1224,7 +1649,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Water",
-        "ka": "წყალი"
+        "ka": "წყალი",
+        "ru": "Вода",
+        "es": "Agua",
+        "tr": "Su",
+        "ar": "مياه",
+        "zh": "矿泉水"
       },
       "description": {
         "en": "",
@@ -1241,7 +1671,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Borjomi",
-        "ka": "ბორჯომი"
+        "ka": "ბორჯომი",
+        "ru": "Боржоми",
+        "es": "Borjomi",
+        "tr": "Borjomi",
+        "ar": "بورجومي",
+        "zh": "博尔若米矿泉水"
       },
       "description": {
         "en": "",
@@ -1258,7 +1693,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Coca-cola",
-        "ka": "კოკა-კოლა"
+        "ka": "კოკა-კოლა",
+        "ru": "Coca-Cola",
+        "es": "Coca-Cola",
+        "tr": "Coca-Cola",
+        "ar": "Coca-Cola",
+        "zh": "可口可乐"
       },
       "description": {
         "en": "",
@@ -1275,7 +1715,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Fanta",
-        "ka": "ფანტა"
+        "ka": "ფანტა",
+        "ru": "Fanta",
+        "es": "Fanta",
+        "tr": "Fanta",
+        "ar": "Fanta",
+        "zh": "芬达"
       },
       "description": {
         "en": "",
@@ -1292,7 +1737,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Sprite",
-        "ka": "სპრაიტი"
+        "ka": "სპრაიტი",
+        "ru": "Sprite",
+        "es": "Sprite",
+        "tr": "Sprite",
+        "ar": "Sprite",
+        "zh": "雪碧"
       },
       "description": {
         "en": "",
@@ -1309,7 +1759,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Homemade lemonade: citrus",
-        "ka": "სახლის ლიმონათი: ციტრუსი"
+        "ka": "სახლის ლიმონათი: ციტრუსი",
+        "ru": "Домашний лимонад: цитрус",
+        "es": "Limonada casera: cítricos",
+        "tr": "Ev yapımı limonata: narenciye",
+        "ar": "ليموناضة منزلية: حمضيات",
+        "zh": "自制柠檬水：柑橘"
       },
       "description": {
         "en": "",
@@ -1326,7 +1781,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Homemade lemonade: berries",
-        "ka": "სახლის ლიმონათი: კენკრა"
+        "ka": "სახლის ლიმონათი: კენკრა",
+        "ru": "Домашний лимонад: ягоды",
+        "es": "Limonada casera: frutos rojos",
+        "tr": "Ev yapımı limonata: orman meyveleri",
+        "ar": "ليموناضة منزلية: توت",
+        "zh": "自制柠檬水：浆果"
       },
       "description": {
         "en": "",
@@ -1343,7 +1803,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Homemade lemonade: maracuya",
-        "ka": "სახლის ლიმონათი: მარაკუია"
+        "ka": "სახლის ლიმონათი: მარაკუია",
+        "ru": "Домашний лимонад: маракуйя",
+        "es": "Limonada casera: maracuyá",
+        "tr": "Ev yapımı limonata: çarkıfelek",
+        "ar": "ليموناضة منزلية: باشن فروت",
+        "zh": "自制柠檬水：百香果"
       },
       "description": {
         "en": "",
@@ -1360,7 +1825,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Fresh orange juice",
-        "ka": "ფორთოხლის ფრეში"
+        "ka": "ფორთოხლის ფრეში",
+        "ru": "Свежевыжатый апельсиновый сок",
+        "es": "Zumo de naranja natural",
+        "tr": "Taze portakal suyu",
+        "ar": "عصير برتقال طازج",
+        "zh": "鲜榨橙汁"
       },
       "description": {
         "en": "",
@@ -1377,7 +1847,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Fresh grapefruit juice",
-        "ka": "ფრეში გრეიფრუტი"
+        "ka": "ფრეში გრეიფრუტი",
+        "ru": "Свежевыжатый грейпфрутовый сок",
+        "es": "Zumo de pomelo natural",
+        "tr": "Taze greyfurt suyu",
+        "ar": "عصير جريب فروت طازج",
+        "zh": "鲜榨西柚汁"
       },
       "description": {
         "en": "",
@@ -1394,7 +1869,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Juice",
-        "ka": "ნატურალური წვენი"
+        "ka": "ნატურალური წვენი",
+        "ru": "Сок",
+        "es": "Zumo",
+        "tr": "Meyve suyu",
+        "ar": "عصير",
+        "zh": "果汁"
       },
       "description": {
         "en": "",
@@ -1411,7 +1891,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Strawberry Milkshake",
-        "ka": "მარწყვის მილქშეიქი"
+        "ka": "მარწყვის მილქშეიქი",
+        "ru": "Клубничный милкшейк",
+        "es": "Batido de fresa",
+        "tr": "Çilekli milkshake",
+        "ar": "ميلك شيك الفراولة",
+        "zh": "草莓奶昔"
       },
       "description": {
         "en": "",
@@ -1428,7 +1913,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Chocolate Milkshake",
-        "ka": "შოკოლადის მილქშეიქი"
+        "ka": "შოკოლადის მილქშეიქი",
+        "ru": "Шоколадный милкшейк",
+        "es": "Batido de chocolate",
+        "tr": "Çikolatalı milkshake",
+        "ar": "ميلك شيك الشوكولاتة",
+        "zh": "巧克力奶昔"
       },
       "description": {
         "en": "",
@@ -1445,7 +1935,12 @@
       "categoryId": "c12",
       "name": {
         "en": "Banana Milkshake",
-        "ka": "ბანანის მილქშეიქი"
+        "ka": "ბანანის მილქშეიქი",
+        "ru": "Банановый милкшейк",
+        "es": "Batido de plátano",
+        "tr": "Muzlu milkshake",
+        "ar": "ميلك شيك الموز",
+        "zh": "香蕉奶昔"
       },
       "description": {
         "en": "",
@@ -1462,7 +1957,12 @@
       "categoryId": "c17",
       "name": {
         "en": "Rkatsiteli (white dry)",
-        "ka": "რქაწითელი (თეთრი მშრალი)"
+        "ka": "რქაწითელი (თეთრი მშრალი)",
+        "ru": "Ркацители (белое сухое)",
+        "es": "Rkatsiteli (blanco seco)",
+        "tr": "Rkatsiteli (beyaz sek)",
+        "ar": "ركاتسيتيلي (أبيض جاف)",
+        "zh": "白羽（干白）"
       },
       "description": {
         "en": "",
@@ -1479,7 +1979,12 @@
       "categoryId": "c17",
       "name": {
         "en": "Alazani valley (white semi-sweet)",
-        "ka": "ალაზნის ველი (თეთრი ნახევრად ტკბილი)"
+        "ka": "ალაზნის ველი (თეთრი ნახევრად ტკბილი)",
+        "ru": "Алазанская долина (белое полусладкое)",
+        "es": "Valle de Alazani (blanco semidulce)",
+        "tr": "Alazani Vadisi (beyaz yarı tatlı)",
+        "ar": "وادي ألازاني (أبيض شبه حلو)",
+        "zh": "阿拉扎尼河谷（半甜白）"
       },
       "description": {
         "en": "",
@@ -1496,7 +2001,12 @@
       "categoryId": "c17",
       "name": {
         "en": "Saperavi (red dry)",
-        "ka": "საფერავი (წითელი მშრალი)"
+        "ka": "საფერავი (წითელი მშრალი)",
+        "ru": "Саперави (красное сухое)",
+        "es": "Saperavi (tinto seco)",
+        "tr": "Saperavi (kırmızı sek)",
+        "ar": "سابيرافي (أحمر جاف)",
+        "zh": "萨别拉维（干红）"
       },
       "description": {
         "en": "",
@@ -1513,7 +2023,12 @@
       "categoryId": "c17",
       "name": {
         "en": "Kindzmarauli (red semi-sweet)",
-        "ka": "ქინძმარაული (წითელი ნახევრად ტკბილი)"
+        "ka": "ქინძმარაული (წითელი ნახევრად ტკბილი)",
+        "ru": "Киндзмараули (красное полусладкое)",
+        "es": "Kindzmarauli (tinto semidulce)",
+        "tr": "Kindzmarauli (kırmızı yarı tatlı)",
+        "ar": "كينزمارولي (أحمر شبه حلو)",
+        "zh": "金兹马拉乌利（半甜红）"
       },
       "description": {
         "en": "",
@@ -1530,7 +2045,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Saperavi (red dry) 750ml",
-        "ka": "საფერავი (წითელი მშრალი) 750მლ"
+        "ka": "საფერავი (წითელი მშრალი) 750მლ",
+        "ru": "Саперави (красное сухое) 750 мл",
+        "es": "Saperavi (tinto seco) 750 ml",
+        "tr": "Saperavi (kırmızı sek) 750 ml",
+        "ar": "سابيرافي (أحمر جاف) 750 مل",
+        "zh": "萨别拉维（干红）750毫升"
       },
       "description": {
         "en": "",
@@ -1547,7 +2067,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Saperavi (red dry) 180ml",
-        "ka": "საფერავი (წითელი მშრალი) 180მლ"
+        "ka": "საფერავი (წითელი მშრალი) 180მლ",
+        "ru": "Саперави (красное сухое) 180 мл",
+        "es": "Saperavi (tinto seco) 180 ml",
+        "tr": "Saperavi (kırmızı sek) 180 ml",
+        "ar": "سابيرافي (أحمر جاف) 180 مل",
+        "zh": "萨别拉维（干红）180毫升"
       },
       "description": {
         "en": "",
@@ -1564,7 +2089,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Rkatsiteli (amber dry) 750ml",
-        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ"
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ",
+        "ru": "Ркацители (янтарное сухое) 750 мл",
+        "es": "Rkatsiteli (ámbar seco) 750 ml",
+        "tr": "Rkatsiteli (amber sek) 750 ml",
+        "ar": "ركاتسيتيلي (كهرماني جاف) 750 مل",
+        "zh": "白羽（琥珀干型）750毫升"
       },
       "description": {
         "en": "",
@@ -1581,7 +2111,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Rkatsiteli (amber dry) 180ml",
-        "ka": "რქაწითელი (ქარვისფერი მშრალი) 180მლ"
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 180მლ",
+        "ru": "Ркацители (янтарное сухое) 180 мл",
+        "es": "Rkatsiteli (ámbar seco) 180 ml",
+        "tr": "Rkatsiteli (amber sek) 180 ml",
+        "ar": "ركاتسيتيلي (كهرماني جاف) 180 مل",
+        "zh": "白羽（琥珀干型）180毫升"
       },
       "description": {
         "en": "",
@@ -1598,7 +2133,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Saperavi (red dry) 750ml",
-        "ka": "საფერავი (წითელი მშრალი) 750მლ"
+        "ka": "საფერავი (წითელი მშრალი) 750მლ",
+        "ru": "Саперави (красное сухое) 750 мл",
+        "es": "Saperavi (tinto seco) 750 ml",
+        "tr": "Saperavi (kırmızı sek) 750 ml",
+        "ar": "سابيرافي (أحمر جاف) 750 مل",
+        "zh": "萨别拉维（干红）750毫升"
       },
       "description": {
         "en": "",
@@ -1615,7 +2155,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Saperavi (red dry) 180ml",
-        "ka": "საფერავი (წითელი მშრალი) 180მლ"
+        "ka": "საფერავი (წითელი მშრალი) 180მლ",
+        "ru": "Саперави (красное сухое) 180 мл",
+        "es": "Saperavi (tinto seco) 180 ml",
+        "tr": "Saperavi (kırmızı sek) 180 ml",
+        "ar": "سابيرافي (أحمر جاف) 180 مل",
+        "zh": "萨别拉维（干红）180毫升"
       },
       "description": {
         "en": "",
@@ -1632,7 +2177,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Rkatsiteli (amber dry) 750ml",
-        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ"
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ",
+        "ru": "Ркацители (янтарное сухое) 750 мл",
+        "es": "Rkatsiteli (ámbar seco) 750 ml",
+        "tr": "Rkatsiteli (amber sek) 750 ml",
+        "ar": "ركاتسيتيلي (كهرماني جاف) 750 مل",
+        "zh": "白羽（琥珀干型）750毫升"
       },
       "description": {
         "en": "",
@@ -1649,7 +2199,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Rkatsiteli (amber dry) 180ml",
-        "ka": "რქაწითელი (ქარვისფერი მშრალი) 180მლ"
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 180მლ",
+        "ru": "Ркацители (янтарное сухое) 180 мл",
+        "es": "Rkatsiteli (ámbar seco) 180 ml",
+        "tr": "Rkatsiteli (amber sek) 180 ml",
+        "ar": "ركاتسيتيلي (كهرماني جاف) 180 مل",
+        "zh": "白羽（琥珀干型）180毫升"
       },
       "description": {
         "en": "",
@@ -1666,7 +2221,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Saperavi (red dry) 750ml",
-        "ka": "საფერავი (წითელი მშრალი) 750მლ"
+        "ka": "საფერავი (წითელი მშრალი) 750მლ",
+        "ru": "Саперави (красное сухое) 750 мл",
+        "es": "Saperavi (tinto seco) 750 ml",
+        "tr": "Saperavi (kırmızı sek) 750 ml",
+        "ar": "سابيرافي (أحمر جاف) 750 مل",
+        "zh": "萨别拉维（干红）750毫升"
       },
       "description": {
         "en": "",
@@ -1683,7 +2243,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Saperavi (red dry) 180ml",
-        "ka": "საფერავი (წითელი მშრალი) 180მლ"
+        "ka": "საფერავი (წითელი მშრალი) 180მლ",
+        "ru": "Саперави (красное сухое) 180 мл",
+        "es": "Saperavi (tinto seco) 180 ml",
+        "tr": "Saperavi (kırmızı sek) 180 ml",
+        "ar": "سابيرافي (أحمر جاف) 180 مل",
+        "zh": "萨别拉维（干红）180毫升"
       },
       "description": {
         "en": "",
@@ -1700,7 +2265,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Rkatsiteli (amber dry) 750ml",
-        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ"
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ",
+        "ru": "Ркацители (янтарное сухое) 750 мл",
+        "es": "Rkatsiteli (ámbar seco) 750 ml",
+        "tr": "Rkatsiteli (amber sek) 750 ml",
+        "ar": "ركاتسيتيلي (كهرماني جاف) 750 مل",
+        "zh": "白羽（琥珀干型）750毫升"
       },
       "description": {
         "en": "",
@@ -1717,7 +2287,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Rkatsiteli (amber dry) 180ml",
-        "ka": "რქაწითელი (ქარვისფერი მშრალი) 180მლ"
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 180მლ",
+        "ru": "Ркацители (янтарное сухое) 180 мл",
+        "es": "Rkatsiteli (ámbar seco) 180 ml",
+        "tr": "Rkatsiteli (amber sek) 180 ml",
+        "ar": "ركاتسيتيلي (كهرماني جاف) 180 مل",
+        "zh": "白羽（琥珀干型）180毫升"
       },
       "description": {
         "en": "",
@@ -1734,7 +2309,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Saperavi (red dry) 750ml",
-        "ka": "საფერავი (წითელი მშრალი) 750მლ"
+        "ka": "საფერავი (წითელი მშრალი) 750მლ",
+        "ru": "Саперави (красное сухое) 750 мл",
+        "es": "Saperavi (tinto seco) 750 ml",
+        "tr": "Saperavi (kırmızı sek) 750 ml",
+        "ar": "سابيرافي (أحمر جاف) 750 مل",
+        "zh": "萨别拉维（干红）750毫升"
       },
       "description": {
         "en": "",
@@ -1751,7 +2331,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Saperavi (red dry) 180ml",
-        "ka": "საფერავი (წითელი მშრალი) 180მლ"
+        "ka": "საფერავი (წითელი მშრალი) 180მლ",
+        "ru": "Саперави (красное сухое) 180 мл",
+        "es": "Saperavi (tinto seco) 180 ml",
+        "tr": "Saperavi (kırmızı sek) 180 ml",
+        "ar": "سابيرافي (أحمر جاف) 180 مل",
+        "zh": "萨别拉维（干红）180毫升"
       },
       "description": {
         "en": "",
@@ -1768,7 +2353,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Krakhuna (white dry) 750ml",
-        "ka": "კრახუნა (თეთრი მშრალი) 750მლ"
+        "ka": "კრახუნა (თეთრი მშრალი) 750მლ",
+        "ru": "Крахуна (белое сухое) 750 мл",
+        "es": "Krakhuna (blanco seco) 750 ml",
+        "tr": "Krakhuna (beyaz sek) 750 ml",
+        "ar": "كراخونا (أبيض جاف) 750 مل",
+        "zh": "克拉胡纳（干白）750毫升"
       },
       "description": {
         "en": "",
@@ -1785,7 +2375,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Krakhuna (white dry) 180ml",
-        "ka": "კრახუნა (თეთრი მშრალი) 180მლ"
+        "ka": "კრახუნა (თეთრი მშრალი) 180მლ",
+        "ru": "Крахуна (белое сухое) 180 мл",
+        "es": "Krakhuna (blanco seco) 180 ml",
+        "tr": "Krakhuna (beyaz sek) 180 ml",
+        "ar": "كراخونا (أبيض جاف) 180 مل",
+        "zh": "克拉胡纳（干白）180毫升"
       },
       "description": {
         "en": "",
@@ -1802,7 +2397,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Khikhvi (amber dry) 750ml",
-        "ka": "ხიხვი (ქარვისფერი მშრალი) 750მლ"
+        "ka": "ხიხვი (ქარვისფერი მშრალი) 750მლ",
+        "ru": "Хихви (янтарное сухое) 750 мл",
+        "es": "Khikhvi (ámbar seco) 750 ml",
+        "tr": "Khikhvi (amber sek) 750 ml",
+        "ar": "خيخفي (كهرماني جاف) 750 مل",
+        "zh": "基赫维（琥珀干型）750毫升"
       },
       "description": {
         "en": "",
@@ -1819,7 +2419,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Khikhvi (amber dry) 180ml",
-        "ka": "ხიხვი (ქარვისფერი მშრალი) 180მლ"
+        "ka": "ხიხვი (ქარვისფერი მშრალი) 180მლ",
+        "ru": "Хихви (янтарное сухое) 180 мл",
+        "es": "Khikhvi (ámbar seco) 180 ml",
+        "tr": "Khikhvi (amber sek) 180 ml",
+        "ar": "خيخفي (كهرماني جاف) 180 مل",
+        "zh": "基赫维（琥珀干型）180毫升"
       },
       "description": {
         "en": "",
@@ -1836,7 +2441,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Kisi (amber dry) 750ml",
-        "ka": "ქისი (ქარვისფერი მშრალი) 750მლ"
+        "ka": "ქისი (ქარვისფერი მშრალი) 750მლ",
+        "ru": "Киси (янтарное сухое) 750 мл",
+        "es": "Kisi (ámbar seco) 750 ml",
+        "tr": "Kisi (amber sek) 750 ml",
+        "ar": "كيسي (كهرماني جاف) 750 مل",
+        "zh": "基西（琥珀干型）750毫升"
       },
       "description": {
         "en": "",
@@ -1853,7 +2463,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Kisi (amber dry) 180ml",
-        "ka": "ქისი (ქარვისფერი მშრალი) 180მლ"
+        "ka": "ქისი (ქარვისფერი მშრალი) 180მლ",
+        "ru": "Киси (янтарное сухое) 180 мл",
+        "es": "Kisi (ámbar seco) 180 ml",
+        "tr": "Kisi (amber sek) 180 ml",
+        "ar": "كيسي (كهرماني جاف) 180 مل",
+        "zh": "基西（琥珀干型）180毫升"
       },
       "description": {
         "en": "",
@@ -1870,7 +2485,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Saperavi chacha 50ml",
-        "ka": "საფერავის ჭაჭა 50მლ"
+        "ka": "საფერავის ჭაჭა 50მლ",
+        "ru": "Чача из саперави 50 мл",
+        "es": "Chacha de saperavi 50 ml",
+        "tr": "Saperavi çaçası 50 ml",
+        "ar": "تشاتشا سابيرافي 50 مل",
+        "zh": "萨别拉维恰恰50毫升"
       },
       "description": {
         "en": "",
@@ -1887,7 +2507,12 @@
       "categoryId": "c19",
       "name": {
         "en": "Fruit chacha 50ml",
-        "ka": "ხილის ჭაჭა 50მლ"
+        "ka": "ხილის ჭაჭა 50მლ",
+        "ru": "Фруктовая чача 50 мл",
+        "es": "Chacha de frutas 50 ml",
+        "tr": "Meyve çaçası 50 ml",
+        "ar": "تشاتشا الفواكه 50 مل",
+        "zh": "水果恰恰50毫升"
       },
       "description": {
         "en": "",
@@ -1904,7 +2529,12 @@
       "categoryId": "c20",
       "name": {
         "en": "Rkatsiteli (amber dry) 750ml",
-        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ"
+        "ka": "რქაწითელი (ქარვისფერი მშრალი) 750მლ",
+        "ru": "Ркацители (янтарное сухое) 750 мл",
+        "es": "Rkatsiteli (ámbar seco) 750 ml",
+        "tr": "Rkatsiteli (amber sek) 750 ml",
+        "ar": "ركاتسيتيلي (كهرماني جاف) 750 مل",
+        "zh": "白羽（琥珀干型）750毫升"
       },
       "description": {
         "en": "",
@@ -1921,7 +2551,12 @@
       "categoryId": "c20",
       "name": {
         "en": "Mtsvane (amber dry) 750ml",
-        "ka": "მწვანე (ქარვისფერი მშრალი) 750მლ"
+        "ka": "მწვანე (ქარვისფერი მშრალი) 750მლ",
+        "ru": "Мцване (янтарное сухое) 750 мл",
+        "es": "Mtsvane (ámbar seco) 750 ml",
+        "tr": "Mtsvane (amber sek) 750 ml",
+        "ar": "متسفاني (كهرماني جاف) 750 مل",
+        "zh": "姆茨瓦内（琥珀干型）750毫升"
       },
       "description": {
         "en": "",
@@ -1938,7 +2573,12 @@
       "categoryId": "c20",
       "name": {
         "en": "Saperavi (red dry) 750ml",
-        "ka": "საფერავი (წითელი მშრალი) 750მლ"
+        "ka": "საფერავი (წითელი მშრალი) 750მლ",
+        "ru": "Саперави (красное сухое) 750 мл",
+        "es": "Saperavi (tinto seco) 750 ml",
+        "tr": "Saperavi (kırmızı sek) 750 ml",
+        "ar": "سابيرافي (أحمر جاف) 750 مل",
+        "zh": "萨别拉维（干红）750毫升"
       },
       "description": {
         "en": "",
@@ -1955,7 +2595,12 @@
       "categoryId": "c20",
       "name": {
         "en": "Khikhvi (white dry) 750ml",
-        "ka": "ხიხვი (თეთრი მშრალი) 750მლ"
+        "ka": "ხიხვი (თეთრი მშრალი) 750მლ",
+        "ru": "Хихви (белое сухое) 750 мл",
+        "es": "Khikhvi (blanco seco) 750 ml",
+        "tr": "Khikhvi (beyaz sek) 750 ml",
+        "ar": "خيخفي (أبيض جاف) 750 مل",
+        "zh": "基赫维（干白）750毫升"
       },
       "description": {
         "en": "",
@@ -1972,7 +2617,12 @@
       "categoryId": "c20",
       "name": {
         "en": "Kisi (amber dry) 750ml",
-        "ka": "ქისი (ქარვისფერი მშრალი) 750მლ"
+        "ka": "ქისი (ქარვისფერი მშრალი) 750მლ",
+        "ru": "Киси (янтарное сухое) 750 мл",
+        "es": "Kisi (ámbar seco) 750 ml",
+        "tr": "Kisi (amber sek) 750 ml",
+        "ar": "كيسي (كهرماني جاف) 750 مل",
+        "zh": "基西（琥珀干型）750毫升"
       },
       "description": {
         "en": "",
@@ -1989,7 +2639,12 @@
       "categoryId": "c18",
       "name": {
         "en": "Tsinandali (white dry) 750ml",
-        "ka": "წინანდალი (თეთრი მშრალი) 750მლ"
+        "ka": "წინანდალი (თეთრი მშრალი) 750მლ",
+        "ru": "Цинандали (белое сухое) 750 мл",
+        "es": "Tsinandali (blanco seco) 750 ml",
+        "tr": "Tsinandali (beyaz sek) 750 ml",
+        "ar": "تسيناندالي (أبيض جاف) 750 مل",
+        "zh": "齐南达利（干白）750毫升"
       },
       "description": {
         "en": "",
@@ -2006,7 +2661,12 @@
       "categoryId": "c18",
       "name": {
         "en": "Tsinandali (white dry) 180ml",
-        "ka": "წინანდალი (თეთრი მშრალი) 180მლ"
+        "ka": "წინანდალი (თეთრი მშრალი) 180მლ",
+        "ru": "Цинандали (белое сухое) 180 мл",
+        "es": "Tsinandali (blanco seco) 180 ml",
+        "tr": "Tsinandali (beyaz sek) 180 ml",
+        "ar": "تسيناندالي (أبيض جاف) 180 مل",
+        "zh": "齐南达利（干白）180毫升"
       },
       "description": {
         "en": "",
@@ -2023,7 +2683,12 @@
       "categoryId": "c18",
       "name": {
         "en": "Tvishi (white semi-sweet) 750ml",
-        "ka": "ტვიში (თეთრი ნახევრად ტკბილი) 750მლ"
+        "ka": "ტვიში (თეთრი ნახევრად ტკბილი) 750მლ",
+        "ru": "Твиши (белое полусладкое) 750 мл",
+        "es": "Tvishi (blanco semidulce) 750 ml",
+        "tr": "Tvishi (beyaz yarı tatlı) 750 ml",
+        "ar": "تفيشي (أبيض شبه حلو) 750 مل",
+        "zh": "特维希（半甜白）750毫升"
       },
       "description": {
         "en": "",
@@ -2040,7 +2705,12 @@
       "categoryId": "c18",
       "name": {
         "en": "Tvishi (white semi-sweet) 180ml",
-        "ka": "ტვიში (თეთრი ნახევრად ტკბილი) 180მლ"
+        "ka": "ტვიში (თეთრი ნახევრად ტკბილი) 180მლ",
+        "ru": "Твиши (белое полусладкое) 180 мл",
+        "es": "Tvishi (blanco semidulce) 180 ml",
+        "tr": "Tvishi (beyaz yarı tatlı) 180 ml",
+        "ar": "تفيشي (أبيض شبه حلو) 180 مل",
+        "zh": "特维希（半甜白）180毫升"
       },
       "description": {
         "en": "",
@@ -2057,7 +2727,12 @@
       "categoryId": "c18",
       "name": {
         "en": "Rose (pink) 750ml",
-        "ka": "როზე (ვარდისფერი) 750მლ"
+        "ka": "როზე (ვარდისფერი) 750მლ",
+        "ru": "Розе (розовое) 750 мл",
+        "es": "Vino (rosado) 750 ml",
+        "tr": "Roze (pembe) 750 ml",
+        "ar": "روزيه (وردي) 750 مل",
+        "zh": "葡萄酒（桃红）750毫升"
       },
       "description": {
         "en": "",
@@ -2074,7 +2749,12 @@
       "categoryId": "c18",
       "name": {
         "en": "Rose (pink) 180ml",
-        "ka": "როზე (ვარდისფერი) 180მლ"
+        "ka": "როზე (ვარდისფერი) 180მლ",
+        "ru": "Розе (розовое) 180 мл",
+        "es": "Vino (rosado) 180 ml",
+        "tr": "Roze (pembe) 180 ml",
+        "ar": "روزيه (وردي) 180 مل",
+        "zh": "葡萄酒（桃红）180毫升"
       },
       "description": {
         "en": "",
@@ -2091,7 +2771,12 @@
       "categoryId": "c18",
       "name": {
         "en": "Kindzmarauli (red semi-sweet) 750ml",
-        "ka": "ქინძმარაული (წითელი ნახევრად ტკბილი) 750მლ"
+        "ka": "ქინძმარაული (წითელი ნახევრად ტკბილი) 750მლ",
+        "ru": "Киндзмараули (красное полусладкое) 750 мл",
+        "es": "Kindzmarauli (tinto semidulce) 750 ml",
+        "tr": "Kindzmarauli (kırmızı yarı tatlı) 750 ml",
+        "ar": "كينزمارولي (أحمر شبه حلو) 750 مل",
+        "zh": "金兹马拉乌利（半甜红）750毫升"
       },
       "description": {
         "en": "",
@@ -2108,7 +2793,12 @@
       "categoryId": "c18",
       "name": {
         "en": "Kindzmarauli (red semi-sweet) 180ml",
-        "ka": "ქინძმარაული (წითელი ნახევრად ტკბილი) 180მლ"
+        "ka": "ქინძმარაული (წითელი ნახევრად ტკბილი) 180მლ",
+        "ru": "Киндзмараули (красное полусладкое) 180 мл",
+        "es": "Kindzmarauli (tinto semidulce) 180 ml",
+        "tr": "Kindzmarauli (kırmızı yarı tatlı) 180 ml",
+        "ar": "كينزمارولي (أحمر شبه حلو) 180 مل",
+        "zh": "金兹马拉乌利（半甜红）180毫升"
       },
       "description": {
         "en": "",
@@ -2125,7 +2815,12 @@
       "categoryId": "c21",
       "name": {
         "en": "Sparkling wine Brut 750ml",
-        "ka": "ცქრიალა ღვინო ბრუტი 750მლ"
+        "ka": "ცქრიალა ღვინო ბრუტი 750მლ",
+        "ru": "Игристое вино брют 750 мл",
+        "es": "Vino espumoso brut 750 ml",
+        "tr": "Köpüklü şarap brut 750 ml",
+        "ar": "نبيذ فوار بروت 750 مل",
+        "zh": "干型起泡酒750毫升"
       },
       "description": {
         "en": "",
@@ -2142,7 +2837,12 @@
       "categoryId": "c21",
       "name": {
         "en": "Sparkling wine Brut 180ml",
-        "ka": "ცქრიალა ღვინო ბრუტი 180მლ"
+        "ka": "ცქრიალა ღვინო ბრუტი 180მლ",
+        "ru": "Игристое вино брют 180 мл",
+        "es": "Vino espumoso brut 180 ml",
+        "tr": "Köpüklü şarap brut 180 ml",
+        "ar": "نبيذ فوار بروت 180 مل",
+        "zh": "干型起泡酒180毫升"
       },
       "description": {
         "en": "",
@@ -2159,7 +2859,12 @@
       "categoryId": "c21",
       "name": {
         "en": "Prosecco",
-        "ka": "პროსეკო"
+        "ka": "პროსეკო",
+        "ru": "Просекко",
+        "es": "Prosecco",
+        "tr": "Prosecco",
+        "ar": "بروسيكو",
+        "zh": "普罗塞克"
       },
       "description": {
         "en": "",
@@ -2176,7 +2881,12 @@
       "categoryId": "c21",
       "name": {
         "en": "Prosecco 180ml",
-        "ka": "პროსეკო 180მლ"
+        "ka": "პროსეკო 180მლ",
+        "ru": "Просекко 180 мл",
+        "es": "Prosecco 180 ml",
+        "tr": "Prosecco 180 ml",
+        "ar": "بروسيكو 180 مل",
+        "zh": "普罗塞克 180毫升"
       },
       "description": {
         "en": "",
@@ -2193,7 +2903,12 @@
       "categoryId": "c21",
       "name": {
         "en": "Petnat (extra brut) 750ml",
-        "ka": "პეტნატი (ექსტრა ბრუტი) 750მლ"
+        "ka": "პეტნატი (ექსტრა ბრუტი) 750მლ",
+        "ru": "Пет-нат (экстра брют) 750 мл",
+        "es": "Pét-nat (extra brut) 750 ml",
+        "tr": "Pet-nat (ekstra brut) 750 ml",
+        "ar": "بيت-نات (إكسترا بروت) 750 مل",
+        "zh": "自然起泡酒（超干型）750毫升"
       },
       "description": {
         "en": "",
@@ -2210,7 +2925,12 @@
       "categoryId": "c13",
       "name": {
         "en": "Natakhtari",
-        "ka": "ნატახტარი"
+        "ka": "ნატახტარი",
+        "ru": "Натахтари",
+        "es": "Natakhtari",
+        "tr": "Natakhtari",
+        "ar": "Natakhtari",
+        "zh": "Natakhtari"
       },
       "description": {
         "en": "",
@@ -2227,7 +2947,12 @@
       "categoryId": "c13",
       "name": {
         "en": "Lowenbrau",
-        "ka": "ლოვენბრაუ"
+        "ka": "ლოვენბრაუ",
+        "ru": "Löwenbräu",
+        "es": "Löwenbräu",
+        "tr": "Löwenbräu",
+        "ar": "Löwenbräu",
+        "zh": "Löwenbräu"
       },
       "description": {
         "en": "",
@@ -2244,7 +2969,12 @@
       "categoryId": "c13",
       "name": {
         "en": "Corona",
-        "ka": "კორონა"
+        "ka": "კორონა",
+        "ru": "Corona",
+        "es": "Corona",
+        "tr": "Corona",
+        "ar": "Corona",
+        "zh": "Corona"
       },
       "description": {
         "en": "",
@@ -2261,7 +2991,12 @@
       "categoryId": "c13",
       "name": {
         "en": "Black Lion",
-        "ka": "შავი ლომი"
+        "ka": "შავი ლომი",
+        "ru": "Black Lion",
+        "es": "Black Lion",
+        "tr": "Black Lion",
+        "ar": "Black Lion",
+        "zh": "Black Lion"
       },
       "description": {
         "en": "",
@@ -2278,7 +3013,12 @@
       "categoryId": "c14",
       "name": {
         "en": "Aperol",
-        "ka": "აპეროლი"
+        "ka": "აპეროლი",
+        "ru": "Апероль",
+        "es": "Aperol",
+        "tr": "Aperol",
+        "ar": "أبيرول",
+        "zh": "阿佩罗"
       },
       "description": {
         "en": "",
@@ -2295,7 +3035,12 @@
       "categoryId": "c14",
       "name": {
         "en": "Gin tonic",
-        "ka": "ჯინ ტონიკი"
+        "ka": "ჯინ ტონიკი",
+        "ru": "Джин-тоник",
+        "es": "Gin-tonic",
+        "tr": "Cin tonik",
+        "ar": "جن وتونيك",
+        "zh": "金汤力"
       },
       "description": {
         "en": "",
@@ -2312,7 +3057,12 @@
       "categoryId": "c14",
       "name": {
         "en": "Negroni",
-        "ka": "ნეგრონი"
+        "ka": "ნეგრონი",
+        "ru": "Негрони",
+        "es": "Negroni",
+        "tr": "Negroni",
+        "ar": "نيغروني",
+        "zh": "内格罗尼"
       },
       "description": {
         "en": "",
@@ -2329,7 +3079,12 @@
       "categoryId": "c14",
       "name": {
         "en": "Piña colada",
-        "ka": "პინა კოლადა"
+        "ka": "პინა კოლადა",
+        "ru": "Пина колада",
+        "es": "Piña colada",
+        "tr": "Piña colada",
+        "ar": "بينا كولادا",
+        "zh": "椰林飘香"
       },
       "description": {
         "en": "",
@@ -2346,7 +3101,12 @@
       "categoryId": "c14",
       "name": {
         "en": "Maracuya cocktail",
-        "ka": "მარაკუიას კოქტეილი"
+        "ka": "მარაკუიას კოქტეილი",
+        "ru": "Коктейль с маракуйей",
+        "es": "Cóctel de maracuyá",
+        "tr": "Çarkıfelek kokteyli",
+        "ar": "كوكتيل باشن فروت",
+        "zh": "百香果鸡尾酒"
       },
       "description": {
         "en": "",

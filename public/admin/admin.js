@@ -17,6 +17,14 @@ const ic = {
 let data = { settings: {}, categories: [], products: [] };
 let filterCat = '';
 
+// Extra menu languages (English and Georgian have their own fields). Empty → guests see English.
+const EXTRA = [['ru', 'Русский'], ['es', 'Español'], ['tr', 'Türkçe'], ['ar', 'العربية'], ['zh', '中文']];
+const ALL_LANGS = ['en', 'ka', ...EXTRA.map(([c]) => c)];
+const extraField = (name, label, c, max, optional) => `<label class="field"><span>${label} · ${EXTRA.find((x) => x[0] === c)[1]}${optional ? ' <i>optional</i>' : ''}</span><input name="${name}.${c}" maxlength="${max}" autocomplete="off" lang="${c}" dir="${c === 'ar' ? 'rtl' : 'auto'}"></label>`;
+$('#mlProduct').innerHTML = EXTRA.map(([c]) => extraField('name', 'Name', c, 120) + extraField('description', 'Note', c, 240, true)).join('');
+$('#mlNotice').innerHTML = EXTRA.map(([c]) => extraField('notice', 'Popup text', c, 120)).join('');
+const langValues = (prefix) => Object.fromEntries(ALL_LANGS.map((c) => [c, ($('#editorForm')[`${prefix}.${c}`]?.value || '').trim()]));
+
 // ---------- api ----------
 async function api(method, url, body) {
   const opts = { method, headers: {} };
@@ -151,7 +159,7 @@ function renderProducts() {
   const off = data.products.filter((p) => !p.available).length;
   $('#stats').innerHTML = `<b>${data.products.length}</b> products${off ? ` · <b>${off}</b> hidden` : ''}`;
 
-  const match = (p) => !q || [p.name.en, p.name.ka, p.description?.en, p.description?.ka].some((s) => s?.toLowerCase().includes(q));
+  const match = (p) => !q || [...Object.values(p.name || {}), ...Object.values(p.description || {})].some((s) => String(s).toLowerCase().includes(q));
   const groups = sortedCats()
     .filter((c) => !filterCat || c.id === filterCat)
     .map((c) => ({ c, items: productsOf(c.id).filter(match) }))
@@ -316,6 +324,11 @@ function openEditor(p) {
   form['name.ka'].value = p?.name.ka || '';
   form['description.en'].value = p?.description?.en || '';
   form['description.ka'].value = p?.description?.ka || '';
+  for (const [c] of EXTRA) {
+    form[`name.${c}`].value = p?.name?.[c] || '';
+    form[`description.${c}`].value = p?.description?.[c] || '';
+  }
+  form.querySelector('.more-langs').open = false;
   form.price.value = p ? p.price : '';
   form.categoryId.value = p?.categoryId || filterCat || sortedCats()[0]?.id || '';
   form.available.checked = p ? p.available : true;
@@ -345,8 +358,8 @@ editor.addEventListener('cancel', (e) => { e.preventDefault(); closeEditor(); })
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const body = {
-    name: { en: form['name.en'].value.trim(), ka: form['name.ka'].value.trim() },
-    description: { en: form['description.en'].value.trim(), ka: form['description.ka'].value.trim() },
+    name: langValues('name'),
+    description: langValues('description'),
     price: Number(String(form.price.value).replace(',', '.')),
     categoryId: form.categoryId.value,
     available: form.available.checked,

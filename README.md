@@ -40,6 +40,13 @@ Open http://localhost:3000. The admin password defaults to `ode-admin` locally �
 - **Backup** (Cafe tab): download the whole menu as a file, or restore one.
 - Built for phones first — the admin works fully from a phone.
 
+## Languages
+
+English, Georgian, Russian, Spanish, Turkish, Arabic (right-to-left) and Chinese — picked from the globe button in the top bar; the choice is shared between the website and the menu. First-time visitors get their phone's language if it's one of these, otherwise Georgian.
+
+- Website and menu texts live in `public/js/site.js` and `public/js/app.js`.
+- Menu names in the extra languages come from `seed/translations.json` (`node scripts/apply-translations.mjs` fills any that are empty; it never overwrites). In the admin they're under **Other languages** in the product editor. Empty → English is shown.
+
 ## Notes
 
 - Georgian has no capital letters. The server converts any Mtavruli (ᲐᲑᲒ…) to regular letters on save, and the menu never applies uppercase styling to Georgian.

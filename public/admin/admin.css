@@ -220,6 +220,18 @@ input[type="time"]::-webkit-calendar-picker-indicator { filter: invert(.7); }
 .cat .del { display: grid; }
 @media (min-width: 900px) { .cat { grid-template-columns: auto minmax(0, 1fr) auto; } .cat-names { grid-template-columns: 1fr 1fr; gap: 8px; } .cat input[data-k="ka"] { height: 38px; } }
 
+/* other languages (fold-out) */
+.more-langs { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.more-langs summary { display: grid; gap: 2px; padding: 14px 44px 14px 16px; cursor: pointer; list-style: none; position: relative; }
+.more-langs summary::-webkit-details-marker { display: none; }
+.more-langs summary::after { content: ''; position: absolute; right: 18px; top: 50%; width: 9px; height: 9px; margin-top: -7px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .25s; }
+.more-langs[open] summary::after { transform: rotate(225deg); margin-top: -2px; }
+.more-langs summary small { color: var(--faint); font-size: 13px; }
+.more-langs .ml-grid, .more-langs .grid2 { padding: 0 16px 16px; }
+.ml-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+@media (min-width: 600px) { .ml-grid { grid-template-columns: 1fr 1fr; } }
+.ml-grid .field, .more-langs .grid2 .field { grid-column: auto !important; }
+
 /* backup */
 .backup { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 32px; padding: 16px; border-radius: 18px; border: 1px dashed var(--line-2); }
 .backup small { display: block; color: var(--faint); font-size: 13px; }

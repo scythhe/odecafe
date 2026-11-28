@@ -1,4 +1,6 @@
 // ============ Ode — website ============
+import { initialLang, saveLang, applyDocLang, mountPicker, pick } from './lang.js';
+
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
@@ -35,18 +37,95 @@ const T = {
     hours: 'სამუშაო საათები', address: 'მისამართი', contact: 'კონტაქტი',
     waText: 'გამარჯობა! მსურს მაგიდის დაჯავშნა ოდეში.',
   },
+  ru: {
+    menu: 'Меню', viewMenu: 'Смотреть меню', reserve: 'Забронировать',
+    liveTitle: 'Живое фортепиано',
+    aboutEyebrow: 'Об Ode',
+    aboutText: 'Ode — ресторан в центре Тбилиси с уютным залом, террасой и тёплым гостеприимством. Здесь хорошо неспешно пообедать, собраться всей семьёй или провести элегантный ужин под живое фортепиано.',
+    factTerrace: 'Терраса', factHall: 'Зал', factPiano: 'Живое фортепиано',
+    flavorsTitle: 'Вкусы на любой случай',
+    flavorsText: 'В нашем меню грузинская классика соседствует с блюдами из мяса, рыбы и морепродуктов, пастой, ризотто, салатами, супами, вегетарианскими блюдами и десертами. Хотите сытный ужин или лёгкий перекус — вы обязательно найдёте что-то по вкусу.',
+    locTitle: 'В сердце Тбилиси, на улице Атонели',
+    locText: 'Ресторан находится на тихой исторической улице Георгия Атонели, 18 — сюда легко заглянуть во время прогулки по центру города. Проведите вечер на открытой террасе или в главном зале.',
+    addressLabel: 'Адрес', hoursLabel: 'Часы работы', directions: 'Как добраться',
+    galleryEyebrow: 'Атмосфера',
+    reserveTitle: 'Забронировать столик', call: 'Позвонить', daily: 'Ежедневно',
+    hours: 'Часы работы', address: 'Адрес', contact: 'Контакты',
+    waText: 'Здравствуйте! Хочу забронировать столик в Ode.',
+  },
+  es: {
+    menu: 'Menú', viewMenu: 'Ver el menú', reserve: 'Reservar',
+    liveTitle: 'Piano en vivo',
+    aboutEyebrow: 'Sobre Ode',
+    aboutText: 'Ode es un restaurante en el centro de Tiflis con un comedor acogedor, una terraza y una cálida hospitalidad. Es ideal para almuerzos sin prisa, reuniones familiares y cenas elegantes con música de piano en vivo.',
+    factTerrace: 'Terraza', factHall: 'Comedor', factPiano: 'Piano en vivo',
+    flavorsTitle: 'Sabores para cada ocasión',
+    flavorsText: 'Nuestra carta reúne clásicos georgianos junto a carnes, pescados y mariscos, pasta, risotto, ensaladas, sopas, opciones vegetarianas y postres. Tanto si le apetece una cena contundente como algo ligero, encontrará fácilmente algo a su gusto.',
+    locTitle: 'En el corazón de Tiflis, en la calle Atoneli',
+    locText: 'En la tranquila e histórica calle Giorgi Atoneli 18, el restaurante es una parada fácil durante un paseo por el centro: perfecto para pasar la velada en nuestra terraza al aire libre o en el comedor principal.',
+    addressLabel: 'Dirección', hoursLabel: 'Horario', directions: 'Cómo llegar',
+    galleryEyebrow: 'Ambiente',
+    reserveTitle: 'Reservar mesa', call: 'Llamar', daily: 'Todos los días',
+    hours: 'Horario', address: 'Dirección', contact: 'Contacto',
+    waText: '¡Hola! Me gustaría reservar una mesa en Ode.',
+  },
+  tr: {
+    menu: 'Menü', viewMenu: 'Menüyü gör', reserve: 'Rezervasyon',
+    liveTitle: 'Canlı piyano',
+    aboutEyebrow: 'Ode hakkında',
+    aboutText: 'Ode, Tiflis’in merkezinde sıcak bir salonu, terası ve içten misafirperverliğiyle bir restoran. Keyifli öğle yemekleri, aile buluşmaları ve canlı piyano eşliğinde şık akşam yemekleri için ideal.',
+    factTerrace: 'Teras', factHall: 'Salon', factPiano: 'Canlı piyano',
+    flavorsTitle: 'Her ana uygun lezzetler',
+    flavorsText: 'Menümüzde Gürcü klasiklerinin yanında et, balık ve deniz ürünleri, makarna, risotto, salatalar, çorbalar, vejetaryen seçenekler ve tatlılar var. Doyurucu bir akşam yemeği de istesen hafif bir atıştırmalık da, damak tadına uygun bir şey mutlaka bulacaksın.',
+    locTitle: 'Tiflis’in kalbinde, Atoneli Caddesi’nde',
+    locText: 'Sakin ve tarihi Giorgi Atoneli Caddesi 18’deki restoran, şehir merkezinde yürüyüş yaparken kolayca uğranacak bir durak; akşamı açık terasımızda ya da ana salonda geçirmek için ideal.',
+    addressLabel: 'Adres', hoursLabel: 'Çalışma saatleri', directions: 'Yol tarifi',
+    galleryEyebrow: 'Atmosfer',
+    reserveTitle: 'Masa ayırtın', call: 'Ara', daily: 'Her gün',
+    hours: 'Çalışma saatleri', address: 'Adres', contact: 'İletişim',
+    waText: 'Merhaba! Ode’da masa ayırtmak istiyorum.',
+  },
+  ar: {
+    menu: 'القائمة', viewMenu: 'عرض القائمة', reserve: 'احجز',
+    liveTitle: 'بيانو حي',
+    aboutEyebrow: 'عن Ode',
+    aboutText: 'Ode مطعم في وسط تبليسي يضم صالة طعام دافئة وتراساً وضيافة كريمة. إنه مثالي لغداء على مهل وللقاءات العائلية ولعشاء أنيق على أنغام البيانو الحي.',
+    factTerrace: 'تراس', factHall: 'صالة الطعام', factPiano: 'بيانو حي',
+    flavorsTitle: 'نكهات لكل مناسبة',
+    flavorsText: 'تجمع قائمتنا بين الأطباق الجورجية الكلاسيكية وأطباق اللحوم والأسماك والمأكولات البحرية والمعكرونة والريزوتو والسلطات والشوربات والخيارات النباتية والحلويات. سواء رغبت في عشاء غني أو وجبة خفيفة، ستجد بسهولة ما يناسب ذوقك.',
+    locTitle: 'في قلب تبليسي، في شارع أتونيلي',
+    locText: 'يقع المطعم في شارع جيورجي أتونيلي 18 الهادئ والتاريخي، فهو محطة سهلة خلال نزهة في وسط المدينة، ومثالي لقضاء المساء على تراسنا المفتوح أو في الصالة الرئيسية.',
+    addressLabel: 'العنوان', hoursLabel: 'ساعات العمل', directions: 'الاتجاهات',
+    galleryEyebrow: 'الأجواء',
+    reserveTitle: 'احجز طاولة', call: 'اتصل', daily: 'يومياً',
+    hours: 'ساعات العمل', address: 'العنوان', contact: 'التواصل',
+    waText: 'مرحباً! أود حجز طاولة في Ode.',
+  },
+  zh: {
+    menu: '菜单', viewMenu: '查看菜单', reserve: '预订',
+    liveTitle: '现场钢琴',
+    aboutEyebrow: '关于 Ode',
+    aboutText: 'Ode 位于第比利斯市中心，拥有温馨的用餐厅、露台和热情周到的服务。无论是悠闲的午餐、家庭聚会，还是伴着现场钢琴的优雅晚餐，这里都是理想之选。',
+    factTerrace: '露台', factHall: '用餐厅', factPiano: '现场钢琴',
+    flavorsTitle: '适合每个场合的美味',
+    flavorsText: '我们的菜单汇集了格鲁吉亚经典菜肴，以及肉类、鱼类和海鲜、意面、烩饭、沙拉、汤品、素食和甜点。无论您想要一顿丰盛的晚餐还是一份轻食，都能轻松找到合口味的选择。',
+    locTitle: '位于第比利斯中心的阿托涅利街',
+    locText: '餐厅坐落于安静而富有历史感的乔治·阿托涅利街18号，漫步市中心时可轻松到访——无论是在露天露台还是主餐厅，都是共度夜晚的好去处。',
+    addressLabel: '地址', hoursLabel: '营业时间', directions: '路线',
+    galleryEyebrow: '氛围',
+    reserveTitle: '预订餐桌', call: '致电', daily: '每天',
+    hours: '营业时间', address: '地址', contact: '联系',
+    waText: '您好！我想在 Ode 预订一张餐桌。',
+  },
 };
 
-const store = {
-  get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
-  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
-};
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-let lang = store.get('ode.lang', 'ka'); // shared with the menu page
+let lang = initialLang(); // shared with the menu page
 let data = { settings: {}, categories: [], products: [] };
 
-const t = (k) => T[lang][k] ?? k;
-const tr = (o) => (o ? o[lang] || o.en || o.ka || '' : '');
+let picker;
+const t = (k) => T[lang]?.[k] ?? T.en[k] ?? k;
+const tr = (o) => pick(o, lang);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const money = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(2));
 const sized = (url, w) => (url?.startsWith('/media/') ? url.replace('/media/', `/media/w/${w}/`) : url);
@@ -70,7 +149,7 @@ const icons = {
 
 // ---------- render ----------
 function render() {
-  document.documentElement.lang = lang;
+  applyDocLang(lang);
   $$('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
   const s = data.settings;
   const hours = s.hours ? `${t('daily')} · ${s.hours.open} — ${s.hours.close}` : '';
@@ -105,7 +184,7 @@ function renderStatus() {
   // shows the working hours (green light always on), not a live open/closed state
   const { open, close } = data.settings.hours || {};
   if (!open || !close) return;
-  $('#status span').textContent = `${lang === 'ka' ? 'სამუშაო საათები' : 'Hours'} ${open} — ${close}`;
+  $('#status span').textContent = `${t('hoursLabel')} ${open} — ${close}`;
 }
 
 // signature dishes from the live menu (managed in the admin)
@@ -156,11 +235,12 @@ function observe(els) {
 }
 
 function bind() {
-  $('#langBtn').addEventListener('click', () => {
-    lang = lang === 'ka' ? 'en' : 'ka';
-    store.set('ode.lang', lang);
-    if (document.startViewTransition && !reduceMotion) document.startViewTransition(render);
-    else render();
+  picker = mountPicker($('#langPick'), () => lang, (code) => {
+    lang = code;
+    saveLang(code);
+    const update = () => { render(); picker.sync(); };
+    if (document.startViewTransition && !reduceMotion) document.startViewTransition(update);
+    else update();
   });
 
   const topbar = $('#topbar');

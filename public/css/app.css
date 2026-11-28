@@ -60,17 +60,42 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .brand { display: block; }
 .brand img { height: 34px; width: auto; filter: drop-shadow(0 2px 10px rgb(0 0 0 / .45)); }
 
-.lang {
-  position: relative; display: flex; height: 40px; padding: 3px; border-radius: 99px;
-  background: rgb(14 12 10 / .5); border: 1px solid var(--line-2);
+/* language picker (shared with the website) */
+.langpick { position: relative; }
+.langpick-btn {
+  display: flex; align-items: center; gap: 7px; height: 40px; padding: 0 14px 0 11px; border-radius: 99px;
+  background: rgb(14 12 10 / .5); border: 1px solid var(--line-2); color: var(--text);
   -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
-  font: 700 12px/1 var(--sans); letter-spacing: .04em;
+  font: 700 13px/1 var(--sans); letter-spacing: .03em; transition: background .2s, scale .2s;
 }
-.lang span { position: relative; z-index: 1; display: grid; place-items: center; width: 40px; border-radius: 99px; color: var(--muted); transition: color .35s; }
-.lang span[data-l="ka"] { font-family: 'Noto Sans Georgian', sans-serif; }
-.lang::before { content: ''; position: absolute; inset: 3px auto 3px 3px; width: 40px; border-radius: 99px; background: var(--text); transition: transform .45s var(--spring); }
-html[lang="en"] .lang::before { transform: translateX(40px); }
-html[lang="ka"] .lang [data-l="ka"], html[lang="en"] .lang [data-l="en"] { color: var(--bg); }
+.langpick-btn svg { width: 18px; height: 18px; color: var(--accent); }
+.langpick-btn:active { scale: .95; }
+.langpick-cur { min-width: 18px; text-align: center; font-family: 'Noto Sans Georgian', var(--sans); }
+.topbar.solid .langpick-btn { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.langpick-menu {
+  position: absolute; z-index: 60; top: calc(100% + 8px); inset-inline-end: 0; min-width: 176px; margin: 0; padding: 6px; list-style: none;
+  border-radius: 18px; background: rgb(26 22 18 / .96); border: 1px solid var(--line-2);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  box-shadow: 0 24px 50px -16px rgb(0 0 0 / .8);
+  transform-origin: top right; animation: pickIn .22s var(--ease-out);
+}
+[dir="rtl"] .langpick-menu { transform-origin: top left; }
+@keyframes pickIn { from { opacity: 0; transform: translateY(-6px) scale(.97); } }
+.langpick-menu[hidden] { display: none; }
+.langpick-menu button {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; height: 44px; padding: 0 14px;
+  border-radius: 12px; color: var(--muted); font-size: 15px; font-weight: 600; text-align: start; transition: background .15s, color .15s;
+}
+.langpick-menu button[lang="ka"] { font-family: 'Noto Sans Georgian', var(--sans); }
+.langpick-menu button[lang="ar"] { font-family: 'Noto Sans Arabic', var(--sans); }
+.langpick-menu button:active, .langpick-menu button:focus-visible { background: var(--surface-2); color: var(--text); outline: none; }
+@media (hover: hover) { .langpick-menu button:hover { background: var(--surface-2); color: var(--text); } }
+.langpick-menu button[aria-selected="true"] { color: var(--text); }
+.langpick-menu button[aria-selected="true"]::after { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+
+/* scripts that need their own fonts */
+html[lang="ar"] body { font-family: 'Noto Sans Arabic', var(--sans); }
+html[lang="zh"] body { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', var(--sans); }
 
 /* ---------- hero ---------- */
 .hero { position: relative; height: 92svh; min-height: 520px; max-height: 1000px; display: grid; align-items: end; overflow: hidden; isolation: isolate; }
@@ -350,34 +375,50 @@ body:has(dialog[open]) { overflow: hidden; }
   .card, .feature { opacity: 1; transform: none; }
 }
 
-/* ---------- popup notice (shown on every visit) ---------- */
-.notice { width: min(360px, calc(100% - 32px)); margin: auto; overflow: visible; }
-.notice::backdrop { background: rgb(6 5 4 / .55); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); opacity: 0; transition: opacity .4s; }
-.notice.show::backdrop { opacity: 1; }
-.notice-card {
-  position: relative; display: flex; flex-direction: column; align-items: center; text-align: center;
-  padding: 34px 24px 22px; border-radius: 28px; overflow: hidden; isolation: isolate;
-  background: radial-gradient(120% 80% at 50% 0%, rgb(232 176 113 / .16), transparent 60%), var(--bg-2);
-  border: 1px solid var(--line-2); box-shadow: 0 40px 90px -30px rgb(0 0 0 / .9);
-  opacity: 0; transform: translateY(24px) scale(.94);
-  transition: opacity .45s var(--ease-out), transform .6s var(--spring);
+/* ---------- header corner card (bottom-right): live piano on the website, tax note on the menu ---------- */
+/* On phones the header text moves up so this corner stays free. */
+@media (max-width: 899px) {
+  .hero.corner { align-items: start; }
+  .hero.corner .hero-content { padding: calc(var(--top-h) + 20px) var(--gutter) 0; }
 }
-.notice.show .notice-card { opacity: 1; transform: none; }
-.notice.closing .notice-card { transition: opacity .25s, transform .3s var(--ease); transform: translateY(10px) scale(.97); }
-.notice-x { top: 12px; right: 12px; width: 36px; height: 36px; }
-.notice-logo { width: 104px; height: auto; margin-bottom: 18px; opacity: 0; transform: translateY(8px); transition: opacity .6s var(--ease-out) .15s, transform .6s var(--ease-out) .15s; }
-.notice.show .notice-logo { opacity: 1; transform: none; }
-.notice-label { margin: 0 0 6px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
-html[lang="ka"] .notice-label { font-size: 13.5px; letter-spacing: .02em; font-weight: 600; }
-.notice-main { margin: 0; display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: 0 12px; font-size: 22px; font-weight: 600; line-height: 1.2; }
-.notice-main b { font: normal 400 76px/1 var(--serif); color: var(--accent); letter-spacing: -.03em; }
-html[lang="ka"] .notice-main { font-size: 24px; }
-.notice-alt { margin: 6px 0 0; color: var(--faint); font-size: 14px; font-weight: 600; }
-.notice-alt:empty { display: none; }
-.notice-ok {
-  width: 100%; height: 52px; margin-top: 24px; border-radius: 99px;
-  background: var(--accent); color: var(--accent-ink); font-weight: 700; font-size: 15px;
-  box-shadow: 0 14px 30px -12px var(--accent-glow); transition: scale .2s var(--ease), filter .2s;
+.hero-corner {
+  position: absolute; z-index: 2; inset-inline-end: var(--gutter); bottom: calc(max(28px, env(safe-area-inset-bottom)) + 70px);
+  display: grid; justify-items: end; gap: 2px; text-align: end; max-width: calc(100% - 2 * var(--gutter));
+  padding: 12px 16px 12px 18px; border-radius: 18px;
+  background: rgb(14 12 10 / .55); border: 1px solid var(--line-2);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  opacity: 0; animation: rise .9s var(--ease-out) 1.5s forwards;
+  transition: opacity .3s, transform .35s var(--ease);
 }
-.notice-ok:active { scale: .97; }
-@media (hover: hover) { .notice-ok:hover { filter: brightness(1.06); } }
+.hero-corner[hidden] { display: none; }
+.hero-corner.gone { opacity: 0 !important; transform: translateY(8px) scale(.96); animation: none; pointer-events: none; }
+.hero-corner-title { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+html[lang="ka"] .hero-corner-title, html[lang="ar"] .hero-corner-title, html[lang="zh"] .hero-corner-title { font-size: 14px; letter-spacing: .02em; font-weight: 600; }
+.hero-corner-title i { width: 8px; height: 8px; border-radius: 50%; background: #e07a5f; box-shadow: 0 0 0 0 rgb(224 122 95 / .6); animation: livePulse 2s infinite; }
+@keyframes livePulse { 70% { box-shadow: 0 0 0 9px rgb(224 122 95 / 0); } 100% { box-shadow: 0 0 0 0 rgb(224 122 95 / 0); } }
+.hero-corner-big { font: 400 30px/1.05 var(--serif); color: var(--accent); letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.hero-corner-big span { color: rgb(232 176 113 / .55); }
+@supports (animation-timeline: scroll()) {
+  .hero-corner { animation: rise .9s var(--ease-out) 1.5s both, heroFade linear both; animation-timeline: auto, scroll(root); animation-range: normal, 0 55svh; }
+}
+
+/* menu: the tax note, closeable */
+.hero-note { padding-inline-end: 44px; }
+.hero-note-label { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+html[lang="ka"] .hero-note-label, html[lang="ar"] .hero-note-label, html[lang="zh"] .hero-note-label { font-size: 13px; letter-spacing: .02em; font-weight: 600; }
+.hero-note-main { font-size: 17px; font-weight: 600; line-height: 1.25; }
+.hero-note-main b { font: 400 34px/1 var(--serif); color: var(--accent); letter-spacing: -.02em; }
+.hero-note-x {
+  position: absolute; top: 8px; inset-inline-end: 8px; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%;
+  color: var(--muted); transition: background .2s, color .2s;
+}
+.hero-note-x svg { width: 16px; height: 16px; }
+.hero-note-x:active { background: var(--surface-2); color: var(--text); }
+@media (hover: hover) { .hero-note-x:hover { background: var(--surface-2); color: var(--text); } }
+
+@media (min-width: 900px) {
+  .hero-corner { inset-inline-end: 48px; bottom: 40px; padding: 14px 20px; }
+  .hero-note { padding-inline-end: 48px; }
+  .hero-corner-big { font-size: 38px; }
+  .hero-note-main b { font-size: 40px; }
+}
