@@ -14,11 +14,14 @@ import seed from '../seed/menu.json' with { type: 'json' };
 const PASSWORD = env.ADMIN_PASSWORD;
 const storage = d1Storage({ db: env.DB, seed });
 const db = createDb(storage);
-const auth = createAuth({ password: PASSWORD || crypto.randomUUID(), secret: env.SESSION_SECRET, secure: true });
+// (No random values here: Cloudflare forbids generating them while the Worker loads.)
+const auth = createAuth({ password: PASSWORD || '', secret: env.SESSION_SECRET, secure: true });
 
 const app = express();
-app.post('/api/admin/login', (req, res, next) => {
+// Until ADMIN_PASSWORD is set, the whole admin API is closed — no login, no saving.
+app.use('/api/admin', (req, res, next) => {
   if (PASSWORD) return next();
+  if (req.path === '/session') return res.json({ authed: false });
   res.status(503).json({ error: 'Admin is not set up yet: add the ADMIN_PASSWORD secret in Cloudflare → Worker → Settings → Variables and Secrets' });
 });
 app.use(finishApp(createApp({ db, storage, auth })));
