@@ -14,12 +14,11 @@ command = "npm run build:static"
 directory = "./dist"
 html_handling = "auto-trailing-slash"
 
-# Create the database in the Cloudflare dashboard (Storage & Databases → D1 → "ode")
-# and paste its ID here.
+# D1 database "ode" in the Cloudflare account (Storage & Databases → D1)
 [[d1_databases]]
 binding = "DB"
 database_name = "ode"
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "a24040a0-2030-4eae-8f64-34b565fb1750"
 
 [observability]
 enabled = true
